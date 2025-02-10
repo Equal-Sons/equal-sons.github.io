@@ -340,7 +340,8 @@
 
     @include md {
         .sticky-wrapper {
-            padding: 15px 36px;
+            // padding: 15px 36px;
+            padding: 0px 36px;
         }
     }
     @include xs {
@@ -461,12 +462,14 @@
     }
     @include md {
         .sticky-wrapper {
-            padding: 15px 36px;
+            // padding: 15px 36px;
+            padding: 0px 36px;
         }
     }
     @include xs {
         .sticky-wrapper {
-            padding: 15px 0px;
+            // padding: 15px 0px;
+            padding: 0px;
         }
     }
 }

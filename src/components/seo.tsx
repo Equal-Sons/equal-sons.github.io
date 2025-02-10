@@ -1,19 +1,29 @@
 import { Helmet } from "react-helmet-async";
 
-// prop type 
+// prop type
 type IProps = {
-  title: string;
-}
+	title?: string;
+};
 const SEOCom = ({ title }: IProps) => {
-  return (
-    <Helmet>
-      <meta charSet="utf-8" />
-      <title>{title ? `${title} - Frisk` : 'Frisk - Creative Agency & Portfolio React Template'}</title>
-      <meta name="description" content="Frisk - Creative Agency & Portfolio HTML Template" />
-      <meta name="keywords" content="Frisk - Creative Agency & Portfolio HTML Template" />
-      <meta name="robots" content="INDEX,FOLLOW" />
-    </Helmet>
-  );
+	return (
+		<Helmet>
+			<meta charSet="utf-8" />
+			<title>
+				{title
+					? `${title} - Equal Sons`
+					: "Equal Sons - Product and Story Development"}
+			</title>
+			<meta
+				name="description"
+				content="Equal Sons - Product and Story Development"
+			/>
+			<meta
+				name="keywords"
+				content="Equal Sons - Product and Story Development"
+			/>
+			<meta name="robots" content="INDEX,FOLLOW" />
+		</Helmet>
+	);
 };
 
 export default SEOCom;

@@ -1,44 +1,43 @@
 import Wrapper from "../layout/wrapper";
 import SEOCom from "../components/seo";
-import HeaderThree from "../layout/headers/header-three";
-import FooterEight from "../layout/footer/footer-eight";
+import Header from "../layout/headers/header";
+
 import BreadcrumbOne from "../components/breadcrumb/breadcrumb-one";
 import ContactInfo from "../components/contact/contact-info";
-import ContactOne from "../components/contact/contact-one";
 import MarqueeSlider from "../components/marquee-slider";
-
+import ContactTwo from "../components/contact/contact-two";
+import FooterSeven from "../layout/footer/footer-seven";
 
 export default function Contact() {
-  return (
-    <Wrapper>
+	return (
+		<Wrapper>
+			{/* seo title */}
+			<SEOCom title="Contact" />
+			{/* seo title */}
 
-      {/* seo title */}
-      <SEOCom title="Contact" />
-      {/* seo title */}
+			{/* header area start */}
+			<Header />
+			{/* header area end */}
 
-      {/* header area start */}
-      <HeaderThree />
-      {/* header area end */}
+			{/* breadcrumb start */}
+			<BreadcrumbOne title="Contact" />
+			{/* breadcrumb end */}
 
-      {/* breadcrumb start */}
-      <BreadcrumbOne title="Contact" />
-      {/* breadcrumb end */}
+			{/* contact info */}
+			<ContactInfo />
+			{/* contact info */}
 
-      {/* contact info */}
-      <ContactInfo/>
-      {/* contact info */}
+			{/* contact area */}
+			{/* <ContactTwo /> */}
+			{/* contact area */}
 
-      {/* contact area */}
-      <ContactOne/>
-      {/* contact area */}
+			{/* marquee slider */}
+			<MarqueeSlider />
+			{/* marquee slider */}
 
-      {/* marquee slider */}
-      <MarqueeSlider/>
-      {/* marquee slider */}
-
-      {/* footer area */}
-      <FooterEight/>
-      {/* footer area */}
-    </Wrapper>
-  )
+			{/* footer area */}
+			<FooterSeven />
+			{/* footer area */}
+		</Wrapper>
+	);
 }

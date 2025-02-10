@@ -1,24 +1,22 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import SideMenu from "./component/side-menu";
-import MobileMenuSocials from "./component/mobile-menu-socials";
-import HeaderNav from "./component/header-nav";
-import MobileNav from "./component/mobile-nav";
 import { useSticky } from "../../hooks/useSticky";
 import useDocument from "../../hooks/useDocument";
-import SearchPopup from "../../components/popup/search-popup";
+import SideMenu from "./component/side-menu";
+import MobileNav from "./component/mobile-nav";
+import MobileMenuSocials from "./component/mobile-menu-socials";
+import HeaderNav from "./component/header-nav";
 
-export default function HeaderOne() {
+export default function HeaderThree() {
 	const [isOpen, setIsOpen] = useState(false);
 	const { isScrolled } = useSticky();
 	const { mobileMenuOpen, setMobileMenuOpen } = useDocument();
-
 	return (
 		<>
 			<SideMenu isOpen={isOpen} setIsOpen={setIsOpen} />
-			{/*--==============================
-   
-    ============================== */}
+
+			{/* Mobile Menu */}
+
 			<div
 				className={`mobile-menu-wrapper ${
 					mobileMenuOpen ? "body-visible" : ""
@@ -33,7 +31,11 @@ export default function HeaderOne() {
 					</button>
 					<div className="mobile-logo">
 						<NavLink to="/">
-							<img src="/assets/img/esLogo_lightBlack.png" alt="Ovation" />
+							<img
+								src="/assets/img/esLogo_lightBlack.png"
+								alt="Ovation"
+								style={{ maxWidth: "50%" }}
+							/>
 						</NavLink>
 					</div>
 					<div className="mobile-menu">
@@ -42,15 +44,14 @@ export default function HeaderOne() {
 						</ul>
 					</div>
 					<div className="sidebar-wrap">
-						<h6>27 Division St, New York,</h6>
-						<h6>NY 10002, USA</h6>
+						<h6>Richmond Virginia</h6>
 					</div>
 					<div className="sidebar-wrap">
-						<h6>
+						{/* <h6>
 							<a href="tel:1800123654987">+1 800 123 654 987 </a>
-						</h6>
+						</h6> */}
 						<h6>
-							<a href="mailto:frisk.agency@mail.com">frisk.agency@mail.com</a>
+							<a href="mailto:info@equalsons.com">info@equalsons.com</a>
 						</h6>
 					</div>
 					<div className="social-btn style3">
@@ -58,12 +59,12 @@ export default function HeaderOne() {
 					</div>
 				</div>
 			</div>
-			{/*--==============================
-	    Header Area
-      ==============================*/}
-			<header className="nav-header header-layout1">
+
+			{/* Header Area */}
+
+			<header className="nav-header header-layout3">
 				<div className={`sticky-wrapper ${isScrolled ? "header-sticky" : ""} `}>
-					{/*-- Main Menu Area */}
+					{/* Main Menu Area */}
 					<div className="menu-area">
 						<div className="container-fluid">
 							<div className="row align-items-center justify-content-between">
@@ -72,8 +73,8 @@ export default function HeaderOne() {
 										<NavLink to="/">
 											<img
 												src="/assets/img/esLogo_lightBlack.png"
-												style={{ maxWidth: "40%" }}
 												alt="logo"
+												style={{ maxWidth: "50%" }}
 											/>
 										</NavLink>
 									</div>
@@ -87,8 +88,8 @@ export default function HeaderOne() {
 									<div className="navbar-right d-inline-flex d-lg-none">
 										<button
 											type="button"
-											className="menu-toggle sidebar-btn"
 											onClick={() => setMobileMenuOpen(true)}
+											className="menu-toggle sidebar-btn"
 										>
 											<span className="line"></span>
 											<span className="line"></span>
@@ -98,30 +99,12 @@ export default function HeaderOne() {
 								</div>
 								<div className="col-auto d-none d-lg-block">
 									<div className="header-button">
-										<button
-											type="button"
-											className="search-btn searchBoxToggler"
-											onClick={() =>
-												document
-													.getElementsByClassName("popup-search-box")[0]
-													?.classList.toggle("show")
-											}
-										>
-											<img src="/assets/img/icon/search.svg" alt="icon" />
+										<NavLink to="/contact" className="btn">
 											<span className="link-effect">
-												<span className="effect-1">SEARCH</span>
-												<span className="effect-1">SEARCH</span>
+												<span className="effect-1">WORK WITH US</span>
+												<span className="effect-1">WORK WITH US</span>
 											</span>
-										</button>
-										<button
-											type="button"
-											className="sidebar-btn sideMenuToggler"
-											onClick={() => setIsOpen(true)}
-										>
-											<span className="line"></span>
-											<span className="line"></span>
-											<span className="line"></span>
-										</button>
+										</NavLink>
 									</div>
 								</div>
 							</div>
@@ -129,10 +112,6 @@ export default function HeaderOne() {
 					</div>
 				</div>
 			</header>
-
-			{/* search popup */}
-			<SearchPopup />
-			{/* search popup */}
 		</>
 	);
 }
