@@ -1,5 +1,5 @@
-import Slider, { Settings } from "react-slick";
-import { IPortfolioDT } from "../../types/portfolio-d-t";
+import Slider, { type Settings } from "react-slick";
+import type { IPortfolioDT } from "../../types/portfolio-d-t";
 
 const portfolio_data: IPortfolioDT[] = [
 	{
@@ -7,36 +7,42 @@ const portfolio_data: IPortfolioDT[] = [
 		imageSrc: "/assets/img/portfolio/portfolio2_1.jpg",
 		category: "Branding",
 		title: "Decentralized Platform",
+		url: "",
 	},
 	{
 		id: 2,
 		imageSrc: "/assets/img/portfolio/portfolio2_2.jpg",
 		category: "Branding",
 		title: "Decentralized Platform",
+		url: "",
 	},
 	{
 		id: 3,
 		imageSrc: "/assets/img/portfolio/portfolio2_3.jpg",
 		category: "Branding",
 		title: "Decentralized Platform",
+		url: "",
 	},
 	{
 		id: 4,
 		imageSrc: "/assets/img/portfolio/portfolio2_1.jpg",
 		category: "Branding",
 		title: "Decentralized Platform",
+		url: "",
 	},
 	{
 		id: 5,
 		imageSrc: "/assets/img/portfolio/portfolio2_2.jpg",
 		category: "Branding",
 		title: "Decentralized Platform",
+		url: "",
 	},
 	{
 		id: 6,
 		imageSrc: "/assets/img/portfolio/portfolio2_3.jpg",
 		category: "Branding",
 		title: "Decentralized Platform",
+		url: "",
 	},
 ];
 

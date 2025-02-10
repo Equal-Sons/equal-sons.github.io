@@ -1,6 +1,4 @@
-import { NavLink } from "react-router-dom";
 import type { ITeamDT } from "../../types/team-d-t";
-
 export default function TeamSingle({ elm }: { elm: ITeamDT }) {
 	return (
 		<div className="team-card">

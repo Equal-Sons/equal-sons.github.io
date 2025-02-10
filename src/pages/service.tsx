@@ -4,8 +4,6 @@ import Header from "../layout/headers/header";
 import Footer from "../layout/footer/footer-seven";
 import BreadcrumbOne from "../components/breadcrumb/breadcrumb-one";
 import MarqueeSlider from "../components/marquee-slider";
-import FaqThree from "../components/faq/faq-three";
-import ClientAreaTwo from "../components/clients/client-area-two";
 import FaqTechServices from "../components/faq/faq-tech-services";
 import FaqSpeakingServices from "../components/faq/faq-speaking-services";
 

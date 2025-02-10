@@ -1,35 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "../components/scroll-to-top";
-import HomeOne from "../pages/home-1";
-import HomeTwo from "../pages/home-2";
-import HomeThree from "../pages/home-3";
-import HomeFour from "../pages/home-4";
-import HomeFive from "../pages/home-5";
 import BackToTop from "../components/back-to-top";
-import HomeSix from "../pages/home-6";
-import HomeSeven from "../pages/home-7";
-import HomeEight from "../pages/home-8";
 import Contact from "../pages/contact";
-import Blog from "../pages/blog";
-import BlogTwo from "../pages/blog-two";
-import BlogDetails from "../pages/blog-details";
-import Project from "../pages/project";
-import ProjectTwo from "../pages/project-2";
-import ProjectThree from "../pages/project-3";
-import ProjectFour from "../pages/project-4";
-import ProjectFive from "../pages/project-5";
-import ProjectSix from "../pages/project-6";
-import ProjectDetails from "../pages/project-details";
-import AboutPage from "../pages/about";
-import TeamPage from "../pages/team";
-import TeamDetailsPage from "../pages/team-details";
-import PricingPage from "../pages/pricing";
-import FaqPage from "../pages/faq";
 import NotFoundPage from "../pages/not-found";
 import ServicePage from "../pages/service";
-import ServicePageTwo from "../pages/service-2";
-import ServicePageThree from "../pages/service-3";
-import ServiceDetailsPage from "../pages/service-details";
 import Home from "../pages/home";
 
 export default function AppNavigation() {

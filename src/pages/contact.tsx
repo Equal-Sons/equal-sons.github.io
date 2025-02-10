@@ -1,11 +1,9 @@
 import Wrapper from "../layout/wrapper";
 import SEOCom from "../components/seo";
 import Header from "../layout/headers/header";
-
 import BreadcrumbOne from "../components/breadcrumb/breadcrumb-one";
 import ContactInfo from "../components/contact/contact-info";
 import MarqueeSlider from "../components/marquee-slider";
-import ContactTwo from "../components/contact/contact-two";
 import FooterSeven from "../layout/footer/footer-seven";
 
 export default function Contact() {
