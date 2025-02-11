@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  cache-and-install:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
