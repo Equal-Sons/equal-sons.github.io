@@ -17,7 +17,7 @@ const Approach = () => {
 								flexible, high-impact solutions—advising, strategizing, leading,
 								and delivering hands-on execution when needed.{" "}
 							</p>
-							<p>
+							<p className="sec-text">
 								We take our work seriously—but not ourselves. We believe in
 								clear thinking, bold action, and just the right amount of
 								irreverence to make things fun.
@@ -25,8 +25,8 @@ const Approach = () => {
 							<div className="btn-group justify-content-center">
 								<NavLink to="/contact" className="btn mt-0">
 									<span className="link-effect">
-										<span className="effect-1">LET’S TALK WITH US</span>
-										<span className="effect-1">LET’S TALK WITH US</span>
+										<span className="effect-1">LET'S TALK</span>
+										<span className="effect-1">LET'S TALK</span>
 									</span>
 								</NavLink>
 							</div>
