@@ -23,10 +23,10 @@ jobs:
           cache: 'npm' # Change to 'yarn' or 'pnpm' if needed
 
       - name: Install dependencies
-        run: npm install # Change to 'yarn install' or 'pnpm install' if required
+        run: pnpm install # Change to 'yarn install' or 'pnpm install' if required
 
       - name: Build Project
-        run: npm run build # Ensure your package.json has a "build" script
+        run: pnpm run build # Ensure your package.json has a "build" script
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
