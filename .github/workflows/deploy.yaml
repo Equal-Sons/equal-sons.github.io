@@ -9,24 +9,27 @@ permissions:
   contents: write
 
 jobs:
-  deploy:
+  cache-and-install:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Node.js and pnpm
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        with:
+          version: 9
+          run_install: false
+
+      - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
-          cache: 'pnpm' # Enable caching for pnpm installs
-
-      - name: Install pnpm
-        run: npm install -g pnpm
+          node-version: 20
+          cache: 'pnpm'
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install
 
       - name: Build Project
         run: pnpm run build # Uses pnpm instead of npm
