@@ -16,17 +16,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
+      - name: Set up Node.js and pnpm
         uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: 'npm' # Change to 'yarn' or 'pnpm' if needed
+          cache: 'pnpm'
+
+      - name: Install pnpm
+        run: npm install -g pnpm
 
       - name: Install dependencies
-        run: pnpm install # Change to 'yarn install' or 'pnpm install' if required
+        run: pnpm install
 
       - name: Build Project
-        run: pnpm run build # Ensure your package.json has a "build" script
+        run: pnpm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
