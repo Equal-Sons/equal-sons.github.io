@@ -4,8 +4,8 @@ const contactInfo = [
 	{
 		iconSrc: "/assets/img/icon/location-pin-alt.svg",
 		title: "Headquarters",
-		address: "Richmond",
-		city: "VA 23220, USA",
+		address: "Richmond, Virginia",
+		city: "USA",
 		// linkUrl: "https://maps.google.com",
 		// linkText: "Get direction",
 	},

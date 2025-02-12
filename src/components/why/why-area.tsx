@@ -15,7 +15,7 @@ const WhyArea = () => {
 				<div className="row">
 					<div className="col-lg-6">
 						<div className="title-area mb-45">
-							<h2 className="sec-title">Passionate About Creating Quality</h2>
+							<h2 className="sec-title">Passionate about creating quality</h2>
 							<p>
 								Equal Sons is a consultancy dedicated to helping businesses
 								build better products, scale smarter, and communicate their

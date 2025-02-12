@@ -24,10 +24,11 @@ export default function HeaderThree() {
 			>
 				<div className="mobile-menu-area">
 					<button
+						type="button"
 						className="menu-toggle"
 						onClick={() => setMobileMenuOpen(false)}
 					>
-						<i className="fas fa-times"></i>
+						<i className="fas fa-times" />
 					</button>
 					<div className="mobile-logo">
 						<NavLink to="/">
@@ -44,7 +45,7 @@ export default function HeaderThree() {
 						</ul>
 					</div>
 					<div className="sidebar-wrap">
-						<h6>Richmond Virginia</h6>
+						<h6>Richmond, Virginia USA</h6>
 					</div>
 					<div className="sidebar-wrap">
 						{/* <h6>
@@ -91,9 +92,9 @@ export default function HeaderThree() {
 											onClick={() => setMobileMenuOpen(true)}
 											className="menu-toggle sidebar-btn"
 										>
-											<span className="line"></span>
-											<span className="line"></span>
-											<span className="line"></span>
+											<span className="line" />
+											<span className="line" />
+											<span className="line" />
 										</button>
 									</div>
 								</div>

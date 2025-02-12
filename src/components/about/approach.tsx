@@ -8,8 +8,8 @@ const Approach = () => {
 					<div className="col-xl-8 col-lg-10">
 						<div className="title-area text-center mb-0">
 							<h2 className="sec-title">
-								Serious Work,
-								<br /> Not-So-Serious People
+								Serious work;
+								<br /> not-so-serious people
 							</h2>
 							<p className="sec-text mt-30 mb-40">
 								There's no one-size-fits-all approach to building great
@@ -23,7 +23,7 @@ const Approach = () => {
 								irreverence to make things fun.
 							</p>
 							<div className="btn-group justify-content-center">
-								<NavLink to="/contact" className="btn mt-0">
+								<NavLink to="/contact" className="btn mt-4">
 									<span className="link-effect">
 										<span className="effect-1">LET'S TALK</span>
 										<span className="effect-1">LET'S TALK</span>

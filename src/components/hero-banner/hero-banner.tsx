@@ -8,22 +8,21 @@ export default function HeroBanner() {
 					<div className="row justify-content-center">
 						<div className="col-lg-10">
 							<h1 className="hero-title text-lg-end wow img-custom-anim-right animated">
-								We Build
+								We build
 							</h1>
 
 							<h1 className="hero-title wow img-custom-anim-left animated">
-								Products &
+								products &
 							</h1>
 
 							<h1 className="hero-title text-lg-end wow img-custom-anim-right animated">
-								Tell Stories
+								tell stories.
 							</h1>
 						</div>
 						<div className="col-lg-6 offset-lg-5">
 							<p className="hero-text wow img-custom-anim-right animated">
-								For business leaders in pursuit of the next big thing—whether
-								it's a bold new product or the right words to share it with the
-								world.
+								For business leaders in pursuit of the next big thing - be it a
+								bold new product or the right words to share it with the world.
 							</p>
 							<p className="hero-text wow img-custom-anim-right animated">
 								We bring the technical expertise and strategic clarity to make

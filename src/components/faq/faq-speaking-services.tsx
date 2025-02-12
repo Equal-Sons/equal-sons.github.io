@@ -13,9 +13,8 @@ const faq_data: IFaqDT[] = [
 	},
 	{
 		id: "facilitation-negotiation-mediation",
-		question: "Facilitation, Negotiation & Mediation",
-		answer: `When conversations matter, we help companies, governments, and teams navigate them effectively.    
-    Executive & leadership facilitation.
+		question: "Facilitation & Mediation",
+		answer: `When conversations matter, we help teams, leaders, and organizations navigate them effectively.
     Conflict resolution & decision-making support.  
     Product & organizational alignment sessions.`,
 	},
