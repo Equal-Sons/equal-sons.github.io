@@ -49,7 +49,7 @@ export default function ContactTwo() {
 												placeholder="Tell us about your needs *"
 												id="contactForm"
 												className="form-control style-border style2"
-											></textarea>
+											/>
 										</div>
 									</div>
 								</div>

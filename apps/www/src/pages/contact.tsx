@@ -5,6 +5,7 @@ import BreadcrumbOne from "../components/breadcrumb/breadcrumb-one";
 import ContactInfo from "../components/contact/contact-info";
 import MarqueeSlider from "../components/marquee-slider";
 import FooterSeven from "../layout/footer/footer-seven";
+import ContactForm from "../components/contact/contact-form";
 
 export default function Contact() {
 	return (
@@ -26,7 +27,7 @@ export default function Contact() {
 			{/* contact info */}
 
 			{/* contact area */}
-			{/* <ContactTwo /> */}
+			<ContactForm />
 			{/* contact area */}
 
 			{/* marquee slider */}
