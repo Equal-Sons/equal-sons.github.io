@@ -1,5 +1,5 @@
 {
-	"name": "equal-sons-monorepo",
+	"name": "equalsons-monorepo",
 	"private": true,
 	"packageManager": "pnpm@9.1.1",
 	"scripts": {

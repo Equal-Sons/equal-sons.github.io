@@ -1,0 +1,58 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "www-form-api",
+	"main": "src/index.ts",
+	"account_id": "00407a40e95866dea86b4528b8a50f87",
+	"compatibility_date": "2025-02-17",
+	"observability": {
+		"enabled": false
+	},
+	"vars": {
+		"CLIENT_HOST": "http://localhost:5173",
+		"ENVIRONMENT": "development"
+	},
+	"env": {
+		"production": {
+			"route": {
+				"pattern": "www-form-api.equalsons.com",
+				"custom_domain": true
+			},
+			"observability": {
+				"enabled": true,
+				"head_sampling_rate": 1
+			},
+			"vars": {
+				"CLIENT_HOST": "http://equalsons.com",
+				"ENVIRONMENT": "production"
+			}
+		}
+	}
+	// "compatibility_flags": [
+	//   "nodejs_compat"
+	// ],
+	// "vars": {
+	//   "MY_VAR": "my-variable"
+	// },
+	// "kv_namespaces": [
+	//   {
+	//     "binding": "MY_KV_NAMESPACE",
+	//     "id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+	//   }
+	// ],
+	// "r2_buckets": [
+	//   {
+	//     "binding": "MY_BUCKET",
+	//     "bucket_name": "my-bucket"
+	//   }
+	// ],
+	// "d1_databases": [
+	//   {
+	//     "binding": "MY_DB",
+	//     "database_name": "my-database",
+	//     "database_id": ""
+	//   }
+	// ],
+	// "ai": {
+	//   "binding": "AI"
+	// },
+}
