@@ -6,6 +6,9 @@ import { AppError } from "./AppError";
 import type { ContentfulStatusCode } from "hono/utils/http-status";
 import emailGenerator from "./emailGenerator";
 import Emailer from "./Emailer";
+import { logger } from "hono/logger";
+import { cors } from "hono/cors";
+import { secureHeaders } from "hono/secure-headers";
 
 /**
  * Contact submission schema using Zod
@@ -30,6 +33,26 @@ const newSubmissionSchema = z.object({
  */
 
 const app = new Hono<{ Bindings: Bindings }>()
+	.use(logger())
+	.use(
+		"*",
+		cors({
+			origin: [
+				"https://equalsons.com",
+				"https://www.equalsons.com",
+				"http://localhost:5173",
+			],
+			credentials: true,
+			allowMethods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+		}),
+	)
+	.use(secureHeaders())
+	.notFound((c) => c.json({ message: "Not Found." }, 404))
+	.onError((err, c) => {
+		console.error(err);
+
+		return c.json({ message: "Internal Server Error." }, 500);
+	})
 	.get("/", (c) => {
 		return c.json({ message: "ping" }, 200);
 	})
