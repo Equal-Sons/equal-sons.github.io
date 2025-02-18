@@ -175,16 +175,25 @@ const ContactForm = () => {
 									</div>
 
 									{/* Turnstile CAPTCHA */}
-									<Turnstile
-										siteKey={turnstileKey}
-										className="mb-3 flex justify-center"
-										options={{ theme: "light" }}
-										onSuccess={onChallengeSuccess}
-										ref={turnstileRef} // Attach ref to Turnstile
-									/>
+									<div className="col-lg-12">
+										<div className="form-group">
+											<Turnstile
+												siteKey={turnstileKey}
+												className="mb-3 flex justify-center"
+												options={{ theme: "light" }}
+												onSuccess={onChallengeSuccess}
+												ref={turnstileRef} // Attach ref to Turnstile
+											/>
+											{errors.challengeToken && (
+												<div className="invalid-feedback">
+													{errors.challengeToken.message}
+												</div>
+											)}
+										</div>
+									</div>
 								</div>
 
-								{/* Messages */}
+								{/* Success and Error Messages */}
 								<div className="form-btn col-12">
 									{success && (
 										<aside
