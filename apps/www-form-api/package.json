@@ -2,7 +2,7 @@
 	"name": "@equalsons/www-form-api",
 	"scripts": {
 		"dev": "wrangler dev",
-		"deploy": "wrangler deploy --minify"
+		"deploy-cloudflare:production": "wrangler deploy --env production src/index.ts"
 	},
 	"dependencies": {
 		"@hono/zod-validator": "^0.4.1",
