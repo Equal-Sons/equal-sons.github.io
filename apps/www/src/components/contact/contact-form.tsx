@@ -47,6 +47,7 @@ const ContactForm = () => {
 	const {
 		register,
 		handleSubmit,
+		trigger,
 		formState: { errors, isSubmitting },
 		reset,
 		setValue,
@@ -63,7 +64,8 @@ const ContactForm = () => {
 	// Handle Captcha success and update form state
 	const onChallengeSuccess = (token: string) => {
 		setChallengeToken(token);
-		setValue("challengeToken", token);
+		setValue("challengeToken", token); // This updates RHF
+		trigger("challengeToken"); // Manually triggers RHF validation
 	};
 
 	const onSubmit = async (data: ContactFormData) => {
