@@ -9,6 +9,7 @@ export interface Bindings {
 	CLIENT_HOST: string;
 	ENVIRONMENT: string;
 	SENDGRID_API_KEY: string;
+	PRIVATE_TURNSTILE_KEY: string;
 }
 
 // extend the ContextVariableMap for services and vars manually added to the context
