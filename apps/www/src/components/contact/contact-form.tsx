@@ -185,7 +185,12 @@ const ContactForm = () => {
 												ref={turnstileRef} // Attach ref to Turnstile
 											/>
 											{errors.challengeToken && (
-												<div className="invalid-feedback">
+												<div
+													className="invalid-feedback"
+													style={{ display: "block", textAlign: "center" }}
+												>
+													{" "}
+													{/* Manually make it visible */}
 													{errors.challengeToken.message}
 												</div>
 											)}
