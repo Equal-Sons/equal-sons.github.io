@@ -66,6 +66,23 @@
     }
 }
 
+.breadcumb-icon {
+  width: 60px;
+
+  @include ml {
+        width: 50px;
+    }
+    @include lg {
+        width: 44px;
+    }
+    @include sm {
+        width: 42px;
+    }
+    @include xs {
+        width: 30px;
+    }
+}
+
 .breadcumb-wrapper {
     background-size: cover !important;
     padding: 240px 0;

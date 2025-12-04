@@ -2,10 +2,10 @@ import Wrapper from "../layout/wrapper";
 import SEOCom from "../components/seo";
 import Header from "../layout/headers/header";
 import HeroBanner from "../components/hero-banner/hero-banner";
-import TeamOne from "../components/team/team-one";
 import CtaFour from "../components/cta/cta-four";
-import WhyArea from "../components/why/why-area";
+import PillarsPreview from "../components/pillars/pillars-preview";
 import Approach from "../components/about/approach";
+import WorkShowcase from "../components/work/work-showcase";
 import FooterSeven from "../layout/footer/footer-seven";
 
 export default function HomeSix() {
@@ -23,19 +23,15 @@ export default function HomeSix() {
 			<HeroBanner />
 			{/* hero banner area end */}
 
-			{/* What we do */}
-			<WhyArea />
+			{/* Three Pillars Preview */}
+			<PillarsPreview />
 
 			{/* Our approach area */}
 			<Approach />
 
-			{/* portfolio area start */}
-			{/* <Portfolio /> */}
-			{/* portfolio area end */}
-
-			{/* team area */}
-			<TeamOne />
-			{/* team area */}
+			{/* Work showcase area */}
+			<WorkShowcase />
+			{/* Work showcase area */}
 
 			{/* cta area */}
 			<CtaFour />

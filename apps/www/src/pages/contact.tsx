@@ -11,7 +11,7 @@ export default function Contact() {
 	return (
 		<Wrapper>
 			{/* seo title */}
-			<SEOCom title="Contact" />
+			<SEOCom title="Contact - Equal Sons" />
 			{/* seo title */}
 
 			{/* header area start */}
@@ -19,8 +19,29 @@ export default function Contact() {
 			{/* header area end */}
 
 			{/* breadcrumb start */}
-			<BreadcrumbOne title="Contact" />
+			<BreadcrumbOne
+				title="Let's build something."
+				subtitle="Have a project in mind? A strategy question? An audience waiting?"
+				imageSrc="/assets/img/breadcumb/breadcumb-1.jpg"
+			/>
 			{/* breadcrumb end */}
+
+			{/* Intro Text */}
+			<div className="space-top">
+				<div className="container">
+					<div className="row justify-content-center">
+						<div className="col-xl-8 col-lg-10">
+							<div className="title-area text-center mb-50">
+								<p className="sec-text">
+									We'd love to hear what you're working on. Whether you need
+									technical expertise, strategic guidance, or help getting your
+									message out there—let's talk about what's next.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
 			{/* contact info */}
 			<ContactInfo />
@@ -29,10 +50,6 @@ export default function Contact() {
 			{/* contact area */}
 			<ContactForm />
 			{/* contact area */}
-
-			{/* marquee slider */}
-			<MarqueeSlider />
-			{/* marquee slider */}
 
 			{/* footer area */}
 			<FooterSeven />

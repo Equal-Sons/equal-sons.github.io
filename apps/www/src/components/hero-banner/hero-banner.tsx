@@ -21,12 +21,12 @@ export default function HeroBanner() {
 						</div>
 						<div className="col-lg-6 offset-lg-5">
 							<p className="hero-text wow img-custom-anim-right animated">
-								For business leaders in pursuit of the next big thing - be it a
-								bold new product or the right words to share it with the world.
+								Equal Sons partners with businesses to build products, lead
+								strategy, and share ideas that move.
 							</p>
 							<p className="hero-text wow img-custom-anim-right animated">
-								We bring the technical expertise and strategic clarity to make
-								it happen.
+								We're a boutique consulting firm for businesses ready to move.
+								Three capabilities. One partner. Real momentum.
 							</p>
 						</div>
 					</div>

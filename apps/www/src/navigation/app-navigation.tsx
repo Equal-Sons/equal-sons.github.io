@@ -5,6 +5,13 @@ import Contact from "../pages/contact";
 import NotFoundPage from "../pages/not-found";
 import ServicePage from "../pages/service";
 import Home from "../pages/home";
+import AboutPage from "../pages/about";
+import WorkPage from "../pages/work";
+import WorkDetailsPage from "../pages/work-details";
+import BuildPillarPage from "../pages/services/build";
+import LeadPillarPage from "../pages/services/lead";
+import SharePillarPage from "../pages/services/share";
+import ServiceDetailsPage from "../pages/service-details";
 
 export default function AppNavigation() {
 	return (
@@ -12,7 +19,14 @@ export default function AppNavigation() {
 			<ScrollToTop />
 			<Routes>
 				<Route path="/" element={<Home />} />
+				<Route path="/about" element={<AboutPage />} />
 				<Route path="/services" element={<ServicePage />} />
+				<Route path="/services/build" element={<BuildPillarPage />} />
+				<Route path="/services/lead" element={<LeadPillarPage />} />
+				<Route path="/services/share" element={<SharePillarPage />} />
+				<Route path="/services/:pillar/:slug" element={<ServiceDetailsPage />} />
+				<Route path="/work" element={<WorkPage />} />
+				<Route path="/work/:slug" element={<WorkDetailsPage />} />
 				<Route path="/contact" element={<Contact />} />
 
 				{/* <Route path="/home-1" element={<HomeOne />} />

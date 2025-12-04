@@ -8,19 +8,18 @@ const Approach = () => {
 					<div className="col-xl-8 col-lg-10">
 						<div className="title-area text-center mb-0">
 							<h2 className="sec-title">
-								Serious work;
-								<br /> not-so-serious people
+								Partners in the work.
 							</h2>
 							<p className="sec-text mt-30 mb-40">
-								There's no one-size-fits-all approach to building great
-								products. That's why we work with growing businesses to offer
-								flexible, high-impact solutions—advising, strategizing, leading,
-								and delivering hands-on execution when needed.{" "}
+								We're not the consultants who deliver a deck and disappear. We're
+								the ones who sit beside you, roll up our sleeves, and do the
+								work—building the products, defining the strategies, and
+								delivering the messages that move your business forward.
 							</p>
 							<p className="sec-text">
-								We take our work seriously—but not ourselves. We believe in
-								clear thinking, bold action, and just the right amount of
-								irreverence to make things fun.
+								Ideas deserve execution. Strategy without action is just theory.
+								And the best work happens when you have a partner who's willing
+								to roll up their sleeves alongside you.
 							</p>
 							<div className="btn-group justify-content-center">
 								<NavLink to="/contact" className="btn mt-4">

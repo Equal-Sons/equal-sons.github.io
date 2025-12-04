@@ -130,7 +130,7 @@ function MobileNav() {
                         }
                         href={elm2.link!}
                       >
-                        {elm2.label}
+                        {elm2.title || elm2.label}
                       </a>
                     )}
                   </li>
