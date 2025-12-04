@@ -37,10 +37,10 @@ const PillarsPreview = () => {
 				<div className="row justify-content-center">
 					<div className="col-xl-8 col-lg-10">
 						<div className="title-area text-center">
-							<h2 className="sec-title">Three capabilities. One partner.</h2>
+							<h2 className="sec-title">Three capabilities. One team.</h2>
 							<p className="sec-text">
-								Whether you need a product built, a strategy defined, or a message
-								delivered—we work alongside you to make it happen.
+								Whether you need a product built, a strategy defined, or a
+								message delivered—we work alongside you to make it happen.
 							</p>
 						</div>
 					</div>
@@ -55,7 +55,10 @@ const PillarsPreview = () => {
 								<h3 className="feature-card-title">
 									<NavLink to={pillar.link}>{pillar.title}</NavLink>
 								</h3>
-								<p className="feature-card-tagline" style={{ fontStyle: "italic", marginBottom: "1rem" }}>
+								<p
+									className="feature-card-tagline"
+									style={{ fontStyle: "italic", marginBottom: "1rem" }}
+								>
 									{pillar.tagline}
 								</p>
 								<p className="feature-card-text">{pillar.description}</p>

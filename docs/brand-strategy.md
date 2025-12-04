@@ -16,7 +16,7 @@ Positioning Statement
 Equal Sons partners with businesses to build what needs building, lead where direction is ambiguous, and share what deserves to be heard. We're hands-on collaborators who believe great ideas deserve both exceptional execution and a powerful voice.
 
 Service Pillars
-Three capabilities. One partner. Each pillar represents a distinct area of expertise that can stand alone or work together.
+Three capabilities. One team. Each pillar represents a distinct area of expertise that can stand alone or work together.
 BUILD
 Web Development  •  App Development  •  MVP Creation  •  Systems Integration
 Ideas need infrastructure. We design and develop the digital products that bring your vision to life. From responsive websites to full-scale applications to the integrations that connect your systems. Whether you're validating a concept with an MVP or scaling what's already working, we build with intention, craft, and an eye toward what comes next.
@@ -53,7 +53,7 @@ HERO SUB-HEADLINE
 Equal Sons partners with businesses to build products, lead strategy, and share ideas that move.
 INTRODUCTION
 We're a boutique consulting firm for businesses ready to move. Whether you need a product built, a strategy defined, or a message delivered—we work alongside you to make it happen.
-Three capabilities. One partner. Real momentum.
+Three capabilities. One team. Real momentum.
 SERVICES PREVIEW
 BUILD — Web and app development, MVPs, integrations. We make the technology.
 LEAD — Technology strategy, marketing strategy, positioning. We chart the course.

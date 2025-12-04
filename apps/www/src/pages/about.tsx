@@ -12,11 +12,7 @@ export default function AboutPage() {
 			<SEOCom title="About Us - Equal Sons" />
 			<Header />
 
-			<BreadcrumbOne
-				title="About Us"
-				subtitle="Partners in the work"
-				imageSrc="/assets/img/breadcumb/breadcumb-1.jpg"
-			/>
+			<BreadcrumbOne title="About Us" subtitle="Partners in the work" />
 
 			{/* Our Story */}
 			<div className="space">
@@ -58,8 +54,8 @@ export default function AboutPage() {
 									Strategy without action is just theory. And the best work
 									happens when you have a partner who's willing to roll up their
 									sleeves alongside you. That's how we work—deeply embedded in
-									your challenges, committed to your outcomes, and focused on real
-									momentum.
+									your challenges, committed to your outcomes, and focused on
+									real momentum.
 								</p>
 							</div>
 						</div>
@@ -75,7 +71,8 @@ export default function AboutPage() {
 							<div className="title-area text-center">
 								<h2 className="sec-title">Meet the Partners</h2>
 								<p className="sec-text">
-									Two partners bringing complementary expertise to every engagement.
+									Two partners bringing complementary expertise to every
+									engagement.
 								</p>
 							</div>
 						</div>
@@ -83,68 +80,41 @@ export default function AboutPage() {
 
 					<div className="row gy-5 justify-content-center">
 						{team_data.map((member) => (
-							<div key={member.id} className="col-lg-6">
-								<div className="team-card-details">
-									<div className="row align-items-center">
-										<div className="col-md-5">
-											<div className="team-card-img">
-												<img
-													src={member.imageSrc}
-													alt={member.name}
-													className="w-100"
-												/>
-											</div>
-										</div>
-										<div className="col-md-7">
-											<div className="team-card-content">
-												<h3 className="team-card-title mb-2">{member.name}</h3>
-												<p className="team-card-desig mb-3">
-													{member.designation}
-												</p>
-												{member.bio && <p className="mb-3">{member.bio}</p>}
-												{member.detailedBio && (
-													<p className="mb-3">{member.detailedBio}</p>
-												)}
+							<div key={member.id} className="col-lg-4">
+								<div className="team-card-details team-card-details-vertical">
+									<div className="team-card-img mb-4">
+										<img
+											src={member.imageSrc}
+											alt={member.name}
+											className="w-100"
+										/>
+									</div>
+									<div className="team-card-content">
+										<h3 className="team-card-title mb-2">{member.name}</h3>
+										<p className="team-card-desig mb-3">{member.designation}</p>
+										{member.bio && (
+											<p className="mb-3 text-muted">{member.bio}</p>
+										)}
+										{member.detailedBio && (
+											<p className="mb-4 small">{member.detailedBio}</p>
+										)}
 
-												{member.areasOfFocus && (
-													<div className="mb-3">
-														<strong className="d-block mb-2">
-															Areas of Focus:
-														</strong>
-														<ul className="list-unstyled">
-															{member.areasOfFocus.map((area, index) => (
-																<li key={index} className="mb-1">
-																	<i className="fas fa-check-circle text-theme me-2"></i>
-																	{area}
-																</li>
-															))}
-														</ul>
-													</div>
-												)}
-
-												{member.email && (
-													<div>
-														<NavLink
-															to={`mailto:${member.email}`}
-															className="link-btn"
-														>
-															<span className="link-effect">
-																<span className="effect-1">
-																	{member.email}
-																</span>
-																<span className="effect-1">
-																	{member.email}
-																</span>
-															</span>
-															<img
-																src="/assets/img/icon/arrow-left-top.svg"
-																alt="arrow"
-															/>
-														</NavLink>
-													</div>
-												)}
+										{member.areasOfFocus && (
+											<div className="mb-0">
+												<strong className="d-block mb-2 text-uppercase small">
+													Areas of Focus
+												</strong>
+												<ul className="list-unstyled">
+													{member.areasOfFocus.map((area, index) => (
+														// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
+														<li key={index} className="mb-2 small">
+															<i className="fas fa-arrow-right text-theme me-2" />
+															{area}
+														</li>
+													))}
+												</ul>
 											</div>
-										</div>
+										)}
 									</div>
 								</div>
 							</div>
@@ -161,8 +131,9 @@ export default function AboutPage() {
 							<div className="title-area text-center">
 								<h2 className="sec-title">What We Do</h2>
 								<p className="sec-text">
-									Three capabilities. One partner. Each pillar represents a
-									distinct area of expertise that can stand alone or work together.
+									Three capabilities. One team. Each pillar represents a
+									distinct area of expertise that can stand alone or work
+									together.
 								</p>
 							</div>
 						</div>

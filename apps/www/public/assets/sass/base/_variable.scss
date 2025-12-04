@@ -2,6 +2,7 @@
 
 :root {
   --theme-color: #cbded0; // #e3ff04;
+  --dark-theme-color: #4c705a;
   --title-color: #0a0c00;
   --body-color: #0a0c00;
   --smoke-color: #f6f5f3;
@@ -29,6 +30,7 @@
 }
 // Color Variation
 $theme-color: var(--theme-color);
+$dark-theme-color: var(--dark-theme-color);
 $title-color: var(--title-color);
 $body-color: var(--body-color);
 $smoke-color: var(--smoke-color);

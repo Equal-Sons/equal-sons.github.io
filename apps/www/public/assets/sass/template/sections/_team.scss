@@ -61,6 +61,74 @@
         }
     }
 }
+
+/* Team Card Details (Vertical Layout) ---------------------------------- */
+.team-card-details {
+    &-vertical {
+        .team-card-img {
+            overflow: hidden;
+            border-radius: 8px;
+            
+            img {
+                transition: transform 0.4s ease;
+                filter: grayscale(0.2);
+                width: 100%;
+                display: block;
+            }
+            
+            &:hover img {
+                transform: scale(1.03);
+                filter: grayscale(0);
+            }
+        }
+        
+        .team-card-content {
+            padding: 0;
+            
+            .team-card-title {
+                font-size: 22px;
+                font-weight: 600;
+                line-height: 1.3;
+            }
+            
+            .team-card-desig {
+                font-size: 16px;
+                font-weight: 500;
+                color: $dark-theme-color;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+            
+            .text-muted {
+                color: #666;
+                font-size: 15px;
+                line-height: 1.6;
+            }
+            
+            .small {
+                font-size: 14px;
+                line-height: 1.6;
+                
+                &.text-uppercase {
+                    color: #999;
+                    font-weight: 600;
+                    letter-spacing: 0.5px;
+                }
+            }
+            
+            ul li {
+                font-size: 14px;
+                color: #555;
+                line-height: 1.6;
+                
+                i {
+                    color: $theme-color;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
 @include ml {
     .team-card_title {
         font-size: 22px;

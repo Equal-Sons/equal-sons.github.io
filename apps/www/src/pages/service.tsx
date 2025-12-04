@@ -31,14 +31,12 @@ export default function ServicePageThree() {
 					<div className="row justify-content-center">
 						<div className="col-xl-8 col-lg-10">
 							<div className="title-area text-center mb-50">
-								<h2 className="sec-title">
-									Three capabilities. One partner.
-								</h2>
+								<h2 className="sec-title">Three capabilities. One team.</h2>
 								<p className="sec-text mt-30">
 									Equal Sons partners with businesses to build products, lead
-									strategy, and share ideas that create real momentum. Whether you
-									need one capability or all three, we work alongside you to make
-									it happen.
+									strategy, and share ideas that create real momentum. Whether
+									you need one capability or all three, we work alongside you to
+									make it happen.
 								</p>
 							</div>
 						</div>
@@ -63,9 +61,9 @@ export default function ServicePageThree() {
 									timeline, and goals.
 								</p>
 								<p className="sec-text mb-40">
-									Ideas deserve execution. Strategy without action is just theory.
-									And the best work happens when you have a partner who's willing
-									to roll up their sleeves alongside you.
+									Ideas deserve execution. Strategy without action is just
+									theory. And the best work happens when you have a partner
+									who's willing to roll up their sleeves alongside you.
 								</p>
 								<div className="btn-group justify-content-center">
 									<NavLink to="/contact" className="btn mt-0">

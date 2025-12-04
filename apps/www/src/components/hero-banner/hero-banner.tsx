@@ -26,7 +26,7 @@ export default function HeroBanner() {
 							</p>
 							<p className="hero-text wow img-custom-anim-right animated">
 								We're a boutique consulting firm for businesses ready to move.
-								Three capabilities. One partner. Real momentum.
+								Three capabilities. One team. Real momentum.
 							</p>
 						</div>
 					</div>
