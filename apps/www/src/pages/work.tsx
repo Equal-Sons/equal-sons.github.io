@@ -47,15 +47,15 @@ export default function WorkPage() {
 							{featuredStudies.slice(0, 3).map((study) => (
 								<div key={study.id} className="col-lg-4 col-md-6">
 									<div className="feature-card h-100">
-									<div className="mb-3">
-										<NavLink
-											to={`/services/${study.pillar}`}
-											className="badge me-2"
-											style={{ textDecoration: "none" }}
-										>
-											{study.pillar.toUpperCase()}
-										</NavLink>
-										{study.serviceTags.slice(0, 2).map((tag, index) => (
+										<div className="mb-3">
+											<NavLink
+												to={`/services/${study.pillar}`}
+												className="badge me-2"
+												style={{ textDecoration: "none" }}
+											>
+												{study.pillar.toUpperCase()}
+											</NavLink>
+											{study.serviceTags.slice(0, 2).map((tag, index) => (
 												<NavLink
 													key={index}
 													to={`/services/${study.pillar}/${tag}`}
@@ -64,7 +64,10 @@ export default function WorkPage() {
 												>
 													{tag
 														.split("-")
-														.map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+														.map(
+															(word) =>
+																word.charAt(0).toUpperCase() + word.slice(1),
+														)
 														.join(" ")}
 												</NavLink>
 											))}
@@ -160,7 +163,10 @@ export default function WorkPage() {
 											>
 												{tag
 													.split("-")
-													.map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+													.map(
+														(word) =>
+															word.charAt(0).toUpperCase() + word.slice(1),
+													)
 													.join(" ")}
 											</NavLink>
 										))}
