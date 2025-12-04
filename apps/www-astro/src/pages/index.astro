@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeaderThree from '../components/layout/headers/header.tsx';
+import HeroBanner from '../components-react/hero-banner/hero-banner.tsx';
+import WhyArea from '../components-react/why/why-area.tsx';
+import Approach from '../components-react/about/approach.tsx';
+import TeamOne from '../components-react/team/team-one.tsx';
+import CtaFour from '../components-react/cta/cta-four.tsx';
+import FooterSeven from '../components/layout/footer/footer-seven.tsx';
+import BackToTop from '../components/back-to-top.tsx';
+
+const title = "Equal Sons - Technology Services";
+const description = "Professional technology services and consulting";
+const keywords = "technology, consulting, software development, equal sons";
+---
+
+<BaseLayout title={title} description={description} keywords={keywords}>
+	<!-- Header -->
+	<HeaderThree client:load />
+
+	<!-- Hero Banner -->
+	<HeroBanner client:load />
+
+	<!-- What We Do -->
+	<WhyArea />
+
+	<!-- Our Approach -->
+	<Approach />
+
+	<!-- Team -->
+	<TeamOne />
+
+	<!-- CTA Section -->
+	<CtaFour />
+
+	<!-- Footer -->
+	<FooterSeven />
+
+	<!-- Back to Top Button -->
+	<BackToTop client:load />
+</BaseLayout>

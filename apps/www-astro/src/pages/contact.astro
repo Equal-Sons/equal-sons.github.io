@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeaderThree from '../components/layout/headers/header.tsx';
+import BreadcrumbOne from '../components-react/breadcrumb/breadcrumb-one.tsx';
+import ContactInfo from '../components-react/contact/contact-info.tsx';
+import ContactForm from '../components-react/contact/contact-form.tsx';
+import MarqueeSlider from '../components-react/marquee-slider.tsx';
+import FooterSeven from '../components/layout/footer/footer-seven.tsx';
+import BackToTop from '../components/back-to-top.tsx';
+
+const title = "Contact Us - Equal Sons";
+const description = "Get in touch with Equal Sons for your technology needs";
+const keywords = "contact, equal sons, technology consulting";
+---
+
+<BaseLayout title={title} description={description} keywords={keywords}>
+	<!-- Header -->
+	<HeaderThree client:load />
+
+	<!-- Breadcrumb -->
+	<BreadcrumbOne title="Contact" client:load />
+
+	<!-- Contact Info -->
+	<ContactInfo client:load />
+
+	<!-- Contact Form -->
+	<ContactForm client:only="react" />
+
+	<!-- Marquee Slider -->
+	<MarqueeSlider client:only="react" />
+
+	<!-- Footer -->
+	<FooterSeven />
+
+	<!-- Back to Top -->
+	<BackToTop client:load />
+</BaseLayout>
