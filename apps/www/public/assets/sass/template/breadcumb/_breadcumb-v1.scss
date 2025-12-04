@@ -66,6 +66,28 @@
     }
 }
 
+.breadcumb-subtitle {
+  color: $white-color;
+  font-size: 20px;
+  margin-top: 16px;
+  font-weight: 400;
+  position: relative;
+  z-index: 1;
+  @include ml {
+        font-size: 20px;
+  }
+  @include lg {
+        font-size: 20px;
+  }
+  @include sm {
+        font-size: 18px;
+  }
+  @include xs {
+        font-size: 16px;
+  }
+
+}
+
 .breadcumb-icon {
   width: 60px;
 

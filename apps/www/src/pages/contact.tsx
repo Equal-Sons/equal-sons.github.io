@@ -3,7 +3,6 @@ import SEOCom from "../components/seo";
 import Header from "../layout/headers/header";
 import BreadcrumbOne from "../components/breadcrumb/breadcrumb-one";
 import ContactInfo from "../components/contact/contact-info";
-import MarqueeSlider from "../components/marquee-slider";
 import FooterSeven from "../layout/footer/footer-seven";
 import ContactForm from "../components/contact/contact-form";
 
@@ -22,7 +21,6 @@ export default function Contact() {
 			<BreadcrumbOne
 				title="Let's build something."
 				subtitle="Have a project in mind? A strategy question? An audience waiting?"
-				imageSrc="/assets/img/breadcumb/breadcumb-1.jpg"
 			/>
 			{/* breadcrumb end */}
 
@@ -35,7 +33,7 @@ export default function Contact() {
 								<p className="sec-text">
 									We'd love to hear what you're working on. Whether you need
 									technical expertise, strategic guidance, or help getting your
-									message out there—let's talk about what's next.
+									message out there. Let's talk about what's next.
 								</p>
 							</div>
 						</div>
