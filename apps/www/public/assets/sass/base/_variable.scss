@@ -12,6 +12,7 @@
   --smoke-color5: #f0f2f4;
   --black-color: #202020;
   --gray-color: #131312;
+  --light-gray-color: #d6d6d6;
   --white-color: #ffffff;
   --light-color: #9fa2ad;
   --yellow-color: #ffb539;
@@ -42,6 +43,7 @@ $white-color: var(--white-color);
 $light-color: var(--light-color);
 $black-color: var(--black-color);
 $gray-color: var(--gray-color);
+$light-gray-color: var(--light-gray-color);
 $yellow-color: var(--yellow-color);
 $success-color: var(--success-color);
 $error-color: var(--error-color);
@@ -87,6 +89,7 @@ $bgcolorMap: map-merge(
   (
     "theme": $theme-color,
     "theme2": $theme-color,
+    "dark-theme": $dark-theme-color,
     "smoke": $smoke-color,
     "smoke2": $smoke-color2,
     "smoke3": $smoke-color3,
@@ -95,7 +98,9 @@ $bgcolorMap: map-merge(
     "white": $white-color,
     "black": $black-color,
     "gray": $gray-color,
+    "light-gray": $light-gray-color,
     "title": $title-color,
+    "light": $light-color,
   ),
   $bgcolorMap
 );
@@ -119,6 +124,7 @@ $textColorsMap: map-merge(
   (
     "theme": $theme-color,
     "theme2": $theme-color,
+    "dark-theme": $dark-theme-color,
     "title": $title-color,
     "body": $body-color,
     "white": $white-color,

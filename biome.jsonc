@@ -25,6 +25,9 @@
 					"level": "warn"
 				},
 				"noNonNullAssertion": "off"
+			},
+			"suspicious": {
+				"noArrayIndexKey": "warn"
 			}
 		}
 	},

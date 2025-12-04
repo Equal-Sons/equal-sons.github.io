@@ -35,7 +35,6 @@
     font-style: italic;
 }
 .badge {
-    position: absolute;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
@@ -44,7 +43,7 @@
     background-color: $theme-color;
     color: $black-color;
     padding: 0.2em 0.45em;
-    font-size: 0.6em;
+    font-size: 0.8em;
     border-radius: 0px;
     top: 12px;
     left: 12px;

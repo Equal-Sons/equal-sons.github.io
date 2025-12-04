@@ -1,26 +1,60 @@
-@import url('https://fonts.googleapis.com/css?family=EB+Garamond|Lato&display=swap');
+@import url("https://fonts.googleapis.com/css?family=EB+Garamond|Lato&display=swap");
 
 .font-lato {
-  font-family: 'Lato', sans-serif;
+	font-family: "Lato", sans-serif;
 }
 
 .font-ebg {
-  font-family: 'EB Garamond', serif;
+	font-family: "EB Garamond", serif;
 }
 
 .woods-bg {
-  background-image: url("../images/homepage_mobile_bg.png");
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
+	background-image: url("../images/homepage_mobile_bg.png");
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: cover;
 }
 
 .bg-transparent-black {
-  background-color: #000000c4;
+	background-color: #000000c4;
+}
+
+/* Filter Tab Group */
+.filter-tab-group {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16px;
+	justify-content: center;
+	align-items: center;
+}
+
+.filter-tab {
+	padding: 12px 24px;
+	font-size: 14px;
+	font-weight: 600;
+	font-family: "Unbounded", sans-serif;
+	border: 1px solid var(--theme-color);
+	background-color: transparent;
+	color: var(--title-color);
+	border-radius: 4px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	text-transform: capitalize;
+}
+
+.filter-tab:hover {
+	background-color: var(--smoke-color);
+	color: var(--dark-theme-color);
+}
+
+.filter-tab.active {
+	background-color: var(--theme-color);
+	color: var(--title-color);
+	border-color: var(--theme-color);
 }
 
 @media (min-width: 600px) {
-  .woods-bg {
-    background-image: url("../images/homepage_desktop_bg.png");
-  }
+	.woods-bg {
+		background-image: url("../images/homepage_desktop_bg.png");
+	}
 }
