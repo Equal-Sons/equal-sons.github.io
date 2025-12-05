@@ -14,7 +14,10 @@ export default function BreadcrumbOne({
 	return (
 		<div
 			className="breadcumb-wrapper"
-			style={{ backgroundImage: `url(${bg})` }}
+			style={{
+				backgroundImage: `url(${bg})`,
+				backgroundPosition: "center center",
+			}}
 		>
 			<div className="container">
 				<div className="breadcumb-content flex justify-center">

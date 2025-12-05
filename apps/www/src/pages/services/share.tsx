@@ -15,7 +15,11 @@ export default function SharePillarPage() {
 			<SEOCom title="SHARE - Equal Sons" />
 			<Header />
 
-			<BreadcrumbOne title={pillarInfo.name} subtitle={pillarInfo.tagline} />
+			<BreadcrumbOne
+				title={pillarInfo.name}
+				subtitle={pillarInfo.tagline}
+				bg="/assets/img/service/share.jpg"
+			/>
 
 			{/* Pillar Overview */}
 			<div className="space">

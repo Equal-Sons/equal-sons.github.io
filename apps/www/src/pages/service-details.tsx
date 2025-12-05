@@ -27,7 +27,11 @@ export default function ServiceDetailsPage() {
 			<SEOCom title={`${service.title} - Equal Sons`} />
 			<Header />
 
-			<BreadcrumbOne title={service.title} subtitle={service.tagline} />
+			<BreadcrumbOne
+				title={service.title}
+				subtitle={service.tagline}
+				bg={`/assets/img/service/${service.slug}.jpg`}
+			/>
 
 			{/* Service Overview */}
 			<div className="service-details-area space">

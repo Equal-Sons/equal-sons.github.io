@@ -12,7 +12,11 @@ export default function AboutPage() {
 			<SEOCom title="About Us - Equal Sons" />
 			<Header />
 
-			<BreadcrumbOne title="About Us" subtitle="Partners in the work" />
+			<BreadcrumbOne
+				title="About Us"
+				subtitle="Partners in the work"
+				bg="/assets/img/about.jpg"
+			/>
 
 			{/* Our Story */}
 			<div className="space">

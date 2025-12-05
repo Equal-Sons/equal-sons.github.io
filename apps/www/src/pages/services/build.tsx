@@ -15,7 +15,11 @@ export default function BuildPillarPage() {
 			<SEOCom title="BUILD - Equal Sons" />
 			<Header />
 
-			<BreadcrumbOne title={pillarInfo.name} subtitle={pillarInfo.tagline} />
+			<BreadcrumbOne
+				title={pillarInfo.name}
+				subtitle={pillarInfo.tagline}
+				bg="/assets/img/service/build.jpg"
+			/>
 
 			{/* Pillar Overview */}
 			<div className="space">

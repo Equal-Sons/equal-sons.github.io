@@ -15,7 +15,11 @@ export default function LeadPillarPage() {
 			<SEOCom title="LEAD - Equal Sons" />
 			<Header />
 
-			<BreadcrumbOne title={pillarInfo.name} subtitle={pillarInfo.tagline} />
+			<BreadcrumbOne
+				title={pillarInfo.name}
+				subtitle={pillarInfo.tagline}
+				bg="/assets/img/service/lead.jpg"
+			/>
 
 			{/* Pillar Overview */}
 			<div className="space">
