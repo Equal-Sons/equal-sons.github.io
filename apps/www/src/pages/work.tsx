@@ -6,6 +6,7 @@ import Header from "../layout/headers/header";
 import BreadcrumbOne from "../components/breadcrumb/breadcrumb-one";
 import FooterSeven from "../layout/footer/footer-seven";
 import { caseStudies, getFeaturedCaseStudies } from "../data/case-studies";
+import CaseStudyCard from "../components/work/case-study-card";
 
 export default function WorkPage() {
 	const [activeFilter, setActiveFilter] = useState<string>("all");
@@ -46,55 +47,7 @@ export default function WorkPage() {
 						<div className="row gy-4">
 							{featuredStudies.slice(0, 3).map((study) => (
 								<div key={study.id} className="col-lg-4 col-md-6">
-									<div className="feature-card h-100">
-										<div className="mb-3">
-											<NavLink
-												to={`/services/${study.pillar}`}
-												className="badge me-2"
-												style={{ textDecoration: "none" }}
-											>
-												{study.pillar.toUpperCase()}
-											</NavLink>
-											{study.serviceTags.slice(0, 2).map((tag, index) => (
-												<NavLink
-													key={index}
-													to={`/services/${study.pillar}/${tag}`}
-													className="badge bg-smoke me-2"
-													style={{ textDecoration: "none" }}
-												>
-													{tag
-														.split("-")
-														.map(
-															(word) =>
-																word.charAt(0).toUpperCase() + word.slice(1),
-														)
-														.join(" ")}
-												</NavLink>
-											))}
-										</div>
-										<h3 className="h4 mb-2">
-											<NavLink
-												className="text-dark-theme"
-												to={`/work/${study.slug}`}
-											>
-												{study.title}
-											</NavLink>
-										</h3>
-										<p className="mb-2">
-											<strong>{study.client}</strong>
-										</p>
-										<p className="mb-3">{study.shortDescription}</p>
-										<NavLink to={`/work/${study.slug}`} className="link-btn">
-											<span className="link-effect">
-												<span className="effect-1">READ CASE STUDY</span>
-												<span className="effect-1">READ CASE STUDY</span>
-											</span>
-											<img
-												src="/assets/img/icon/arrow-left-top.svg"
-												alt="arrow"
-											/>
-										</NavLink>
-									</div>
+									<CaseStudyCard study={study} showTags={true} maxTags={2} />
 								</div>
 							))}
 						</div>
@@ -145,55 +98,7 @@ export default function WorkPage() {
 					<div className="row gy-4">
 						{filteredCaseStudies.map((study) => (
 							<div key={study.id} className="col-lg-6">
-								<div className="feature-card h-100">
-									<div className="mb-3 relative">
-										<NavLink
-											to={`/services/${study.pillar}`}
-											className="badge me-2"
-											style={{ textDecoration: "none" }}
-										>
-											{study.pillar.toUpperCase()}
-										</NavLink>
-										{study.serviceTags.slice(0, 2).map((tag) => (
-											<NavLink
-												key={tag}
-												to={`/services/${study.pillar}/${tag}`}
-												className="badge bg-smoke me-2"
-												style={{ textDecoration: "none" }}
-											>
-												{tag
-													.split("-")
-													.map(
-														(word) =>
-															word.charAt(0).toUpperCase() + word.slice(1),
-													)
-													.join(" ")}
-											</NavLink>
-										))}
-									</div>
-									<h3 className="h4 mb-2 text-black">
-										<NavLink
-											className="text-dark-theme"
-											to={`/work/${study.slug}`}
-										>
-											{study.title}
-										</NavLink>
-									</h3>
-									<p className="mb-2">
-										<strong>{study.client}</strong>
-									</p>
-									<p className="mb-3">{study.shortDescription}</p>
-									<NavLink to={`/work/${study.slug}`} className="link-btn">
-										<span className="link-effect">
-											<span className="effect-1">READ CASE STUDY</span>
-											<span className="effect-1">READ CASE STUDY</span>
-										</span>
-										<img
-											src="/assets/img/icon/arrow-left-top.svg"
-											alt="arrow"
-										/>
-									</NavLink>
-								</div>
+								<CaseStudyCard study={study} showTags={true} maxTags={2} />
 							</div>
 						))}
 					</div>

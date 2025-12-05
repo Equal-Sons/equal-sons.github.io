@@ -4,8 +4,12 @@ import SEOCom from "../components/seo";
 import Header from "../layout/headers/header";
 import BreadcrumbOne from "../components/breadcrumb/breadcrumb-one";
 import FooterSeven from "../layout/footer/footer-seven";
-import { getCaseStudyBySlug, getRelatedCaseStudies } from "../data/case-studies";
+import {
+	getCaseStudyBySlug,
+	getRelatedCaseStudies,
+} from "../data/case-studies";
 import { getServiceBySlug } from "../data/services";
+import CaseStudyCard from "../components/work/case-study-card";
 
 export default function WorkDetailsPage() {
 	const { slug } = useParams<{ slug: string }>();
@@ -30,11 +34,7 @@ export default function WorkDetailsPage() {
 			<SEOCom title={`${caseStudy.title} - Equal Sons`} />
 			<Header />
 
-			<BreadcrumbOne
-				title={caseStudy.title}
-				subtitle={caseStudy.client}
-				imageSrc="/assets/img/breadcumb/breadcumb-1.jpg"
-			/>
+			<BreadcrumbOne title={caseStudy.title} subtitle={caseStudy.client} />
 
 			{/* Case Study Content */}
 			<div className="project-details-area space">
@@ -81,8 +81,11 @@ export default function WorkDetailsPage() {
 							{caseStudy.testimonial && (
 								<div className="mb-50">
 									<div className="p-4 bg-smoke">
-										<blockquote className="mb-0">
-											<p className="mb-3" style={{ fontSize: "1.1rem", fontStyle: "italic" }}>
+										<blockquote className="mb-0 flex-column">
+											<p
+												className="mb-3"
+												style={{ fontSize: "1.1rem", fontStyle: "italic" }}
+											>
 												"{caseStudy.testimonial.quote}"
 											</p>
 											<footer className="blockquote-footer">
@@ -105,12 +108,17 @@ export default function WorkDetailsPage() {
 												<NavLink
 													to={`/services/${service.pillar}/${service.slug}`}
 													className="d-flex align-items-center p-3 bg-smoke hover-bg-theme hover-text-white"
-													style={{ textDecoration: "none", transition: "all 0.3s" }}
+													style={{
+														textDecoration: "none",
+														transition: "all 0.3s",
+													}}
 												>
-													<i className="fas fa-arrow-right me-3"></i>
+													<i className="fas fa-arrow-right me-3" />
 													<div>
 														<div className="fw-bold">{service.title}</div>
-														<div className="small">{service.briefDescription}</div>
+														<div className="small">
+															{service.briefDescription}
+														</div>
 													</div>
 												</NavLink>
 											</div>
@@ -141,7 +149,9 @@ export default function WorkDetailsPage() {
 												{caseStudy.serviceTags.map((tag, index) => (
 													<span key={index}>
 														{tag}
-														{index < caseStudy.serviceTags.length - 1 ? ", " : ""}
+														{index < caseStudy.serviceTags.length - 1
+															? ", "
+															: ""}
 													</span>
 												))}
 											</div>
@@ -152,9 +162,7 @@ export default function WorkDetailsPage() {
 								{/* CTA */}
 								<div className="widget mb-4">
 									<div className="p-4 bg-theme text-white">
-										<h4 className="h5 mb-3 text-white">
-											Have a similar challenge?
-										</h4>
+										<h4 className="h5 mb-3">Have a similar challenge?</h4>
 										<p className="mb-3">
 											Let's talk about how we can help you achieve results like
 											these.
@@ -178,7 +186,10 @@ export default function WorkDetailsPage() {
 													key={related.id}
 													to={`/work/${related.slug}`}
 													className="d-block p-3 bg-smoke hover-bg-theme hover-text-white"
-													style={{ textDecoration: "none", transition: "all 0.3s" }}
+													style={{
+														textDecoration: "none",
+														transition: "all 0.3s",
+													}}
 												>
 													<div className="small mb-1">
 														<span className="badge bg-white text-dark">

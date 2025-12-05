@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { getFeaturedCaseStudies } from "../../data/case-studies";
+import CaseStudyCard from "./case-study-card";
 
 export default function WorkShowcase() {
 	const featuredWork = getFeaturedCaseStudies().slice(0, 3);
@@ -23,35 +24,7 @@ export default function WorkShowcase() {
 				<div className="row gy-4 justify-content-center">
 					{featuredWork.map((study) => (
 						<div key={study.id} className="col-lg-4 col-md-6">
-							<div
-								className="feature-card h-100 bg-title"
-								style={{ position: "relative", overflow: "hidden" }}
-							>
-								<div className="mb-3">
-									<span
-										className="badge bg-theme text-black"
-										style={{ display: "inline-block" }}
-									>
-										{study.pillar.toUpperCase()}
-									</span>
-								</div>
-								<h3 className="h4 mb-2 text-theme">
-									<NavLink to={`/work/${study.slug}`} className="text-theme">
-										{study.title}
-									</NavLink>
-								</h3>
-								<p className="mb-2 text-white">
-									<strong>{study.client}</strong>
-								</p>
-								<p className="mb-3 text-white">{study.shortDescription}</p>
-								<NavLink to={`/work/${study.slug}`} className="link-btn">
-									<span className="link-effect">
-										<span className="effect-1 text-white">READ CASE STUDY</span>
-										<span className="effect-1 text-white">READ CASE STUDY</span>
-									</span>
-									<img src="/assets/img/icon/arrow-left-top.svg" alt="arrow" />
-								</NavLink>
-							</div>
+							<CaseStudyCard study={study} variant="dark" showTags={true} maxTags={0} />
 						</div>
 					))}
 				</div>

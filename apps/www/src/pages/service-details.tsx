@@ -6,6 +6,7 @@ import BreadcrumbOne from "../components/breadcrumb/breadcrumb-one";
 import FooterSeven from "../layout/footer/footer-seven";
 import { getServiceBySlug, getRelatedServices } from "../data/services";
 import { getCaseStudiesByService } from "../data/case-studies";
+import CaseStudyCard from "../components/work/case-study-card";
 
 export default function ServiceDetailsPage() {
 	const { pillar, slug } = useParams<{ pillar: string; slug: string }>();
@@ -91,34 +92,7 @@ export default function ServiceDetailsPage() {
 										<div className="row gy-4">
 											{relatedCaseStudies.map((study) => (
 												<div key={study.id} className="col-md-6">
-													<div className="feature-card">
-														<span className="badge bg-theme text-white mb-2">
-															{study.pillar.toUpperCase()}
-														</span>
-														<h4 className="h5 mb-2">
-															<NavLink to={`/work/${study.slug}`}>
-																{study.title}
-															</NavLink>
-														</h4>
-														<p className="mb-3">{study.shortDescription}</p>
-														<NavLink
-															to={`/work/${study.slug}`}
-															className="link-btn"
-														>
-															<span className="link-effect">
-																<span className="effect-1">
-																	READ CASE STUDY
-																</span>
-																<span className="effect-1">
-																	READ CASE STUDY
-																</span>
-															</span>
-															<img
-																src="/assets/img/icon/arrow-left-top.svg"
-																alt="arrow"
-															/>
-														</NavLink>
-													</div>
+													<CaseStudyCard study={study} showTags={false} />
 												</div>
 											))}
 										</div>
