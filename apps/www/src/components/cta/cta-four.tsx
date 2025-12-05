@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 export default function CtaFour() {
 	return (
-		<div className="cta-area-1 overflow-hidden bg-smoke space">
+		<div className="cta-area-1 overflow-hidden space">
 			<div className="container">
 				<div className="row justify-content-center">
 					<div className="col-xl-8 col-lg-10">

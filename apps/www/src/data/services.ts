@@ -24,7 +24,12 @@ export const PILLAR_INFO = {
 		tagline: "You have the idea. We have the expertise.",
 		description:
 			"Ideas need infrastructure. We design and develop the digital products that bring your vision to life. From responsive websites to full-scale applications to the integrations that connect your systems. Whether you're validating a concept with an MVP or scaling what's already working, we build with intention, craft, and an eye toward what comes next.",
-		services: ["web-development", "app-development", "mvp-creation", "systems-integration"],
+		services: [
+			"systems-integration",
+			"app-development",
+			"mvp-creation",
+			"web-development",
+		],
 	},
 	lead: {
 		name: "LEAD",
@@ -56,58 +61,58 @@ export const services: IService[] = [
 	// BUILD PILLAR
 	{
 		id: 1,
-		slug: "web-development",
+		slug: "systems-integration",
 		pillar: "build",
 		pillarName: "BUILD",
-		title: "Web Development",
-		tagline: "Custom websites built for performance and scale",
+		title: "Systems Integration",
+		tagline: "Connect your tools and automate your workflows",
 		briefDescription:
-			"Responsive, performant websites that represent your brand and drive business results.",
+			"Make your systems work together seamlessly with custom integrations and automation.",
 		detailedDescription:
-			"We build custom websites that combine beautiful design with robust functionality. From marketing sites to complex web applications, we create digital experiences that perform across all devices and scale with your business. Our approach prioritizes user experience, performance, and maintainability—ensuring your website is an asset, not a burden.",
+			"Your business uses dozens of tools, and they don't always play nicely together. We build custom integrations that connect your systems, automate repetitive tasks, and ensure data flows where it needs to go. From CRM integrations to custom APIs to workflow automation, we make your technology stack work for you.",
 		keyFeatures: [
-			"Responsive design optimized for all devices",
-			"Performance-first architecture",
-			"Modern frameworks (React, Next.js, Astro)",
-			"SEO and accessibility built-in",
-			"Content management systems",
-			"E-commerce capabilities",
-			"API integrations",
-			"Analytics and tracking setup",
+			"API development and integration",
+			"CRM and marketing automation connections",
+			"Payment gateway integration",
+			"Data synchronization between systems",
+			"Workflow automation (Zapier, Make, custom)",
+			"Legacy system modernization",
+			"Webhook setup and management",
+			"AI integration and automation",
 		],
 		process: [
 			{
 				step: 1,
-				title: "Discovery & Planning",
+				title: "Systems Audit",
 				description:
-					"We start by understanding your business goals, target audience, and technical requirements. We map out the site architecture, features, and technical approach.",
+					"We map out your current tools, identify integration opportunities, and find workflows that can be automated.",
 			},
 			{
 				step: 2,
-				title: "Design & Prototyping",
+				title: "Integration Design",
 				description:
-					"We create wireframes and design mockups that reflect your brand and prioritize user experience. You'll see exactly what we're building before we write a single line of code.",
+					"We design the data flows and connections between systems, ensuring reliability and proper error handling.",
 			},
 			{
 				step: 3,
 				title: "Development & Testing",
 				description:
-					"We build your site using modern, maintainable code. Throughout development, we test across browsers and devices to ensure everything works perfectly.",
+					"We build the integrations and test thoroughly to ensure data integrity and system stability.",
 			},
 			{
 				step: 4,
-				title: "Launch & Support",
+				title: "Monitoring & Maintenance",
 				description:
-					"We handle deployment, monitoring, and provide ongoing support to keep your site running smoothly. We're here for the long term.",
+					"We set up monitoring to catch issues early and provide ongoing support as your systems evolve.",
 			},
 		],
 		benefits: [
-			"Built for scale from day one",
-			"Technology decisions driven by business goals",
-			"Hands-on partnership through launch and beyond",
-			"Fast, secure, and maintainable code",
+			"Eliminate manual data entry",
+			"Reduce errors and improve data accuracy",
+			"Save time with workflow automation",
+			"Get better insights from connected data",
 		],
-		relatedCaseStudies: ["saas-platform-redesign"],
+		relatedCaseStudies: ["crm-integration-automation"],
 	},
 	{
 		id: 2,
@@ -115,7 +120,7 @@ export const services: IService[] = [
 		pillar: "build",
 		pillarName: "BUILD",
 		title: "App Development",
-		tagline: "Full-scale applications that scale with your business",
+		tagline: "Custom applications that scale with your business",
 		briefDescription:
 			"Custom web and mobile applications built to solve complex business challenges.",
 		detailedDescription:
@@ -174,7 +179,7 @@ export const services: IService[] = [
 		briefDescription:
 			"Get to market quickly with a minimum viable product that tests your core assumptions.",
 		detailedDescription:
-			"You have an idea, and you need to validate it quickly. We help you build a focused MVP that tests your core hypothesis without over-engineering or wasting time on features you don't need yet. We prioritize speed to market while maintaining quality and building on a foundation that can scale when you're ready.",
+			"You have an idea, and you need to validate it quickly. We help you build a focused MVP that tests your core hypothesis without over-engineering or wasting time on features you don't yet need. We prioritize speed to market while maintaining quality and building on a foundation that can scale when you're ready.",
 		keyFeatures: [
 			"Rapid prototyping and development",
 			"Focus on core features that validate your hypothesis",
@@ -221,58 +226,58 @@ export const services: IService[] = [
 	},
 	{
 		id: 4,
-		slug: "systems-integration",
+		slug: "web-development",
 		pillar: "build",
 		pillarName: "BUILD",
-		title: "Systems Integration",
-		tagline: "Connect your tools and automate your workflows",
+		title: "Web Development",
+		tagline: "Custom websites built for performance and scale",
 		briefDescription:
-			"Make your systems work together seamlessly with custom integrations and automation.",
+			"Responsive, performant websites that represent your brand and drive business results.",
 		detailedDescription:
-			"Your business uses dozens of tools, and they don't always play nicely together. We build custom integrations that connect your systems, automate repetitive tasks, and ensure data flows where it needs to go. From CRM integrations to custom APIs to workflow automation, we make your technology stack work for you.",
+			"We build custom websites that combine beautiful design with robust functionality. From marketing sites to complex web applications, we create digital experiences that perform across all devices and scale with your business. Our approach prioritizes user experience, performance, and maintainability—ensuring your website is an asset, not a burden.",
 		keyFeatures: [
-			"API development and integration",
-			"CRM and marketing automation connections",
-			"Payment gateway integration",
-			"Data synchronization between systems",
-			"Workflow automation (Zapier, Make, custom)",
-			"Legacy system modernization",
-			"Webhook setup and management",
-			"Real-time data pipelines",
+			"Responsive design optimized for all devices",
+			"Performance-first architecture",
+			"Modern frameworks (React, Next.js, Astro)",
+			"SEO and accessibility built-in",
+			"Content management systems",
+			"E-commerce capabilities",
+			"API integrations",
+			"Analytics and tracking setup",
 		],
 		process: [
 			{
 				step: 1,
-				title: "Systems Audit",
+				title: "Discovery & Planning",
 				description:
-					"We map out your current tools, identify integration opportunities, and find workflows that can be automated.",
+					"We start by understanding your business goals, target audience, and technical requirements. We map out the site architecture, features, and technical approach.",
 			},
 			{
 				step: 2,
-				title: "Integration Design",
+				title: "Design & Prototyping",
 				description:
-					"We design the data flows and connections between systems, ensuring reliability and proper error handling.",
+					"We create wireframes and design mockups that reflect your brand and prioritize user experience. You'll see exactly what we're building before we write a single line of code.",
 			},
 			{
 				step: 3,
 				title: "Development & Testing",
 				description:
-					"We build the integrations and test thoroughly to ensure data integrity and system stability.",
+					"We build your site using modern, maintainable code. Throughout development, we test across browsers and devices to ensure everything works perfectly.",
 			},
 			{
 				step: 4,
-				title: "Monitoring & Maintenance",
+				title: "Launch & Support",
 				description:
-					"We set up monitoring to catch issues early and provide ongoing support as your systems evolve.",
+					"We handle deployment, monitoring, and provide ongoing support to keep your site running smoothly. We're here for the long term.",
 			},
 		],
 		benefits: [
-			"Eliminate manual data entry",
-			"Reduce errors and improve data accuracy",
-			"Save time with workflow automation",
-			"Get better insights from connected data",
+			"Built for scale from day one",
+			"Technology decisions driven by business goals",
+			"Hands-on partnership through launch and beyond",
+			"Fast, secure, and maintainable code",
 		],
-		relatedCaseStudies: ["crm-integration-automation"],
+		relatedCaseStudies: ["saas-platform-redesign"],
 	},
 
 	// LEAD PILLAR
@@ -392,7 +397,8 @@ export const services: IService[] = [
 		pillar: "lead",
 		pillarName: "LEAD",
 		title: "Product & Service Positioning",
-		tagline: "Position your offerings to own their rightful place in the market",
+		tagline:
+			"Position your offerings to own their rightful place in the market",
 		briefDescription:
 			"Strategic positioning that differentiates your products and clarifies your value.",
 		detailedDescription:
@@ -559,7 +565,8 @@ export const services: IService[] = [
 		pillar: "share",
 		pillarName: "SHARE",
 		title: "Public Speaking & Keynotes",
-		tagline: "Take the stage with confidence and deliver messages that resonate",
+		tagline:
+			"Take the stage with confidence and deliver messages that resonate",
 		briefDescription:
 			"Engaging keynotes and presentations that educate, inspire, and drive action.",
 		detailedDescription:
@@ -721,7 +728,9 @@ export const services: IService[] = [
 ];
 
 // Helper functions for filtering services
-export const getServicesByPillar = (pillar: "build" | "lead" | "share"): IService[] => {
+export const getServicesByPillar = (
+	pillar: "build" | "lead" | "share",
+): IService[] => {
 	return services.filter((service) => service.pillar === pillar);
 };
 
@@ -731,6 +740,10 @@ export const getServiceBySlug = (slug: string): IService | undefined => {
 
 export const getRelatedServices = (currentService: IService): IService[] => {
 	return services
-		.filter((service) => service.pillar === currentService.pillar && service.id !== currentService.id)
+		.filter(
+			(service) =>
+				service.pillar === currentService.pillar &&
+				service.id !== currentService.id,
+		)
 		.slice(0, 3);
 };

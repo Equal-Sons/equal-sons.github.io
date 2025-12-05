@@ -25,7 +25,7 @@ export default function WorkPage() {
 
 			<BreadcrumbOne
 				title="Our Work"
-				subtitle="Case studies showcasing how we help businesses build, lead, and share"
+				subtitle="See how our clients have improved their businesses through our partnership."
 			/>
 
 			{/* Featured Case Studies */}

@@ -44,7 +44,7 @@ export default function CaseStudyCard({
 			)}
 			<h3 className={`h4 mb-2 ${isDark ? "text-theme" : "text-black"}`}>
 				<NavLink
-					className={isDark ? "text-theme" : "text-dark-theme"}
+					className={isDark ? "text-theme" : ""}
 					to={`/work/${study.slug}`}
 				>
 					{study.title}
@@ -53,7 +53,9 @@ export default function CaseStudyCard({
 			<p className={`mb-2 ${isDark ? "text-white" : ""}`}>
 				<strong>{study.client}</strong>
 			</p>
-			<p className={`mb-3 ${isDark ? "text-white" : ""}`}>{study.shortDescription}</p>
+			<p className={`mb-3 ${isDark ? "text-white" : ""}`}>
+				{study.shortDescription}
+			</p>
 			<NavLink to={`/work/${study.slug}`} className="link-btn">
 				<span className="link-effect">
 					<span className={`effect-1 ${isDark ? "text-white" : ""}`}>

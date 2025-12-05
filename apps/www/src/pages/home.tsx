@@ -30,7 +30,7 @@ export default function HomeSix() {
 			<Approach />
 
 			{/* Work showcase area */}
-			<WorkShowcase />
+			{/* <WorkShowcase /> */}
 			{/* Work showcase area */}
 
 			{/* cta area */}

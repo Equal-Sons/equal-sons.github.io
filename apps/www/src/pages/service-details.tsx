@@ -60,7 +60,7 @@ export default function ServiceDetailsPage() {
 									{service.process.map((step) => (
 										<div key={step.step} className="mb-4">
 											<h4 className="h5 mb-2">
-												<span className="text-theme me-2">
+												<span className="text-dark-theme me-2">
 													{String(step.step).padStart(2, "0")}.
 												</span>
 												{step.title}
@@ -139,7 +139,7 @@ export default function ServiceDetailsPage() {
 								{/* CTA */}
 								<div className="widget mb-4">
 									<div className="p-4 bg-theme text-white">
-										<h4 className="h5 mb-3 text-white">Ready to start?</h4>
+										<h4 className="h5 mb-3">Ready to start?</h4>
 										<p className="mb-3">
 											Let's talk about your project and how we can help.
 										</p>

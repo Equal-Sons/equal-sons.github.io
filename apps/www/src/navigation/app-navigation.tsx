@@ -24,8 +24,11 @@ export default function AppNavigation() {
 				<Route path="/services/build" element={<BuildPillarPage />} />
 				<Route path="/services/lead" element={<LeadPillarPage />} />
 				<Route path="/services/share" element={<SharePillarPage />} />
-				<Route path="/services/:pillar/:slug" element={<ServiceDetailsPage />} />
-				<Route path="/work" element={<WorkPage />} />
+				<Route
+					path="/services/:pillar/:slug"
+					element={<ServiceDetailsPage />}
+				/>
+				{/* <Route path="/work" element={<WorkPage />} /> */}
 				<Route path="/work/:slug" element={<WorkDetailsPage />} />
 				<Route path="/contact" element={<Contact />} />
 
