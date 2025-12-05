@@ -23,7 +23,7 @@ export const PILLAR_INFO = {
 		name: "BUILD",
 		tagline: "You have the idea. We have the expertise.",
 		description:
-			"Ideas need infrastructure. We design and develop the digital products that bring your vision to life. From responsive websites to full-scale applications to the integrations that connect your systems. Whether you're validating a concept with an MVP or scaling what's already working, we build with intention, craft, and an eye toward what comes next.",
+			"We design and develop the digital products that bring your vision to life. From responsive websites to full-scale applications to the integrations that connect your systems. Whether you're validating a concept with an MVP or scaling what's already working, we build with intention, craft, and an eye toward what comes next.",
 		services: [
 			"systems-integration",
 			"app-development",
@@ -35,7 +35,7 @@ export const PILLAR_INFO = {
 		name: "LEAD",
 		tagline: "Knowing where you're going changes how you get there.",
 		description:
-			"Direction matters as much as motion. We partner with leadership teams to define the path forward. We align technology decisions with business objectives, craft go-to-market strategies that resonate, and position your offerings to own their rightful place in the market. Strategic clarity that cuts through noise and creates real momentum.",
+			"We partner with leadership teams to define the path forward. We align technology decisions with business objectives, craft go-to-market strategies that resonate, and position your offerings to own their rightful place in the market. Strategic clarity that cuts through noise and creates real momentum.",
 		services: [
 			"technology-strategy",
 			"marketing-strategy",
@@ -47,7 +47,7 @@ export const PILLAR_INFO = {
 		name: "SHARE",
 		tagline: "What you know is valuable. How you share it sets you apart.",
 		description:
-			"Great work deserves a great voice. We facilitate the conversations that align teams, mediate the decisions that move projects forward, and take the stage to share insights that matter. From boardrooms to conferences, we help you find the words, and the confidence, to lead out loud.",
+			"We facilitate the conversations that align teams, mediate the decisions that move projects forward, and take the stage to share insights that matter. From boardrooms to conferences, we help you find the words, and the confidence, to lead out loud.",
 		services: [
 			"facilitation-mediation",
 			"public-speaking",
@@ -457,7 +457,7 @@ export const services: IService[] = [
 		briefDescription:
 			"Strategic facilitation that aligns leadership teams and drives organizational clarity.",
 		detailedDescription:
-			"Strategy only works when everyone's aligned. We facilitate strategic planning sessions, leadership offsites, and alignment workshops that get teams on the same page. We help you clarify direction, prioritize initiatives, and create the clarity needed for confident execution.",
+			"Strategy only works when everyone's aligned. We facilitate strategic planning sessions, leadership offsites, and alignment workshops that get teams on the same page. We help you define direction, prioritize initiatives, and create the clarity needed for confident execution.",
 		keyFeatures: [
 			"Strategic planning facilitation",
 			"Leadership team alignment",
