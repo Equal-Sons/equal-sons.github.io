@@ -5,7 +5,7 @@ import HeroBanner from "../components/hero-banner/hero-banner";
 import CtaFour from "../components/cta/cta-four";
 import PillarsPreview from "../components/pillars/pillars-preview";
 import Approach from "../components/about/approach";
-import WorkShowcase from "../components/work/work-showcase";
+// import WorkShowcase from "../components/work/work-showcase";
 import FooterSeven from "../layout/footer/footer-seven";
 
 export default function HomeSix() {

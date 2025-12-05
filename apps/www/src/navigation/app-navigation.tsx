@@ -6,7 +6,7 @@ import NotFoundPage from "../pages/not-found";
 import ServicePage from "../pages/service";
 import Home from "../pages/home";
 import AboutPage from "../pages/about";
-import WorkPage from "../pages/work";
+// import WorkPage from "../pages/work";
 import WorkDetailsPage from "../pages/work-details";
 import BuildPillarPage from "../pages/services/build";
 import LeadPillarPage from "../pages/services/lead";

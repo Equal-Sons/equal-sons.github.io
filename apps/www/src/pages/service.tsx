@@ -18,11 +18,7 @@ export default function ServicePageThree() {
 			{/* header area end */}
 
 			{/* breadcrumb start */}
-			<BreadcrumbOne
-				title="Services"
-				subtitle="Build. Lead. Share."
-				imageSrc="/assets/img/breadcumb/breadcumb-1.jpg"
-			/>
+			<BreadcrumbOne title="Services" subtitle="Build. Lead. Share." />
 			{/* breadcrumb end */}
 
 			{/* Intro Section */}

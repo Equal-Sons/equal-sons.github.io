@@ -9,7 +9,10 @@ import { getCaseStudiesByService } from "../data/case-studies";
 import CaseStudyCard from "../components/work/case-study-card";
 
 export default function ServiceDetailsPage() {
-	const { pillar, slug } = useParams<{ pillar: string; slug: string }>();
+	const {
+		// pillar,
+		slug,
+	} = useParams<{ pillar: string; slug: string }>();
 
 	// Get service data
 	const service = slug ? getServiceBySlug(slug) : undefined;

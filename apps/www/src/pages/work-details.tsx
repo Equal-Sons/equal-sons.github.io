@@ -9,7 +9,7 @@ import {
 	getRelatedCaseStudies,
 } from "../data/case-studies";
 import { getServiceBySlug } from "../data/services";
-import CaseStudyCard from "../components/work/case-study-card";
+// import CaseStudyCard from "../components/work/case-study-card";
 
 export default function WorkDetailsPage() {
 	const { slug } = useParams<{ slug: string }>();
