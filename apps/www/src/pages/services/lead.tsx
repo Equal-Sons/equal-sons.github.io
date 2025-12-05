@@ -15,11 +15,7 @@ export default function LeadPillarPage() {
 			<SEOCom title="LEAD - Equal Sons" />
 			<Header />
 
-			<BreadcrumbOne
-				title={pillarInfo.name}
-				subtitle={pillarInfo.tagline}
-				imageSrc="/assets/img/breadcumb/breadcumb-1.jpg"
-			/>
+			<BreadcrumbOne title={pillarInfo.name} subtitle={pillarInfo.tagline} />
 
 			{/* Pillar Overview */}
 			<div className="space">
@@ -55,7 +51,9 @@ export default function LeadPillarPage() {
 											{service.title}
 										</NavLink>
 									</h3>
-									<p className="feature-card-text">{service.briefDescription}</p>
+									<p className="feature-card-text">
+										{service.briefDescription}
+									</p>
 									<NavLink
 										to={`/services/lead/${service.slug}`}
 										className="link-btn"
@@ -84,8 +82,8 @@ export default function LeadPillarPage() {
 							<div className="title-area text-center mb-0">
 								<h2 className="sec-title">Ready to chart your course?</h2>
 								<p className="sec-text mt-30 mb-40">
-									Let's talk about where you're headed and how we can help you get
-									there with clarity and confidence.
+									Let's talk about where you're headed and how we can help you
+									get there with clarity and confidence.
 								</p>
 								<div className="btn-group justify-content-center">
 									<NavLink to="/contact" className="btn mt-0">

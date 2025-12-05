@@ -15,11 +15,7 @@ export default function BuildPillarPage() {
 			<SEOCom title="BUILD - Equal Sons" />
 			<Header />
 
-			<BreadcrumbOne
-				title={pillarInfo.name}
-				subtitle={pillarInfo.tagline}
-				imageSrc="/assets/img/breadcumb/breadcumb-1.jpg"
-			/>
+			<BreadcrumbOne title={pillarInfo.name} subtitle={pillarInfo.tagline} />
 
 			{/* Pillar Overview */}
 			<div className="space">
@@ -53,7 +49,9 @@ export default function BuildPillarPage() {
 											{service.title}
 										</NavLink>
 									</h3>
-									<p className="feature-card-text">{service.briefDescription}</p>
+									<p className="feature-card-text">
+										{service.briefDescription}
+									</p>
 									<NavLink
 										to={`/services/build/${service.slug}`}
 										className="link-btn"

@@ -26,11 +26,7 @@ export default function ServiceDetailsPage() {
 			<SEOCom title={`${service.title} - Equal Sons`} />
 			<Header />
 
-			<BreadcrumbOne
-				title={service.title}
-				subtitle={service.tagline}
-				imageSrc="/assets/img/breadcumb/breadcumb-1.jpg"
-			/>
+			<BreadcrumbOne title={service.title} subtitle={service.tagline} />
 
 			{/* Service Overview */}
 			<div className="service-details-area space">
@@ -49,7 +45,7 @@ export default function ServiceDetailsPage() {
 										{service.keyFeatures.map((feature, index) => (
 											<div key={index} className="col-md-6">
 												<div className="d-flex align-items-start">
-													<i className="fas fa-check-circle text-theme me-2 mt-1"></i>
+													<i className="fas fa-check-circle text-theme me-2 mt-1" />
 													<span>{feature}</span>
 												</div>
 											</div>
@@ -80,7 +76,7 @@ export default function ServiceDetailsPage() {
 										{service.benefits.map((benefit, index) => (
 											<div key={index} className="col-md-6">
 												<div className="d-flex align-items-start">
-													<i className="fas fa-arrow-right text-theme me-2 mt-1"></i>
+													<i className="fas fa-arrow-right text-theme me-2 mt-1" />
 													<span>{benefit}</span>
 												</div>
 											</div>
@@ -110,8 +106,12 @@ export default function ServiceDetailsPage() {
 															className="link-btn"
 														>
 															<span className="link-effect">
-																<span className="effect-1">READ CASE STUDY</span>
-																<span className="effect-1">READ CASE STUDY</span>
+																<span className="effect-1">
+																	READ CASE STUDY
+																</span>
+																<span className="effect-1">
+																	READ CASE STUDY
+																</span>
 															</span>
 															<img
 																src="/assets/img/icon/arrow-left-top.svg"
@@ -189,7 +189,7 @@ export default function ServiceDetailsPage() {
 														to={`/services/${related.pillar}/${related.slug}`}
 														className="d-flex align-items-center text-title hover-text-theme"
 													>
-														<i className="fas fa-chevron-right me-2 small"></i>
+														<i className="fas fa-chevron-right me-2 small" />
 														{related.title}
 													</NavLink>
 												</li>
