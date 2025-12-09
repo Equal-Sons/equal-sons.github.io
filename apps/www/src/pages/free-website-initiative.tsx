@@ -39,17 +39,28 @@ export default function FreeWebsiteInitiative() {
 								<p className="sec-text">That's where we come in.</p>
 
 								<div className="btn-group justify-content-center">
-									<a
-										href="https://tally.so/r/Y5PzdW"
-										target="_blank"
-										rel="noopener noreferrer"
+									<button
+										type="button"
 										className="btn mt-12"
+										data-tally-open="Y5PzdW"
+										data-tally-layout="modal"
+										data-tally-width="800"
 									>
+										<span className="link-effect">
+											<span className="effect-1">
+												REQUEST YOUR FREE WEBSITE
+											</span>
+											<span className="effect-1">
+												REQUEST YOUR FREE WEBSITE
+											</span>
+										</span>
+									</button>
+									{/* <NavLink to="/free-website-form" className="btn mt-12">
 										<span className="link-effect">
 											<span className="effect-1">APPLY NOW</span>
 											<span className="effect-1">APPLY NOW</span>
 										</span>
-									</a>
+									</NavLink> */}
 								</div>
 							</div>
 						</div>
@@ -160,11 +171,12 @@ export default function FreeWebsiteInitiative() {
 									back to you shortly.
 								</p>
 								<div className="btn-group justify-content-center">
-									<a
-										href="https://tally.so/r/Y5PzdW"
-										target="_blank"
-										rel="noopener noreferrer"
-										className="btn mt-0"
+									<button
+										type="button"
+										className="btn mt-12"
+										data-tally-open="Y5PzdW"
+										data-tally-layout="modal"
+										data-tally-width="800"
 									>
 										<span className="link-effect">
 											<span className="effect-1">
@@ -174,7 +186,7 @@ export default function FreeWebsiteInitiative() {
 												REQUEST YOUR FREE WEBSITE
 											</span>
 										</span>
-									</a>
+									</button>
 								</div>
 							</div>
 						</div>
