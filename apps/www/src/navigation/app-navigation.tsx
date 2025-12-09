@@ -31,7 +31,10 @@ export default function AppNavigation() {
 				/>
 				{/* <Route path="/work" element={<WorkPage />} /> */}
 				<Route path="/work/:slug" element={<WorkDetailsPage />} />
-				<Route path="/free-website" element={<FreeWebsiteInitiative />} />
+				<Route
+					path="/your-business-deserves-a-website"
+					element={<FreeWebsiteInitiative />}
+				/>
 				<Route path="/contact" element={<Contact />} />
 
 				{/* <Route path="/home-1" element={<HomeOne />} />
