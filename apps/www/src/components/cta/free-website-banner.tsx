@@ -34,7 +34,10 @@ export default function FreeWebsiteBanner() {
 								</strong>
 							</p>
 							<div className="btn-group justify-content-center gap-3">
-								<NavLink to="/free-website" className="btn mt-0">
+								<NavLink
+									to="/your-business-deserves-a-website"
+									className="btn mt-0"
+								>
 									<span className="link-effect">
 										<span className="effect-1">LEARN MORE</span>
 										<span className="effect-1">LEARN MORE</span>
