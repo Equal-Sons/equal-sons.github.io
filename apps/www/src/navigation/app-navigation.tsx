@@ -12,6 +12,7 @@ import BuildPillarPage from "../pages/services/build";
 import LeadPillarPage from "../pages/services/lead";
 import SharePillarPage from "../pages/services/share";
 import ServiceDetailsPage from "../pages/service-details";
+import FreeWebsiteInitiative from "../pages/free-website-initiative";
 
 export default function AppNavigation() {
 	return (
@@ -30,6 +31,7 @@ export default function AppNavigation() {
 				/>
 				{/* <Route path="/work" element={<WorkPage />} /> */}
 				<Route path="/work/:slug" element={<WorkDetailsPage />} />
+				<Route path="/free-website" element={<FreeWebsiteInitiative />} />
 				<Route path="/contact" element={<Contact />} />
 
 				{/* <Route path="/home-1" element={<HomeOne />} />
