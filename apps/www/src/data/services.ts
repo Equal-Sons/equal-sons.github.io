@@ -16,6 +16,12 @@ export interface IService {
 	benefits: string[];
 	relatedCaseStudies: string[]; // slugs
 	imageSrc?: string;
+	testimonial?: {
+		text: string;
+		name: string;
+		title: string;
+		company: string;
+	};
 }
 
 export const PILLAR_INFO = {
@@ -113,6 +119,12 @@ export const services: IService[] = [
 			"Get better insights from connected data",
 		],
 		relatedCaseStudies: ["crm-integration-automation"],
+		testimonial: {
+			text: "Justin at Equal Sons and I have collaborated on a number of web projects. He's an excellent sounding board for product ideas and consistently delivers practical solutions that move development forward.",
+			name: "Joey Figaro",
+			title: "Director",
+			company: "Rogue Agency",
+		},
 	},
 	{
 		id: 2,
@@ -223,6 +235,12 @@ export const services: IService[] = [
 			"Partnership through the uncertainty",
 		],
 		relatedCaseStudies: ["startup-mvp-launch"],
+		testimonial: {
+			text: "Justin at Equal Sons is an invaluable partner for our agency. His expertise in web development allows us to offer our clients a seamless transition from design to launch, knowing that the final website will reflect our vision.",
+			name: "Angela Prado",
+			title: "Founder",
+			company: "Boomhitch Creative",
+		},
 	},
 	{
 		id: 4,
@@ -278,6 +296,12 @@ export const services: IService[] = [
 			"Fast, secure, and maintainable code",
 		],
 		relatedCaseStudies: ["saas-platform-redesign"],
+		testimonial: {
+			text: "Getting our new business online seemed complicated until I worked with Justin at Equal Sons. He made sure our domain, website, and email were all connected and running smoothly. Fast, professional, and very helpful.",
+			name: "Matt Donaldson",
+			title: "CEO",
+			company: "Donaldson Construction",
+		},
 	},
 
 	// LEAD PILLAR
@@ -335,6 +359,12 @@ export const services: IService[] = [
 			"Confident decision-making",
 		],
 		relatedCaseStudies: ["enterprise-tech-roadmap"],
+		testimonial: {
+			text: "As a founder, finding someone I could trust with our technical foundation was key. Justin at Equal Sons delivered exactly what we needed for our MVP and proved he was invested in our vision. Having him come on as both a contractor and equity partner made perfect sense.",
+			name: "Drew Elliott",
+			title: "Founder",
+			company: "RoundlyX (formerly Coin Savage)",
+		},
 	},
 	{
 		id: 6,

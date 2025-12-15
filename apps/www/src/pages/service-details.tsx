@@ -92,6 +92,33 @@ export default function ServiceDetailsPage() {
 									</div>
 								</div>
 
+								{/* Testimonial */}
+								{service.testimonial && (
+									<div className="mb-50">
+										<div className="bg-smoke p-4 p-md-5 position-relative">
+											<div className="quote-icon mb-3">
+												<img
+													src="/assets/img/icon/quote.svg"
+													alt="quote"
+													style={{ width: "40px", opacity: 0.3 }}
+												/>
+											</div>
+											<p className="mb-4 fs-5 text-title">
+												{service.testimonial.text}
+											</p>
+											<div className="d-flex align-items-center">
+												<div>
+													<h5 className="mb-0">{service.testimonial.name}</h5>
+													<p className="mb-0 text-muted">
+														{service.testimonial.title},{" "}
+														{service.testimonial.company}
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								)}
+
 								{/* Related Case Studies */}
 								{relatedCaseStudies.length > 0 && (
 									<div className="mb-50">
