@@ -180,6 +180,12 @@ export const services: IService[] = [
 			"Long-term partnership mindset",
 		],
 		relatedCaseStudies: ["enterprise-workflow-app"],
+		testimonial: {
+			text: "Writing code is the easy part. Architecting, documenting, executing, and testing is the real work of development and Justin from Equal Sons excels at it!",
+			name: "David Vogeleer",
+			title: "CTO",
+			company: "Buddy Technology",
+		},
 	},
 	{
 		id: 3,
