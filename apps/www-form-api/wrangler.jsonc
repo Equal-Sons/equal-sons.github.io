@@ -24,7 +24,7 @@
 			"vars": {
 				"CLIENT_HOST": "http://equalsons.com",
 				"ENVIRONMENT": "production"
-			}
+			},"name": "www-form-api"
 		}
 	}
 	// "compatibility_flags": [
