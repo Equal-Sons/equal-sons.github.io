@@ -1,6 +1,5 @@
 interface EmailBaseArgs {
 	host: string;
-	toAddress: string[];
 }
 
 export interface ContactEmailArgs extends EmailBaseArgs {
@@ -16,28 +15,55 @@ export interface EmailGenerator {
 const emailGenerator: EmailGenerator = {
 	contactSubmissionEmail: (args: ContactEmailArgs): string => {
 		const payload = {
-			from: {
+			subject: "New Contact Submission",
+			sender: {
+				name: "Equal Sons",
 				email: "justin@equalsons.com",
 			},
-			reply_to: {
+			to: [{ email: "justin@equalsons.com" }, { email: "ace@equalsons.com" }],
+			replyTo: {
 				email: args.email,
 			},
-			personalizations: [
-				{
-					to: args.toAddress.map((address) => ({ email: address })),
-				},
-			],
-			subject: "New Contact Submission",
-			content: [
-				{
-					type: "text/plain",
-					value: `A new contact submission has been received. Here are the details:\n\nName: ${args.name}\nEmail: ${args.email}\nMessage: ${args.message}\n\n`,
-				},
-			],
+			htmlContent: `
+      <html>
+        <body>
+          <p>A new contact submission has been received. Here are the details:</p>
+          <ul>
+            <li>Name: ${args.name}</li>
+            <li>Email: ${args.email}</li>
+            <li>Message: ${args.message}</li>
+          </ul>
+        </body>
+      </html>
+      `,
 		};
 
 		return JSON.stringify(payload);
 	},
+	// contactSubmissionEmail: (args: ContactEmailArgs): string => {
+	// 	const payload = {
+	// 		from: {
+	// 			email: "justin@equalsons.com",
+	// 		},
+	// 		reply_to: {
+	// 			email: args.email,
+	// 		},
+	// 		personalizations: [
+	// 			{
+	// 				to: args.toAddress.map((address) => ({ email: address })),
+	// 			},
+	// 		],
+	// 		subject: "New Contact Submission",
+	// 		content: [
+	// 			{
+	// 				type: "text/plain",
+	// 				value: `A new contact submission has been received. Here are the details:\n\nName: ${args.name}\nEmail: ${args.email}\nMessage: ${args.message}\n\n`,
+	// 			},
+	// 		],
+	// 	};
+
+	// 	return JSON.stringify(payload);
+	// },
 };
 
 export default emailGenerator;

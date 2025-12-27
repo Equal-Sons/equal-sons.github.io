@@ -5,6 +5,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Project Overview
 
 This is a monorepo for Equal Sons containing:
+
 - **www**: Legacy React + Vite marketing website (being phased out)
 - **www-astro**: New Astro-based marketing website with React islands for interactivity
 - **www-form-api**: Cloudflare Workers API for form submissions
@@ -53,6 +54,7 @@ apps/
 ## Development Commands
 
 **Monorepo-level commands** (run from root):
+
 ```bash
 pnpm install              # Install all dependencies
 pnpm dev                  # Start all apps in development mode
@@ -63,6 +65,7 @@ pnpm deploy               # Deploy all apps
 ```
 
 **Frontend - Legacy React (apps/www)** - DEPRECATED:
+
 ```bash
 cd apps/www
 pnpm dev                  # Start Vite dev server (default: http://localhost:5173)
@@ -72,6 +75,7 @@ pnpm preview              # Preview production build locally
 ```
 
 **Frontend - Astro (apps/www-astro)** - CURRENT:
+
 ```bash
 cd apps/www-astro
 pnpm dev                  # Start Astro dev server (default: http://localhost:4321)
@@ -80,6 +84,7 @@ pnpm preview              # Preview production build locally
 ```
 
 **Form API (apps/www-form-api)**:
+
 ```bash
 cd apps/www-form-api
 pnpm dev                  # Start Wrangler dev server (default: http://localhost:8787)
@@ -104,6 +109,7 @@ pnpm deploy               # Deploy to Cloudflare Workers production
   - All React components work as islands
 
 **React Islands Strategy**:
+
 - `client:load` - Interactive components that need immediate hydration (Header, BackToTop)
 - `client:visible` - Components that can wait until visible (ContactForm, FAQs, Marquee)
 - No directive - Static Astro components (Footer, Breadcrumbs)
@@ -123,6 +129,7 @@ This is the old React + Vite site. It's kept for reference but **use www-astro f
 - **Security**: Cloudflare Turnstile verification on `/submit` endpoint
 
 The API exposes:
+
 - `GET /` - Health check endpoint
 - `POST /submit` - Contact form submission with Turnstile validation
 
@@ -135,6 +142,7 @@ The www-form-api exports `ContactApiType` (apps/www-form-api/src/index.ts:101) w
 ## Environment Configuration
 
 **Astro Frontend (.env in apps/www-astro)**:
+
 ```bash
 PUBLIC_CONTACT_SERVER_URL="http://localhost:8787"  # Form API endpoint
 PUBLIC_ENV="development"                            # Environment name
@@ -144,6 +152,7 @@ PUBLIC_TURNSTILE_KEY="..."                          # Cloudflare Turnstile site 
 **Note**: Astro uses `PUBLIC_` prefix for client-side environment variables (not `VITE_`).
 
 **Legacy React Frontend (.env in apps/www)** - DEPRECATED:
+
 ```bash
 VITE_CONTACT_SERVER_URL="http://localhost:8787"
 VITE_ENV="development"
@@ -151,11 +160,7 @@ VITE_TURNSTILE_KEY="..."
 ```
 
 **API (.dev.vars in apps/www-form-api)**:
-Contains secrets like:
-- `PRIVATE_TURNSTILE_KEY` - Cloudflare Turnstile secret
-- `SENDGRID_API_KEY` - SendGrid API key
-
-For production, these are configured via Cloudflare Workers secrets.
+Contains secrets. For production, these are configured via Cloudflare Workers secrets.
 
 ## Code Style
 
@@ -183,6 +188,7 @@ Run `pnpm lint` at root to check all packages.
 4. File-based routing means `/about.astro` → `/about` URL
 
 Example:
+
 ```astro
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
@@ -191,9 +197,9 @@ import FooterSeven from '../components/layout/footer/footer-seven.tsx';
 ---
 
 <BaseLayout title="About" description="About Equal Sons">
-	<HeaderThree client:load />
-	<!-- Your content here -->
-	<FooterSeven />
+ <HeaderThree client:load />
+ <!-- Your content here -->
+ <FooterSeven />
 </BaseLayout>
 ```
 

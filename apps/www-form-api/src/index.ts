@@ -88,13 +88,12 @@ const app = new Hono<{ Bindings: Bindings }>()
 			// Generate email body and send email
 			const emailBody = emailGenerator.contactSubmissionEmail({
 				host: c.env.CLIENT_HOST,
-				toAddress: ["justin@equalsons.com", "ace@equalsons.com"],
 				name,
 				email,
 				message,
 			});
 
-			await Emailer.send({ authKey: c.env.SENDGRID_API_KEY, body: emailBody });
+			await Emailer.send({ authKey: c.env.BREVO_API_KEY, body: emailBody });
 
 			// Return success message
 			return c.json(

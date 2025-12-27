@@ -8,7 +8,7 @@ export interface Bindings {
 	[key: string]: unknown; // required to conform to the Bindings type
 	CLIENT_HOST: string;
 	ENVIRONMENT: string;
-	SENDGRID_API_KEY: string;
+	BREVO_API_KEY: string;
 	PRIVATE_TURNSTILE_KEY: string;
 }
 
