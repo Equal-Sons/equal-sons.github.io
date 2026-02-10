@@ -6,7 +6,7 @@ import NotFoundPage from "../pages/not-found";
 import ServicePage from "../pages/service";
 import Home from "../pages/home";
 import AboutPage from "../pages/about";
-// import WorkPage from "../pages/work";
+import WorkPage from "../pages/work";
 import WorkDetailsPage from "../pages/work-details";
 import BuildPillarPage from "../pages/services/build";
 import LeadPillarPage from "../pages/services/lead";
@@ -29,7 +29,7 @@ export default function AppNavigation() {
 					path="/services/:pillar/:slug"
 					element={<ServiceDetailsPage />}
 				/>
-				{/* <Route path="/work" element={<WorkPage />} /> */}
+				<Route path="/work" element={<WorkPage />} />
 				<Route path="/work/:slug" element={<WorkDetailsPage />} />
 				<Route
 					path="/your-business-deserves-a-website"

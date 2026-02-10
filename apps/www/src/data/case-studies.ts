@@ -23,287 +23,210 @@ export interface ICaseStudy {
 
 export const caseStudies: ICaseStudy[] = [
 	// BUILD PILLAR CASE STUDIES
-	// {
-	// 	id: 1,
-	// 	slug: "saas-platform-redesign",
-	// 	title: "Enterprise SaaS Platform Redesign",
-	// 	client: "TechCorp Solutions",
-	// 	pillar: "build",
-	// 	serviceTags: ["web-development", "systems-integration"],
-	// 	shortDescription:
-	// 		"Complete platform redesign that improved user engagement by 45% and reduced support tickets by 30%.",
-	// 	challenge:
-	// 		"TechCorp's SaaS platform had grown organically over 5 years, resulting in an inconsistent user experience, technical debt, and increasing customer churn. The outdated architecture made it difficult to add new features, and users complained about the complexity of common workflows. With competitors gaining market share, TechCorp needed a modern platform that could scale with their ambitions.",
-	// 	solution:
-	// 		"We partnered with TechCorp's product team to redesign their platform from the ground up. Starting with user research and journey mapping, we identified the core workflows that mattered most to users. We then built a new React-based frontend with a modern design system, integrated it with their existing backend APIs, and implemented a phased rollout strategy that minimized disruption. Throughout the 6-month project, we worked alongside their team, transferring knowledge and ensuring they could maintain and extend the new platform.",
-	// 	results:
-	// 		"The redesigned platform launched on schedule and exceeded expectations. User engagement increased by 45% in the first quarter, support ticket volume dropped by 30%, and customer satisfaction scores reached all-time highs. Most importantly, TechCorp's team now has a solid foundation for future growth with a modern codebase and design system they can build on confidently.",
-	// 	testimonial: {
-	// 		quote: "Equal Sons didn't just rebuild our platform—they taught us how to think about product development differently. The result speaks for itself, but the partnership made all the difference.",
-	// 		author: "Sarah Chen",
-	// 		title: "VP of Product, TechCorp Solutions",
-	// 	},
-	// 	images: {
-	// 		hero: "/img/case-studies/saas-platform-hero.jpg",
-	// 		gallery: [
-	// 			"/img/case-studies/saas-platform-1.jpg",
-	// 			"/img/case-studies/saas-platform-2.jpg",
-	// 			"/img/case-studies/saas-platform-3.jpg",
-	// 		],
-	// 	},
-	// 	featured: true,
-	// },
-	// {
-	// 	id: 2,
-	// 	slug: "enterprise-workflow-app",
-	// 	title: "Custom Workflow Automation Platform",
-	// 	client: "GlobalManufacturing Inc.",
-	// 	pillar: "build",
-	// 	serviceTags: ["app-development", "systems-integration"],
-	// 	shortDescription:
-	// 		"Internal application that automated manual processes and saved 200+ hours of work per week.",
-	// 	challenge:
-	// 		"GlobalManufacturing's operations team was drowning in manual work. Their process for managing supplier relationships, tracking orders, and coordinating logistics involved dozens of spreadsheets, email chains, and phone calls. As the company grew, the manual process became unsustainable, leading to errors, delays, and frustrated team members. They needed a custom solution that fit their unique workflows—off-the-shelf software couldn't handle the complexity.",
-	// 	solution:
-	// 		"We built a custom web application that centralized their entire operations workflow. The system integrated with their ERP, automated status updates, provided real-time visibility into orders, and streamlined communication with suppliers. We developed custom business logic to handle their unique requirements and built mobile-friendly interfaces so team members could work from anywhere. Throughout development, we involved the operations team heavily, ensuring the tool fit how they actually work.",
-	// 	results:
-	// 		"The application eliminated over 200 hours of manual work per week, reduced errors by 85%, and improved supplier relationships through better communication. The operations team went from dreading their daily workflow to having time to focus on strategic improvements. The platform has become essential to GlobalManufacturing's operations and continues to expand to new use cases.",
-	// 	testimonial: {
-	// 		quote: "This tool transformed how we work. What used to take all day now takes minutes. Equal Sons built exactly what we needed—not what they thought we needed.",
-	// 		author: "Michael Rodriguez",
-	// 		title: "Director of Operations, GlobalManufacturing Inc.",
-	// 	},
-	// 	images: {
-	// 		hero: "/img/case-studies/workflow-app-hero.jpg",
-	// 		gallery: ["/img/case-studies/workflow-app-1.jpg", "/img/case-studies/workflow-app-2.jpg"],
-	// 	},
-	// 	featured: true,
-	// },
-	// {
-	// 	id: 3,
-	// 	slug: "startup-mvp-launch",
-	// 	title: "FinTech Startup MVP Launch",
-	// 	client: "PayFlow (Stealth Startup)",
-	// 	pillar: "build",
-	// 	serviceTags: ["mvp-creation", "app-development"],
-	// 	shortDescription:
-	// 		"Rapid MVP development that secured $2M in seed funding and onboarded first 100 customers.",
-	// 	challenge:
-	// 		"A fintech founding team had a vision for simplifying business payments but needed to validate their concept quickly. They had limited runway and needed an MVP that was professional enough to attract customers and investors, but focused enough to build in weeks, not months. The stakes were high—they needed to prove market demand before their funding ran out.",
-	// 	solution:
-	// 		"We worked intensively with the founders to identify their core value proposition and build only what mattered for validation. In 8 weeks, we delivered a functional MVP with user onboarding, payment processing integration, and a clean dashboard for managing transactions. We prioritized speed without sacrificing quality, using proven frameworks and focusing on the user experience. We also set up analytics to measure user behavior and inform future development.",
-	// 	results:
-	// 		"The MVP launched successfully and generated immediate interest. Within 90 days, PayFlow onboarded their first 100 customers, processed over $500K in transactions, and secured $2M in seed funding. The investors specifically mentioned the quality of the product as a key factor in their decision. The founders now have capital to scale what's working, built on a solid technical foundation.",
-	// 	testimonial: {
-	// 		quote: "Equal Sons helped us go from idea to funded company in 3 months. They understood exactly what we needed to prove and built it fast without cutting corners that mattered.",
-	// 		author: "Jordan Kim",
-	// 		title: "Co-Founder & CEO, PayFlow",
-	// 	},
-	// 	images: {
-	// 		hero: "/img/case-studies/mvp-launch-hero.jpg",
-	// 		gallery: ["/img/case-studies/mvp-launch-1.jpg", "/img/case-studies/mvp-launch-2.jpg"],
-	// 	},
-	// 	featured: true,
-	// },
-	// {
-	// 	id: 4,
-	// 	slug: "crm-integration-automation",
-	// 	title: "CRM Integration & Marketing Automation",
-	// 	client: "GrowthAgency",
-	// 	pillar: "build",
-	// 	serviceTags: ["systems-integration"],
-	// 	shortDescription:
-	// 		"Seamless integration between marketing tools that eliminated manual work and improved lead response time by 60%.",
-	// 	challenge:
-	// 		"GrowthAgency's marketing and sales teams were using different tools that didn't talk to each other. Leads from their website, LinkedIn, and events were manually entered into their CRM, often with delays and errors. The sales team couldn't respond quickly to hot leads, and marketing couldn't track which campaigns were actually driving revenue. The manual data entry was taking 10+ hours per week and losing them deals.",
-	// 	solution:
-	// 		"We built custom integrations connecting their marketing automation platform, website forms, CRM, and communication tools. Leads now flow automatically from any source into the CRM with proper tagging and routing. We set up automated workflows that notify sales reps immediately when high-value leads take key actions. We also built dashboards that give marketing visibility into which campaigns drive closed deals, not just leads.",
-	// 	results:
-	// 		"The integration eliminated all manual data entry, improved lead response time by 60%, and gave the team confidence in their data. Marketing can now optimize based on revenue attribution, and sales can focus on selling instead of data entry. The agency has grown 40% year-over-year with the same team size—the automation made it possible.",
-	// 	images: {
-	// 		hero: "/img/case-studies/crm-integration-hero.jpg",
-	// 	},
-	// 	featured: false,
-	// },
-	// // LEAD PILLAR CASE STUDIES
-	// {
-	// 	id: 5,
-	// 	slug: "enterprise-tech-roadmap",
-	// 	title: "Enterprise Technology Roadmap & Modernization",
-	// 	client: "LegacyCorp Financial Services",
-	// 	pillar: "lead",
-	// 	serviceTags: ["technology-strategy"],
-	// 	shortDescription:
-	// 		"3-year technology roadmap that aligned leadership and guided $5M+ in technology investments.",
-	// 	challenge:
-	// 		"LegacyCorp's technology had fallen behind competitors. Their core systems were 15+ years old, making it expensive to add features and difficult to attract engineering talent. Leadership knew they needed to modernize, but disagreed on priorities and approach. Some wanted to rebuild everything from scratch, others preferred incremental updates. Without a clear strategy, they risked wasting millions on the wrong approach.",
-	// 	solution:
-	// 		"We conducted a comprehensive technology assessment, interviewing leadership, engineers, and customers to understand the landscape. We evaluated their current systems, identified critical gaps, and developed a phased modernization roadmap that balanced risk and value. The strategy prioritized customer-facing improvements while systematically addressing technical debt. We facilitated leadership alignment sessions that built consensus on the approach and secured commitment to a 3-year plan.",
-	// 	results:
-	// 		"LegacyCorp now has a clear technology roadmap that guides over $5M in annual technology investment. The first phase delivered measurable improvements in customer experience within 6 months. Engineering morale improved dramatically with modern tools and clear direction. Most importantly, leadership is aligned on technology strategy for the first time in years, making decisions with confidence.",
-	// 	testimonial: {
-	// 		quote: "Equal Sons gave us the clarity we desperately needed. For the first time, our leadership team agrees on technology direction, and our engineers have a plan they believe in.",
-	// 		author: "David Park",
-	// 		title: "CTO, LegacyCorp Financial Services",
-	// 	},
-	// 	images: {
-	// 		hero: "/img/case-studies/tech-roadmap-hero.jpg",
-	// 	},
-	// 	featured: true,
-	// },
-	// {
-	// 	id: 6,
-	// 	slug: "saas-gtm-strategy",
-	// 	title: "SaaS Go-to-Market Strategy & Launch",
-	// 	client: "DataInsights Platform",
-	// 	pillar: "lead",
-	// 	serviceTags: ["marketing-strategy", "product-positioning"],
-	// 	shortDescription:
-	// 		"Complete GTM strategy that drove 150% growth in qualified leads and 40% conversion rate improvement.",
-	// 	challenge:
-	// 		"DataInsights had built a powerful analytics platform but struggled to gain traction. Their marketing efforts weren't generating qualified leads, and their sales team couldn't clearly articulate the value proposition. They were positioned as 'analytics for everyone' but resonated with no one. With runway dwindling, they needed a clear go-to-market strategy that would drive pipeline quickly.",
-	// 	solution:
-	// 		"We started with customer research to understand who actually valued their platform and why. We repositioned DataInsights around a specific niche—enterprise sales teams—and rebuilt their messaging to speak directly to that audience's pain points. We then developed a multi-channel GTM strategy focused on content marketing, targeted outreach, and strategic partnerships. We helped them launch with new website messaging, sales collateral, and a 90-day campaign plan.",
-	// 	results:
-	// 		"The focused positioning immediately resonated with the target market. Qualified lead volume increased by 150% within 60 days. More importantly, lead-to-customer conversion improved by 40% because sales conversations aligned with what prospects actually needed. DataInsights secured their next funding round and has since become the go-to platform for enterprise sales analytics.",
-	// 	testimonial: {
-	// 		quote: "We were trying to be everything to everyone and reaching no one. Equal Sons helped us find our focus and gave us the strategy to win our market.",
-	// 		author: "Emily Thompson",
-	// 		title: "CEO, DataInsights Platform",
-	// 	},
-	// 	images: {
-	// 		hero: "/img/case-studies/gtm-strategy-hero.jpg",
-	// 		gallery: ["/img/case-studies/gtm-strategy-1.jpg"],
-	// 	},
-	// 	featured: true,
-	// },
-	// {
-	// 	id: 7,
-	// 	slug: "product-repositioning",
-	// 	title: "Product Repositioning for Market Expansion",
-	// 	client: "CloudSecure",
-	// 	pillar: "lead",
-	// 	serviceTags: ["product-positioning", "marketing-strategy"],
-	// 	shortDescription:
-	// 		"Strategic repositioning that opened new market segments and doubled average deal size.",
-	// 	challenge:
-	// 		"CloudSecure had successfully sold to small businesses for 3 years but hit a growth ceiling. They wanted to move upmarket to enterprise customers but their positioning, pricing, and messaging screamed 'small business tool.' Enterprise prospects didn't take them seriously. They needed to reposition without alienating their existing customer base or requiring major product changes.",
-	// 	solution:
-	// 		"We developed a dual-positioning strategy that maintained their SMB foundation while opening enterprise doors. We identified enterprise-specific use cases their product already solved, created new messaging tracks for different audiences, and restructured their pricing and packaging to support larger deals. We also coached their sales team on enterprise selling and helped them create enterprise-grade sales materials.",
-	// 	results:
-	// 		"CloudSecure successfully moved upmarket without losing SMB momentum. Average deal size doubled within 6 months, and they closed their first seven-figure contract. The enterprise positioning gave them credibility with larger prospects while the refined SMB messaging actually improved conversion in that segment too. Revenue grew 3x year-over-year with the expanded market reach.",
-	// 	images: {
-	// 		hero: "/img/case-studies/repositioning-hero.jpg",
-	// 	},
-	// 	featured: false,
-	// },
-	// {
-	// 	id: 8,
-	// 	slug: "leadership-strategic-planning",
-	// 	title: "Annual Strategic Planning & Team Alignment",
-	// 	client: "InnovateHealth",
-	// 	pillar: "lead",
-	// 	serviceTags: ["business-alignment", "technology-strategy"],
-	// 	shortDescription:
-	// 		"Facilitated strategic planning that aligned leadership, clarified priorities, and improved execution velocity.",
-	// 	challenge:
-	// 		"InnovateHealth's leadership team was working hard but not aligned. Each executive had different priorities, leading to competing initiatives, resource conflicts, and execution confusion. Their annual planning process produced a 50-page document that no one followed. They needed to break the cycle and create a focused strategy the entire team could execute against.",
-	// 	solution:
-	// 		"We facilitated a 2-day strategic planning offsite that got the leadership team aligned on vision, priorities, and execution plan. Using structured exercises and decision frameworks, we helped them identify their top 3 strategic priorities for the year and define clear success metrics. We then worked with each functional leader to translate the strategy into quarterly OKRs and action plans. The result was a concise strategy document focused on what matters most.",
-	// 	results:
-	// 		"For the first time in years, InnovateHealth's leadership team agreed on priorities and could clearly articulate the strategy to their teams. Execution velocity improved dramatically as competing initiatives were deprioritized or cancelled. The company achieved all three strategic priorities by year-end and has since made the facilitated planning process an annual tradition.",
-	// 	images: {
-	// 		hero: "/img/case-studies/strategic-planning-hero.jpg",
-	// 	},
-	// 	featured: false,
-	// },
-	// // SHARE PILLAR CASE STUDIES
-	// {
-	// 	id: 9,
-	// 	slug: "team-conflict-resolution",
-	// 	title: "Cross-Functional Team Alignment & Conflict Resolution",
-	// 	client: "FastGrowth Startup",
-	// 	pillar: "share",
-	// 	serviceTags: ["facilitation-mediation", "team-alignment"],
-	// 	shortDescription:
-	// 		"Mediation and facilitation that resolved product-engineering tension and restored team velocity.",
-	// 	challenge:
-	// 		"FastGrowth's product and engineering teams were at war. Product felt engineering was too slow and inflexible. Engineering felt product kept changing requirements and didn't respect technical complexity. Standups were tense, collaboration had broken down, and velocity was suffering. The CEO knew that if the teams couldn't work together, the company couldn't succeed.",
-	// 	solution:
-	// 		"We conducted confidential one-on-one interviews with team members to understand the underlying issues. We then facilitated a structured mediation session where both sides could air grievances in a productive way. We helped them establish new working agreements around how requirements are defined, how changes are handled, and how they'll communicate ongoing. We also coached the product and engineering leaders on how to rebuild trust and maintain the new norms.",
-	// 	results:
-	// 		"The teams went from avoiding each other to actively collaborating. Sprint velocity increased by 35% as the dysfunction cleared. More importantly, team members reported feeling heard and respected for the first time in months. The working agreements they established have held for over a year, and the relationship between product and engineering is now a competitive advantage for FastGrowth.",
-	// 	testimonial: {
-	// 		quote: "The tension was killing our culture and our product. Equal Sons created space for real conversation and helped us find a path forward. We're finally working as one team.",
-	// 		author: "Alex Rivera",
-	// 		title: "CEO, FastGrowth Startup",
-	// 	},
-	// 	images: {
-	// 		hero: "/img/case-studies/conflict-resolution-hero.jpg",
-	// 	},
-	// 	featured: true,
-	// },
-	// {
-	// 	id: 10,
-	// 	slug: "conference-keynote-series",
-	// 	title: "Technology Leadership Keynote Series",
-	// 	client: "TechLeaders Conference",
-	// 	pillar: "share",
-	// 	serviceTags: ["public-speaking"],
-	// 	shortDescription:
-	// 		"Keynote series on product strategy that received top ratings and drove event attendance.",
-	// 	challenge:
-	// 		"TechLeaders Conference needed keynote speakers who could deliver real value to their audience of CTOs and engineering leaders, not just corporate pitches. They wanted speakers who had been in the trenches, understood the challenges their audience faced, and could share actionable insights. They'd been burned by speakers who looked good on paper but delivered generic content.",
-	// 	solution:
-	// 		"We developed a custom keynote on 'Strategic Technology Decisions: When to Build, Buy, or Partner' based on real experiences helping companies navigate these critical choices. The talk included specific frameworks attendees could use, war stories that illustrated the principles, and honest reflections on what works and what doesn't. We engaged the audience throughout with interactive elements and made ourselves available for Q&A after the session.",
-	// 	results:
-	// 		"The keynote received the highest ratings of any session at the conference. Attendees specifically mentioned the actionable frameworks and authentic storytelling in their feedback. The conference organizers brought us back for two subsequent events and recommended us to other conference organizers. More importantly, several attendees reached out to discuss applying the concepts to their specific situations.",
-	// 	images: {
-	// 		hero: "/img/case-studies/keynote-series-hero.jpg",
-	// 		gallery: ["/img/case-studies/keynote-series-1.jpg"],
-	// 	},
-	// 	featured: true,
-	// },
-	// {
-	// 	id: 11,
-	// 	slug: "leadership-workshop-series",
-	// 	title: "Engineering Leadership Workshop Series",
-	// 	client: "ScaleUp Tech",
-	// 	pillar: "share",
-	// 	serviceTags: ["workshops-training", "team-alignment"],
-	// 	shortDescription:
-	// 		"Custom workshop series that elevated engineering managers into strategic leaders.",
-	// 	challenge:
-	// 		"ScaleUp Tech had promoted several senior engineers into management roles as the company grew. These new managers were technically excellent but struggled with the people side of leadership—giving feedback, coaching, delegating, and thinking strategically. The company needed to invest in developing these managers quickly, but generic leadership training didn't address the specific challenges of engineering leadership.",
-	// 	solution:
-	// 		"We designed a 6-session workshop series tailored to engineering managers. Each session focused on a critical leadership skill (feedback, coaching, delegation, strategy) with a mix of teaching, discussion, and practice. We used real scenarios from their organization, incorporated peer learning, and gave managers homework to apply concepts between sessions. We also offered 1-on-1 coaching for managers who wanted additional support.",
-	// 	results:
-	// 		"The workshop series transformed ScaleUp's engineering management capability. Managers reported feeling more confident in their roles and had concrete tools for handling common challenges. Their teams noticed the improvement—employee engagement scores for engineering increased significantly. Several managers specifically credited the workshops with breakthroughs in their leadership approach. ScaleUp has now made the program part of their standard management onboarding.",
-	// 	images: {
-	// 		hero: "/img/case-studies/workshop-series-hero.jpg",
-	// 	},
-	// 	featured: false,
-	// },
-	// {
-	// 	id: 12,
-	// 	slug: "remote-team-communication",
-	// 	title: "Remote Team Communication Framework",
-	// 	client: "DistributedCo",
-	// 	pillar: "share",
-	// 	serviceTags: ["team-alignment", "facilitation-mediation"],
-	// 	shortDescription:
-	// 		"Communication framework that eliminated meeting overload and improved async collaboration.",
-	// 	challenge:
-	// 		"DistributedCo went fully remote during the pandemic and never established effective communication practices. They defaulted to endless Zoom meetings that left everyone exhausted and still unclear on priorities. Async communication was chaotic—information lived in Slack threads, Google Docs, and email with no clear system. The team was working harder than ever but felt less aligned.",
-	// 	solution:
-	// 		"We designed a comprehensive communication framework tailored to their remote context. This included meeting cadences (which meetings to have and which to replace with async), decision-making protocols (how decisions get made and communicated), and information architecture (where different types of information live). We facilitated workshops to introduce the framework, helped them implement it gradually, and refined based on feedback.",
-	// 	results:
-	// 		"Meeting time decreased by 40% while team alignment improved dramatically. The communication framework gave everyone clarity on how to share information, make decisions, and stay connected without constant meetings. Team satisfaction scores increased significantly, and several team members mentioned the framework as a key reason they stayed through a competitive hiring market. DistributedCo now shares their communication practices as a recruiting advantage.",
-	// 	images: {
-	// 		hero: "/img/case-studies/remote-communication-hero.jpg",
-	// 	},
-	// 	featured: false,
-	// },
+	{
+		id: 1,
+		slug: "buddy-technology-api-consolidation",
+		title: "API Consolidation & Platform Modernization",
+		client: "Buddy Technology",
+		pillar: "build",
+		serviceTags: ["app-development", "web-development"],
+		shortDescription:
+			"Unified two generations of legacy API services into a single, modular platform — reducing backend footprint by 50% and enabling faster feature development.",
+		challenge:
+			"Buddy Technology had evolved through multiple pivots, leaving them with two concurrent versions of their core API services. Each version reflected different business models and technical decisions, creating confusion for developers, duplicated logic, and mounting maintenance overhead. As they prepared for their next phase of growth, they needed a unified foundation and not another layer on top of legacy complexity.",
+		solution:
+			"We embedded with Buddy's team over four months to consolidate their platform. The work started with understanding their business evolution across previous versions and defining what the unified system needed to support going forward. We redesigned their core services using Clean Architecture, wrapping routes, business logic, and integrations into dedicated modules. This made the system testable, composable, and ready for future changes. Teams could swap services, A/B test features, or extend functionality without untangling legacy dependencies. We then executed an incremental migration from both legacy versions, preserving data integrity while unifying their stack (Express, TypeScript, MongoDB, DynamoDB, S3, ECS, and Lambda) across major versions.",
+		results:
+			"Buddy launched with a single, stable API platform that reduced their backend footprint by over 50%. The modular architecture eliminated the cognitive overhead of maintaining multiple systems and positioned their team to build faster. New features that once required navigating version differences could now be developed against a consistent, well-documented codebase. The foundation was set for their next chapter.",
+		testimonial: {
+			quote:
+				"Writing code is the easy part. Architecting, documenting, executing, and testing is the real work of development and Justin from Equal Sons excels at it!",
+			author: "David Vogeleer",
+			title: "CTO, Buddy Technology",
+		},
+		images: {
+			hero: "/assets/img/work/buddy.png",
+			gallery: ["/assets/img/work/buddy.png"],
+		},
+		featured: true,
+	},
+	{
+		id: 2,
+		slug: "coffitivity-infrastructure-modernization",
+		title: "Infrastructure Modernization for Global Scale",
+		client: "Coffitivity",
+		pillar: "build",
+		serviceTags: ["app-development", "web-development"],
+		shortDescription:
+			"Rebuilt a decade-old productivity platform on modern edge infrastructure — cutting costs by 50% and reducing latency up to 80% for international users.",
+		challenge:
+			"Coffitivity has served over 50,000 unique visitors monthly since launching in 2013, but its infrastructure hadn't evolved with its audience. The platform ran on the same stack since 2015: a single DigitalOcean box running Node v8, serving both frontend and backend from Express. It worked, but just barely. With 57% of traffic coming from outside the US, international users faced sluggish load times. And the aging foundation made it nearly impossible to build new features. Every change risked breaking something. Coffitivity didn't need a patch; it needed a new foundation.",
+		solution:
+			"Over six months, we redesigned Coffitivity's architecture from the ground up. The backend moved to Cloudflare Workers with KV store for edge caching, distributing the service globally and allowing it to scale with demand rather than sit idle on a fixed server. Reduced bandwidth transfer costs to $0 by leveraging Cloudflare's R2 free egress pricing. The frontend was rebuilt in React 19 and deployed via Cloudflare Pages for fast, reliable delivery worldwide. The goal wasn't just modernization, it was creating infrastructure that could support growth worldwide without breaking the bank.",
+		results:
+			"The rebuilt platform cut hosting costs by 50% while dramatically improving performance. International users, the majority of Coffitivity's audience, saw latency reductions of up to 80% in select markets. More importantly, Coffitivity now has a foundation built for what's next: new features, better experiences, and sustainable growth.",
+		testimonial: {
+			quote:
+				"Coffitivity is an Equal Sons venture. We rebuilt our own platform using the same approach we bring to every client: modernize the foundation so you can focus on growth, not maintenance.",
+			author: "Justin Kauszler",
+			title: "Co-Founder, Coffitivity & Managing Partner, Equal Sons",
+		},
+		images: {
+			hero: "/assets/img/work/coffitivity-new.png",
+			gallery: [
+				"/assets/img/work/coffitivity-new.png",
+				"/assets/img/work/coffitivity-new-cafes.png",
+				"/assets/img/work/coffitivity-old.png",
+			],
+		},
+		featured: true,
+	},
+	{
+		id: 3,
+		slug: "coffitivity-product-repositioning",
+		title: "Product Repositioning & Business Turnaround",
+		client: "Coffitivity",
+		pillar: "lead",
+		serviceTags: ["product-positioning", "marketing-strategy"],
+		shortDescription:
+			"Transformed a beloved but unprofitable productivity platform from near-shutdown to sustainable growth—increasing revenue by over 3,200% in one year through customer research, strategic repositioning, and principled product decisions.",
+		challenge:
+			"Coffitivity had been running at a loss for years. Despite a loyal user base and a product people genuinely loved, annual revenue had dwindled to under $600. The service was on the verge of shutdown. Either close it down or subsidize it indefinitely. Neither option was sustainable. The product wasn't broken, but the business model was. Coffitivity needed more than a fix; it needed a new vision.",
+		solution:
+			"We started where every turnaround should start: listening. Through extensive customer interviews and discovery, we learned what users valued, where they struggled, and what they'd pay for. From those insights, we built a roadmap, and not just features, but of a new business strategy. We sourced new content, reimagined how users would consume the product, and restructured the service offerings entirely. Along the way, we made a critical decision: we removed ad-based interruptions designed to push users toward paid subscriptions. It was generating friction, not revenue, and it ran counter to Coffitivity's core mission of helping people focus. Instead, we introduced a daily time limit for free users and created flexible plans for those who wanted simplicity over extras. Every change was informed by real feedback, tested incrementally, and measured against what actually moved the needle.",
+		results:
+			"Within twelve months, Coffitivity went from under $600 in annual revenue to over $18,000 a 3,200% increase. More importantly, the business is now sustainable and positioned for continued growth, tracking toward at least another 300% increase in the coming year. The turnaround wasn't a single big bet. It was the result of listening, iterating, and making principled decisions (even when that meant removing features instead of adding them). Coffitivity now has a clear path forward, built on a model that aligns with its mission and its users.",
+		testimonial: {
+			quote:
+				"The best product decisions come from listening, not guessing. We rebuilt Coffitivity's business the same way we approach every client engagement: start with real conversations, make principled choices, and iterate until it works.",
+			author: "Justin Kauszler",
+			title: "Co-Founder, Coffitivity & Managing Partner, Equal Sons",
+		},
+		images: {
+			hero: "/assets/img/work/coffitivity-new.png",
+			gallery: ["/assets/img/work/coffitivity-finances.png"],
+		},
+		featured: false,
+	},
+	{
+		id: 4,
+		slug: "hic-innovation-management",
+		title: "Innovation Management Platform for Healthcare",
+		client: "VCU Health - Health Innovation Consortium",
+		pillar: "build",
+		serviceTags: ["mvp-creation", "technology-strategy"],
+		shortDescription:
+			"Designed and built a custom platform to capture, evaluate, and fund staff-driven innovation across a major health system — replacing costly off-the-shelf tools and streamlining the path from idea to investment.",
+		challenge:
+			"The Health Innovation Consortium (HIC) at VCU Health had an ambitious mandate: identify promising innovations from staff across the health system, evaluate their feasibility, and decide where to invest support. But there was no clear process for capturing ideas at scale, routing them to the right reviewers, or aggregating feedback into actionable decisions. Off-the-shelf tools didn't fit the workflow, and licensing costs added up fast. HIC needed a system built for how they actually worked.",
+		solution:
+			"We embedded with the HIC team over twelve months to design both the process and the platform. First, we mapped out the full innovation lifecycle: from initial idea capture through advisor review to investment decision. Then we evaluated existing tools against those requirements and determined that building custom was the right call. Equal Sons designed and developed an application that allowed faculty and staff to submit concepts, routed submissions to identified industry advisors for review, and aggregated those evaluations into a clear picture for investment committees. The result was a streamlined system that matched how HIC needed to operate, not how a vendor thought they should.",
+		results:
+			"The platform saved HIC thousands in licensing fees while enabling them to manage innovation funding at scale. Staff had a clear path to submit ideas, advisors had a structured review process, and leadership had the aggregated insights needed to make investment decisions. Supported companies of HIC went on to raise more than $2.35M in funding. The program was later discontinued when COVID-19 shifted the health system's priorities, but the work demonstrated what's possible when process design and custom tooling come together to solve a real operational challenge.",
+		images: {
+			hero: "/assets/img/work/hicportal.png",
+		},
+		featured: false,
+	},
+	{
+		id: 8,
+		slug: "svr-workflow-automation",
+		title: "Workflow Automation & Cost Reduction for Event Rentals",
+		client: "Something Vintage Rentals",
+		pillar: "build",
+		serviceTags: ["web-development", "systems-integration"],
+		shortDescription:
+			"Replaced a costly third-party automation stack with a custom API — cutting workflow costs by 90% while maintaining the efficiency gains that had already reduced a near-full-time role to 15% of one person's workload.",
+		challenge:
+			"Something Vintage Rentals runs on an inventory management system that handles invoices and customer records, but stops short of the operational details that actually make deliveries and will-calls happen. Collecting delivery information, coordinating with customers, gathering signatures, and creating pull orders used to consume nearly a full-time employee's workload: endless emails, spreadsheets, and manual tracking. We'd previously solved this with a Zapier-based automation chain connecting Jotform, Google Sheets, Sendgrid, and PDF generators. It worked beautifully, reducing that role to less than 15% of one person's time. But as SVR's order volume grew, so did their Zapier bill, eventually exceeding $3,500 per year just to maintain the workflow.",
+		solution:
+			"We came back in to cut the dependency. The goal was simple: keep the efficiency gains, eliminate the cost. We built a custom API that took over the bulk of the work Zapier had been handling: form processing, customer communication, document generation, and order tracking. Zapier remained as the interface with their inventory management system, but everything downstream now ran through our lightweight, purpose-built tool. The whole project took three months across both phases.",
+		results:
+			"SVR's workflow costs dropped from $3,500 per year to $25 per month, a 90% reduction. The operational efficiency stayed intact: what once required nearly a full-time employee still runs at a fraction of that. And now they have a system that scales with their business without scaling their software bill alongside it.",
+		images: {
+			hero: "/assets/img/work/something-vintage.png",
+			gallery: ["/assets/img/work/something-vintage.png"],
+		},
+		featured: false,
+	},
+	{
+		id: 5,
+		slug: "roundlyx-mvp",
+		title: "Simulated Crypto Trading MVP",
+		client: "RoundlyX",
+		pillar: "build",
+		serviceTags: ["mvp-creation", "app-development"],
+		shortDescription:
+			"Built a lean MVP API for a simulated crypto trading platform in three months — giving founders the validation they needed before committing to a larger investment.",
+		challenge:
+			"RoundlyX (then Coin Savage) had a concept for a simulated crypto trading platform where users could practice buying and selling without real money on the line. They'd built out their website and marketing pages, but needed help with the core engine: the business logic that would track markets, simulate trades, and rank users on a leaderboard. They didn't need a full production system, they needed something fast and functional to test whether the idea had legs.",
+		solution:
+			"We came in to build exactly that. Over three months, we developed an MVP API using Ruby on Rails, PostgreSQL, and Redis. The system integrated with CoinMarketCap's API to track real-time market data, processed simulated buy and sell orders from users, and maintained a live leaderboard based on portfolio performance. The focus was speed and validation, not perfection. The engagement worked so well that I joined as both a contractor and equity partner, invested in the outcome, not just the hours.",
+		results:
+			"The MVP did exactly what it was supposed to do: give the founders a working product to test their thesis quickly and cheaply. They learned what they needed to learn, and ultimately pivoted, but that's the point. An MVP isn't about building forever; it's about finding out fast whether you're on the right track. RoundlyX saved significant time and capital by validating before over-investing, and the lean approach gave them room to evolve.",
+		testimonial: {
+			quote:
+				"As a founder, finding someone I could trust with our technical foundation was key. Justin at Equal Sons delivered exactly what we needed for our MVP and proved he was invested in our vision. Having him come on as both a contractor and equity partner made perfect sense.",
+			author: "Drew Elliott",
+			title: "Founder, RoundlyX",
+		},
+		images: {
+			hero: "/assets/img/work/roundlyx.png",
+			gallery: ["/assets/img/work/roundlyx.png"],
+		},
+		featured: false,
+	},
+	{
+		id: 6,
+		slug: "painless1099-banking-platform",
+		title: "Fintech Banking Platform for Independent Contractors",
+		client: "Painless1099",
+		pillar: "lead",
+		serviceTags: ["technology-strategy", "product-positioning"],
+		shortDescription:
+			"Led product strategy for a fintech platform that helped independent contractors automatically save for taxes — raising $500K in funding, opening 1,200+ accounts, and processing $10M in assets quarterly.",
+		challenge:
+			"Independent contractors face a unique financial burden: unlike traditional employees, no one withholds taxes for them. Every paycheck arrives whole, and it's on them to set aside the right amount or face a painful bill at tax time. Painless1099 set out to solve this with a bold mission: create a banking product that automatically saved tax money in real time, making the process seamless and invisible. The challenge was finding the right partners and positioning to bring that vision to market.",
+		solution:
+			"We led product strategy over eighteen months to turn the concept into a working business. The first critical step was finding the right banking infrastructure partner. After evaluating options, we partnered with Q2, a bank API provider that gave us the rails to build on. From there, we designed a service that monitored users' income as it arrived and automatically moved a percentage into tax savings: no manual transfers, no guesswork. The product positioning centered on eliminating the anxiety of tax season for contractors, turning a dreaded annual event into a non-issue.",
+		results:
+			"Painless1099 raised $500K from 43North, opened over 1,200 bank accounts, and processed $10M in held assets each quarter. Contractors finally had a tool that worked the way their finances actually did. The business ultimately closed when operating costs outpaced revenue, but the product proved the concept: seamless, automated tax savings resonated with an underserved market. The lessons from building and scaling a fintech product from zero inform how we approach product strategy today.",
+		testimonial: {
+			quote:
+				"Painless1099 was an Equal Sons venture. We took it from concept to $500K raised and thousands of users—and learned firsthand what it takes to build, scale, and make hard calls when the numbers don't work.",
+			author: "Justin Kauszler",
+			title: "Co-Founder, Painless1099 & Managing Partner, Equal Sons",
+		},
+		images: {
+			hero: "/assets/img/work/painless1099.png",
+			gallery: [
+				"/assets/img/work/painless1099.png",
+				"/assets/img/work/painless1099-account.png",
+			],
+		},
+		featured: true,
+	},
+	{
+		id: 7,
+		slug: "bbgb-books-migration",
+		title: "Seamless Site Migration for Design Partners",
+		client: "Boon",
+		pillar: "build",
+		serviceTags: ["web-development"],
+		shortDescription:
+			"Handled the technical last mile for a designer's client project — migrating data and DNS in a single day with zero downtime or data loss.",
+		challenge:
+			"Designers often get 99% of the way to launch. The visuals are polished, the site is built, the client is ready, but that final technical step sits just outside their expertise. For Boon, a designer working with BBGB Books, that last mile was DNS migration. The new site was ready, but switching over without downtime or data loss required a level of infrastructure confidence she didn't need to have. That's where we came in.",
+		solution:
+			"This was a quick, focused engagement. Exactly the kind of work we do regularly for creative partners. We migrated the existing site data, handled the DNS cutover, and ensured continuity of business throughout. No learning curve for the designer, no risk to the client, no interruption to customers. One day, start to finish.",
+		results:
+			"BBGB Books launched on their new site with zero downtime and no data loss. Boon delivered a complete project to her client without needing to become a DNS expert. This kind of last-mile partnership is something we do often. Designers and agencies bring us in when they need technical confidence without the overhead of hiring or learning. It's a small engagement, but it's exactly the kind of support that makes creative work sustainable.",
+		images: {
+			hero: "/assets/img/work/bbgbbooks.png",
+			gallery: ["/assets/img/work/bbgbbooks.png"],
+		},
+		featured: false,
+	},
 ];
 
 // Helper functions

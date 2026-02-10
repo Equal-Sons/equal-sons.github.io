@@ -24,33 +24,32 @@ export default function WorkPage() {
 			<Header />
 
 			<BreadcrumbOne
+				bg="/assets/img/work/work.jpg"
 				title="Our Work"
 				subtitle="See how our clients have improved their businesses through our partnership."
 			/>
 
 			{/* Featured Case Studies */}
 			{activeFilter === "all" && featuredStudies.length > 0 && (
-				<div className="space">
-					<div className="container">
-						<div className="row justify-content-center mb-50">
-							<div className="col-xl-8 col-lg-10">
-								<div className="title-area text-center">
-									<h2 className="sec-title">Featured Work</h2>
-									<p className="sec-text">
-										Highlighted projects that showcase the depth and impact of
-										our partnership approach.
-									</p>
-								</div>
+				<div className="container">
+					<div className="row justify-content-center mt-80 mb-50">
+						<div className="col-xl-8 col-lg-10">
+							<div className="title-area text-center">
+								<h2 className="sec-title">Featured Work</h2>
+								<p className="sec-text">
+									Highlighted projects that showcase the depth and impact of our
+									partnership approach.
+								</p>
 							</div>
 						</div>
+					</div>
 
-						<div className="row gy-4">
-							{featuredStudies.slice(0, 3).map((study) => (
-								<div key={study.id} className="col-lg-4 col-md-6">
-									<CaseStudyCard study={study} showTags={true} maxTags={2} />
-								</div>
-							))}
-						</div>
+					<div className="row gy-4">
+						{featuredStudies.slice(0, 3).map((study) => (
+							<div key={study.id} className="col-lg-4 col-md-6">
+								<CaseStudyCard study={study} showTags={true} maxTags={2} />
+							</div>
+						))}
 					</div>
 				</div>
 			)}
@@ -59,7 +58,7 @@ export default function WorkPage() {
 			<div className="portfolio-area-1 space-bottom">
 				<div className="container">
 					{/* Filter Tabs */}
-					<div className="row justify-content-center mb-50">
+					<div className="row justify-content-center my-50">
 						<div className="col-xl-8 col-lg-10">
 							<div className="filter-tab-group text-center">
 								<button

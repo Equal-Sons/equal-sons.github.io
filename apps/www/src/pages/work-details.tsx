@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useParams, NavLink, Navigate } from "react-router-dom";
 import Wrapper from "../layout/wrapper";
 import SEOCom from "../components/seo";
@@ -9,10 +10,15 @@ import {
 	getRelatedCaseStudies,
 } from "../data/case-studies";
 import { getServiceBySlug } from "../data/services";
+import ImageLightbox from "../components/popup/image-lightbox";
 // import CaseStudyCard from "../components/work/case-study-card";
 
 export default function WorkDetailsPage() {
 	const { slug } = useParams<{ slug: string }>();
+
+	// Lightbox state
+	const [lightboxOpen, setLightboxOpen] = useState(false);
+	const [lightboxIndex, setLightboxIndex] = useState(0);
 
 	// Get case study data
 	const caseStudy = slug ? getCaseStudyBySlug(slug) : undefined;
@@ -29,12 +35,34 @@ export default function WorkDetailsPage() {
 		.map((tag) => getServiceBySlug(tag))
 		.filter((service) => service !== undefined);
 
+	// Lightbox handlers
+	const galleryImages = caseStudy.images.gallery || [];
+
+	const openLightbox = (index: number) => {
+		setLightboxIndex(index);
+		setLightboxOpen(true);
+	};
+
+	const handleNext = () => {
+		setLightboxIndex((prev) => (prev + 1) % galleryImages.length);
+	};
+
+	const handlePrev = () => {
+		setLightboxIndex(
+			(prev) => (prev - 1 + galleryImages.length) % galleryImages.length,
+		);
+	};
+
 	return (
 		<Wrapper>
 			<SEOCom title={`${caseStudy.title} - Equal Sons`} />
 			<Header />
 
-			<BreadcrumbOne title={caseStudy.title} subtitle={caseStudy.client} />
+			<BreadcrumbOne
+				title={caseStudy.title}
+				subtitle={caseStudy.client}
+				bg={caseStudy.images.hero}
+			/>
 
 			{/* Case Study Content */}
 			<div className="project-details-area space">
@@ -49,13 +77,88 @@ export default function WorkDetailsPage() {
 									</span>
 									{caseStudy.serviceTags.map((tag, index) => (
 										<span key={index} className="badge bg-smoke me-2">
-											{tag}
+											{tag
+												.split("-")
+												.map(
+													(word) =>
+														word.charAt(0).toUpperCase() + word.slice(1),
+												)
+												.join(" ")}
 										</span>
 									))}
 								</div>
 								<h2 className="sec-title mb-30">{caseStudy.title}</h2>
 								<p className="mb-40">{caseStudy.shortDescription}</p>
 							</div>
+
+							{/* Project Gallery */}
+							{caseStudy.images.gallery &&
+								caseStudy.images.gallery.length > 0 && (
+									<div className="mb-50">
+										<div className="row gy-4">
+											{caseStudy.images.gallery.map((image, index) => (
+												<div
+													key={index}
+													className={
+														caseStudy.images.gallery?.length === 1
+															? "col-12"
+															: "col-md-6"
+													}
+												>
+													<button
+														type="button"
+														onClick={() => openLightbox(index)}
+														onKeyDown={(e) => {
+															if (e.key === "Enter" || e.key === " ") {
+																openLightbox(index);
+															}
+														}}
+														style={{
+															border: "none",
+															padding: 0,
+															background: "none",
+															cursor: "pointer",
+															width: "100%",
+														}}
+														aria-label={`${caseStudy.title} - Gallery item ${index + 1}`}
+													>
+														<img
+															src={image}
+															alt={`${caseStudy.title} - Gallery item ${index + 1}`}
+															className="w-100"
+															style={{
+																height:
+																	caseStudy.images.gallery?.length === 1
+																		? "auto"
+																		: "300px",
+																objectFit: "cover",
+																borderRadius: "8px",
+																cursor: "pointer",
+																transition: "transform 0.3s, opacity 0.3s",
+															}}
+															onMouseOver={(e) => {
+																e.currentTarget.style.transform = "scale(1.02)";
+																e.currentTarget.style.opacity = "0.9";
+															}}
+															onMouseOut={(e) => {
+																e.currentTarget.style.transform = "scale(1)";
+																e.currentTarget.style.opacity = "1";
+															}}
+															onFocus={(e) => {
+																e.currentTarget.style.transform = "scale(1.02)";
+																e.currentTarget.style.opacity = "0.9";
+															}}
+															onBlur={(e) => {
+																e.currentTarget.style.transform = "scale(1)";
+																e.currentTarget.style.opacity = "1";
+															}}
+														/>
+													</button>
+												</div>
+											))}
+										</div>
+									</div>
+								)}
 
 							{/* The Challenge */}
 							<div className="mb-50">
@@ -148,7 +251,13 @@ export default function WorkDetailsPage() {
 											<div>
 												{caseStudy.serviceTags.map((tag, index) => (
 													<span key={index}>
-														{tag}
+														{tag
+															.split("-")
+															.map(
+																(word) =>
+																	word.charAt(0).toUpperCase() + word.slice(1),
+															)
+															.join(" ")}
 														{index < caseStudy.serviceTags.length - 1
 															? ", "
 															: ""}
@@ -235,6 +344,17 @@ export default function WorkDetailsPage() {
 			</div>
 
 			<FooterSeven />
+
+			{/* Image Lightbox */}
+			<ImageLightbox
+				isOpen={lightboxOpen}
+				images={galleryImages}
+				currentIndex={lightboxIndex}
+				onClose={() => setLightboxOpen(false)}
+				onNext={handleNext}
+				onPrev={handlePrev}
+				alt={caseStudy.title}
+			/>
 		</Wrapper>
 	);
 }
