@@ -1,4 +1,4 @@
-.breadcumb-menu {
+.breadcrumb-menu {
     max-width: 100%;
     padding: 0;
     list-style-type: none;
@@ -43,7 +43,7 @@
     }
 }
 
-.breadcumb-title {
+.breadcrumb-title {
     color: $white-color;
     margin: -0.15em 0 -0.15em 0;
 	line-height: 1.1;
@@ -66,7 +66,7 @@
     }
 }
 
-.breadcumb-subtitle {
+.breadcrumb-subtitle {
   color: $white-color;
   font-size: 20px;
   margin-top: 16px;
@@ -88,7 +88,7 @@
 
 }
 
-.breadcumb-icon {
+.breadcrumb-icon {
   width: 60px;
 
   @include ml {
@@ -105,9 +105,10 @@
     }
 }
 
-.breadcumb-wrapper {
+.breadcrumb-wrapper {
     background-size: cover !important;
-    padding: 240px 0;
+    display: grid;
+    padding: 0;
     overflow: hidden;
     position: relative;
     z-index: auto;
@@ -118,8 +119,30 @@
         content: '';
         position: absolute;
         inset: 0;
+        z-index: 1;
         background: #0A0C00;
         opacity: 0.68;
+    }
+
+    > picture {
+        grid-area: 1 / 1;
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        min-width: 0;
+        min-height: 0;
+        overflow: hidden;
+        contain: size;
+
+    }
+
+    > .container {
+        grid-area: 1 / 1;
+        position: relative;
+        z-index: 2;
+        padding-top: 240px;
+        padding-bottom: 240px;
     }
     @include sm {
         text-align: center;
@@ -128,54 +151,69 @@
         background: $smoke-color;
         padding: 24px 36px;
         text-align: start;
+
+        > .container {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
         &:after {
             display: none;
         }
     }
 }
 
-.breadcumb-background {
-    position: absolute;
-    inset: 0;
+.breadcrumb-background {
+    position: static;
+    display: block;
     width: 100%;
-    height: 100%;
+    height: auto;
+    min-width: 0;
+    min-height: 0;
+    align-self: stretch;
     object-fit: cover;
     object-position: center;
 }
 @include xxl {
-    .breadcumb-wrapper {
-        padding: 200px 0;
+    .breadcrumb-wrapper > .container {
+        padding-top: 200px;
+        padding-bottom: 200px;
     }
 }
 @include ml {
-    .breadcumb-wrapper {
-        padding: 180px 0;
+    .breadcrumb-wrapper > .container {
+        padding-top: 180px;
+        padding-bottom: 180px;
     }
 }
 @include md {
-    .breadcumb-wrapper {
+    .breadcrumb-wrapper {
         // margin-top: 90px;
         margin-top: 100px;
     }
 }
 @include sm {
-    .breadcumb-wrapper {
-        padding: 120px 0;
+    .breadcrumb-wrapper > .container {
+        padding-top: 120px;
+        padding-bottom: 120px;
     }
-    .breadcumb-title {
+    .breadcrumb-title {
         letter-spacing: normal;
     }
 }
 @include xs {
-    .breadcumb-menu li, .breadcumb-menu a, .breadcumb-menu span {
+    .breadcrumb-menu li, .breadcrumb-menu a, .breadcrumb-menu span {
         font-size: 14px;
     }
-    .breadcumb-wrapper {
-        padding: 100px 0;
+    .breadcrumb-wrapper {
         margin-top: 86px;
         margin-top: 100px;
         &.style2 {
             padding: 24px 0px;
         }
+    }
+    .breadcrumb-wrapper > .container {
+        padding-top: 100px;
+        padding-bottom: 100px;
     }
 }

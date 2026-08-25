@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import ResponsiveImage, { type ImageSource } from "../responsive-image";
 
 type IProps = {
@@ -5,30 +6,33 @@ type IProps = {
 	subtitle?: string;
 	bg?: ImageSource;
 	icon?: string;
+	imagePosition?: CSSProperties["objectPosition"];
 };
 
 export default function BreadcrumbOne({
 	title,
 	subtitle,
 	icon,
-	bg = "/assets/img/bg/breadcumb-bg1-6.jpg",
+	bg = "/assets/img/bg/breadcrumb-bg1-6.jpg",
+	imagePosition = "center center",
 }: IProps) {
 	return (
-		<div className="breadcumb-wrapper">
+		<div className="breadcrumb-wrapper">
 			<ResponsiveImage
 				image={bg}
 				alt=""
 				aria-hidden="true"
-				className="breadcumb-background"
+				className="breadcrumb-background"
+				style={{ objectPosition: imagePosition }}
 				sizes="100vw"
 				loading="eager"
 			/>
 			<div className="container">
-				<div className="breadcumb-content flex justify-center">
-					{icon && <img className="breadcumb-icon" src={icon} alt={title} />}
-					<h1 className="breadcumb-title">{title}</h1>
+				<div className="breadcrumb-content flex justify-center">
+					{icon && <img className="breadcrumb-icon" src={icon} alt={title} />}
+					<h1 className="breadcrumb-title">{title}</h1>
 				</div>
-				{subtitle && <p className="breadcumb-subtitle">{subtitle}</p>}
+				{subtitle && <p className="breadcrumb-subtitle">{subtitle}</p>}
 			</div>
 		</div>
 	);

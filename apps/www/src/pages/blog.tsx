@@ -1,6 +1,6 @@
 import Wrapper from "../layout/wrapper";
 import SEOCom from "../components/seo";
-import HeaderThree from "../layout/headers/header-three";
+import HeaderThree from "../layout/headers/header";
 import BreadcrumbOne from "../components/breadcrumb/breadcrumb-one";
 import BlogListArea from "../components/blog/blog-list-area";
 import MarqueeSlider from "../components/marquee-slider";
@@ -18,7 +18,7 @@ export default function Blog() {
 			{/* header area end */}
 
 			{/* breadcrumb start */}
-			<BreadcrumbOne title="Blog" bg="/assets/img/bg/breadcumb-bg1-8.jpg" />
+			<BreadcrumbOne title="Blog" bg="/assets/img/bg/breadcrumb-bg1-8.jpg" />
 			{/* breadcrumb end */}
 
 			{/* blog list area */}

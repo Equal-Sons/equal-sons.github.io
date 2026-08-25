@@ -30,11 +30,16 @@ const menu_data: IMenuDT[] = [
 	},
 	{
 		id: 2,
+		title: "BLOG",
+		link: "/blog",
+	},
+	{
+		id: 3,
 		title: "ABOUT",
 		link: "/about",
 	},
 	{
-		id: 3,
+		id: 4,
 		title: "CONTACT",
 		link: "/contact",
 	},

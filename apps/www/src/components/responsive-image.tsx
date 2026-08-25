@@ -31,15 +31,17 @@ export default function ResponsiveImage({
 }: ResponsiveImageProps) {
 	if (typeof image === "string") {
 		return (
-			<img
-				{...props}
-				src={image}
-				alt={alt}
-				sizes={sizes}
-				loading={loading}
-				width={width}
-				height={height}
-			/>
+			<picture>
+				<img
+					{...props}
+					src={image}
+					alt={alt}
+					sizes={sizes}
+					loading={loading}
+					width={width}
+					height={height}
+				/>
+			</picture>
 		);
 	}
 
