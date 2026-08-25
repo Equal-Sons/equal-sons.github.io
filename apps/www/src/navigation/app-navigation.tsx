@@ -13,6 +13,8 @@ import LeadPillarPage from "../pages/services/lead";
 import SharePillarPage from "../pages/services/share";
 import ServiceDetailsPage from "../pages/service-details";
 import FreeWebsiteInitiative from "../pages/free-website-initiative";
+import Blog from "../pages/blog";
+import BlogDetails from "../pages/blog-details";
 
 export default function AppNavigation() {
 	return (
@@ -36,6 +38,9 @@ export default function AppNavigation() {
 					element={<FreeWebsiteInitiative />}
 				/>
 				<Route path="/contact" element={<Contact />} />
+
+				<Route path="/blog" element={<Blog />} />
+				<Route path="/blog-details/:id" element={<BlogDetails />} />
 
 				{/* <Route path="/home-1" element={<HomeOne />} />
 				<Route path="/home-2" element={<HomeTwo />} />
