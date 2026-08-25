@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import ResponsiveImage from "../responsive-image";
 
 interface ImageLightboxProps {
 	isOpen: boolean;
@@ -145,9 +146,11 @@ export default function ImageLightbox({
 					alignItems: "center",
 				}}
 			>
-				<img
+				<ResponsiveImage
 					src={images[currentIndex]}
 					alt={`${alt} - ${currentIndex + 1}`}
+					sizes="90vw"
+					loading="eager"
 					style={{
 						maxWidth: "100%",
 						maxHeight: "85vh",

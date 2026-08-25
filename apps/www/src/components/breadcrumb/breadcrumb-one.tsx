@@ -1,3 +1,5 @@
+import ResponsiveImage from "../responsive-image";
+
 type IProps = {
 	title: string;
 	subtitle?: string;
@@ -12,13 +14,15 @@ export default function BreadcrumbOne({
 	bg = "/assets/img/bg/breadcumb-bg1-6.jpg",
 }: IProps) {
 	return (
-		<div
-			className="breadcumb-wrapper"
-			style={{
-				backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${bg})`,
-				backgroundPosition: "center center",
-			}}
-		>
+		<div className="breadcumb-wrapper">
+			<ResponsiveImage
+				src={bg}
+				alt=""
+				aria-hidden="true"
+				className="breadcumb-background"
+				sizes="100vw"
+				loading="eager"
+			/>
 			<div className="container">
 				<div className="breadcumb-content flex justify-center">
 					{icon && <img className="breadcumb-icon" src={icon} alt={title} />}

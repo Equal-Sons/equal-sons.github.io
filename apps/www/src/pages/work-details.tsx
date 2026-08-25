@@ -11,6 +11,7 @@ import {
 } from "../data/case-studies";
 import { getServiceBySlug } from "../data/services";
 import ImageLightbox from "../components/popup/image-lightbox";
+import ResponsiveImage from "../components/responsive-image";
 // import CaseStudyCard from "../components/work/case-study-card";
 
 export default function WorkDetailsPage() {
@@ -122,9 +123,14 @@ export default function WorkDetailsPage() {
 														}}
 														aria-label={`${caseStudy.title} - Gallery item ${index + 1}`}
 													>
-														<img
+														<ResponsiveImage
 															src={image}
 															alt={`${caseStudy.title} - Gallery item ${index + 1}`}
+															sizes={
+																caseStudy.images.gallery?.length === 1
+																	? "(min-width: 992px) 66vw, 100vw"
+																	: "(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+															}
 															className="w-100"
 															style={{
 																height:
