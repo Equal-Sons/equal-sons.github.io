@@ -13,7 +13,7 @@ const team_data: ITeamDT[] = [
 			"Web & App Development",
 			"Technology Strategy & Architecture",
 			"MVP Creation & Product Development",
-			"Systems Integration",
+			"AI & Systems Integration",
 			"Fractional CTO Services",
 		],
 		email: "justin@equalsons.com",

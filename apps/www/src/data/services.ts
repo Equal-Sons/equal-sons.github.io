@@ -29,7 +29,7 @@ export const PILLAR_INFO = {
 		name: "BUILD",
 		tagline: "You have the idea. We have the expertise.",
 		description:
-			"We design and develop the digital products that bring your vision to life. From responsive websites to full-scale applications to the integrations that connect your systems. Whether you're validating a concept with an MVP or scaling what's already working, we build with intention, craft, and an eye toward what comes next.",
+			"We design and develop the digital products that bring your vision to life. From responsive websites and full-scale applications to practical AI workflows and the integrations that connect your systems. Whether you're validating a concept with an MVP or scaling what's already working, we build with intention, craft, and an eye toward what comes next.",
 		services: [
 			"systems-integration",
 			"app-development",
@@ -70,53 +70,53 @@ export const services: IService[] = [
 		slug: "systems-integration",
 		pillar: "build",
 		pillarName: "BUILD",
-		title: "Systems Integration",
-		tagline: "Connect your tools and automate your workflows",
+		title: "AI and Systems Integration",
+		tagline: "Put AI to work across the systems your business already uses",
 		briefDescription:
-			"Make your systems work together seamlessly with custom integrations and automation.",
+			"Build practical AI workflows, agents, and integrations that reduce manual work while keeping your team in control.",
 		detailedDescription:
-			"Your business uses dozens of tools, and they don't always play nicely together. We build custom integrations that connect your systems, automate repetitive tasks, and ensure data flows where it needs to go. From CRM integrations to custom APIs to workflow automation, we make your technology stack work for you.",
+			"Useful AI is more than a chatbot. We start with the work your team already does, then build AI agents, assistants, and automations around your trusted data and existing tools. That might mean a research workflow that prepares decisions for review, an internal assistant that can find answers across company documents, or a system that turns incoming forms, emails, and files into structured next steps. We connect the underlying systems, add clear human approval points, and make the result dependable enough for day-to-day business.",
 		keyFeatures: [
-			"API development and integration",
-			"CRM and marketing automation connections",
-			"Payment gateway integration",
-			"Data synchronization between systems",
-			"Workflow automation (Zapier, Make, custom)",
-			"Legacy system modernization",
-			"Webhook setup and management",
-			"AI integration and automation",
+			"Custom AI agents and workflow automation",
+			"Internal knowledge assistants grounded in your documents",
+			"AI-assisted research, reporting, content, and support workflows",
+			"Document extraction, classification, and data enrichment",
+			"Scheduled and event-driven automations",
+			"CRM, marketing, payment, and operations integrations",
+			"Custom APIs, webhooks, and data synchronization",
+			"Human review gates, permissions, monitoring, and safeguards",
 		],
 		process: [
 			{
 				step: 1,
-				title: "Systems Audit",
+				title: "Workflow Discovery",
 				description:
-					"We map out your current tools, identify integration opportunities, and find workflows that can be automated.",
+					"We map the work, tools, and information your team relies on. Then we identify where AI adds real value, where straightforward automation is better, and what should stay human.",
 			},
 			{
 				step: 2,
-				title: "Integration Design",
+				title: "System & Safety Design",
 				description:
-					"We design the data flows and connections between systems, ensuring reliability and proper error handling.",
+					"We design the data flows, system connections, permissions, and review points. Every workflow has clear boundaries for what the AI can do and when a person makes the call.",
 			},
 			{
 				step: 3,
-				title: "Development & Testing",
+				title: "Build & Integrate",
 				description:
-					"We build the integrations and test thoroughly to ensure data integrity and system stability.",
+					"We build the agents, assistants, automations, and integrations, then test them against real scenarios for accuracy, resilience, and useful handoffs.",
 			},
 			{
 				step: 4,
-				title: "Monitoring & Maintenance",
+				title: "Launch, Measure & Improve",
 				description:
-					"We set up monitoring to catch issues early and provide ongoing support as your systems evolve.",
+					"We launch with monitoring and clear success measures, then refine the workflow as your team uses it and your business changes.",
 			},
 		],
 		benefits: [
-			"Eliminate manual data entry",
-			"Reduce errors and improve data accuracy",
-			"Save time with workflow automation",
-			"Get better insights from connected data",
+			"Turn repetitive work into dependable, repeatable systems",
+			"Give your team faster access to company knowledge",
+			"Connect the tools you already use instead of replacing them",
+			"Keep people in control of high-impact decisions",
 		],
 		relatedCaseStudies: ["crm-integration-automation"],
 		testimonial: {

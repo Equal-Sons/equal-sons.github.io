@@ -6,7 +6,7 @@ const pillarData = [
 		title: "BUILD",
 		tagline: "You have the idea. We have the expertise.",
 		description:
-			"Web and app development, MVPs, integrations. We make the technology that brings your vision to life.",
+			"Web and app development, AI workflows, MVPs, and integrations. We make the technology that brings your vision to life.",
 		link: "/services/build",
 		iconSrc: "/assets/img/icon/feature-icon1-2.svg",
 	},
@@ -46,8 +46,8 @@ const PillarsPreview = () => {
 					</div>
 				</div>
 				<div className="row gy-4 align-items-stretch justify-content-center">
-					{pillarData.map((pillar, i) => (
-						<div key={i} className="col-lg-4 col-md-6">
+					{pillarData.map((pillar) => (
+						<div key={pillar.id} className="col-lg-4 col-md-6">
 							<div className="feature-card h-100">
 								<div className="feature-card-icon">
 									<img src={pillar.iconSrc} alt={`${pillar.title} icon`} />
