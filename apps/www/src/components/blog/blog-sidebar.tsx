@@ -1,10 +1,6 @@
 import { NavLink } from "react-router-dom";
-import blog_data from "../../data/blog-data";
 
 export default function BlogSidebar() {
-	const recent_blogs = blog_data
-		.filter((b) => b.page === "blog-list")
-		.slice(-3);
 	return (
 		<aside className="blog__sidebar">
 			{/* CTA */}

@@ -9,7 +9,7 @@ node_modules
 out/
 build
 dist
-apps/www/public/assets/generated/
+apps/www/public/assets/generated/.cache.json
 
 # misc
 .DS_Store
