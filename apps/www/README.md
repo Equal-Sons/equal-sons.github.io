@@ -1,14 +1,17 @@
-# temporary-homepage
-A temporary homepage until we decide how we want to market ourselves.
+# Equal Sons website
 
 ## Image assets
 
-Responsive variants are committed so deployment builds do not regenerate them.
-After changing a source image, run:
+Responsive source images live under `src/assets/images` and are imported by the
+data or component that uses them. Add the imagetools query to each import:
 
-```sh
-pnpm --filter @equal-sons/www generate:images
+```ts
+import image from "../assets/images/example.jpg?responsive";
 ```
 
-Commit both `public/assets/generated` and `src/generated/responsive-images.ts`.
-Vite optimizes the remaining raster assets during production builds.
+Pass the imported object to `ResponsiveImage` or store it directly in page data.
+The centralized policy emits 480/960/1440/1920 widths in AVIF, WebP, and the
+source image's fallback format.
+
+Vite generates the variants during the build and caches transforms under
+`node_modules/.cache/imagetools`. Generated files are not committed.

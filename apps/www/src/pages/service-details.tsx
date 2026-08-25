@@ -1,12 +1,12 @@
-import { useParams, NavLink, Navigate } from "react-router-dom";
-import Wrapper from "../layout/wrapper";
-import SEOCom from "../components/seo";
-import Header from "../layout/headers/header";
+import { NavLink, Navigate, useParams } from "react-router-dom";
 import BreadcrumbOne from "../components/breadcrumb/breadcrumb-one";
-import FooterSeven from "../layout/footer/footer-seven";
-import { getServiceBySlug, getRelatedServices } from "../data/services";
-import { getCaseStudiesByService } from "../data/case-studies";
+import SEOCom from "../components/seo";
 import CaseStudyCard from "../components/work/case-study-card";
+import { getCaseStudiesByService } from "../data/case-studies";
+import { getRelatedServices, getServiceBySlug } from "../data/services";
+import FooterSeven from "../layout/footer/footer-seven";
+import Header from "../layout/headers/header";
+import Wrapper from "../layout/wrapper";
 
 export default function ServiceDetailsPage() {
 	const {
@@ -33,7 +33,7 @@ export default function ServiceDetailsPage() {
 			<BreadcrumbOne
 				title={service.title}
 				subtitle={service.tagline}
-				bg={`/assets/img/service/${service.slug}.jpg`}
+				bg={service.image}
 			/>
 
 			{/* Service Overview */}

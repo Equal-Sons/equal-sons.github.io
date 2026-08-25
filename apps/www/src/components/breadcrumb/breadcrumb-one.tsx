@@ -1,9 +1,9 @@
-import ResponsiveImage from "../responsive-image";
+import ResponsiveImage, { type ImageSource } from "../responsive-image";
 
 type IProps = {
 	title: string;
 	subtitle?: string;
-	bg?: string;
+	bg?: ImageSource;
 	icon?: string;
 };
 
@@ -16,7 +16,7 @@ export default function BreadcrumbOne({
 	return (
 		<div className="breadcumb-wrapper">
 			<ResponsiveImage
-				src={bg}
+				image={bg}
 				alt=""
 				aria-hidden="true"
 				className="breadcumb-background"

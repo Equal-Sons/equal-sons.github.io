@@ -1,10 +1,10 @@
 import { NavLink } from "react-router-dom";
-import Wrapper from "../../layout/wrapper";
-import SEOCom from "../../components/seo";
-import Header from "../../layout/headers/header";
 import BreadcrumbOne from "../../components/breadcrumb/breadcrumb-one";
+import SEOCom from "../../components/seo";
+import { PILLAR_INFO, getServicesByPillar } from "../../data/services";
 import FooterSeven from "../../layout/footer/footer-seven";
-import { getServicesByPillar, PILLAR_INFO } from "../../data/services";
+import Header from "../../layout/headers/header";
+import Wrapper from "../../layout/wrapper";
 
 export default function BuildPillarPage() {
 	const buildServices = getServicesByPillar("build");
@@ -18,7 +18,7 @@ export default function BuildPillarPage() {
 			<BreadcrumbOne
 				title={pillarInfo.name}
 				subtitle={pillarInfo.tagline}
-				bg="/assets/img/service/build.jpg"
+				bg={pillarInfo.image}
 			/>
 
 			{/* Pillar Overview */}

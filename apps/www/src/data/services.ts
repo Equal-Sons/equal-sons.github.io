@@ -1,3 +1,20 @@
+import appDevelopmentImage from "../assets/images/service/app-development.jpg?responsive";
+import buildImage from "../assets/images/service/build.jpg?responsive";
+import businessAlignmentImage from "../assets/images/service/business-alignment.jpg?responsive";
+import facilitationMediationImage from "../assets/images/service/facilitation-mediation.jpg?responsive";
+import leadImage from "../assets/images/service/lead.jpg?responsive";
+import marketingStrategyImage from "../assets/images/service/marketing-strategy.jpg?responsive";
+import mvpCreationImage from "../assets/images/service/mvp-creation.jpg?responsive";
+import productPositioningImage from "../assets/images/service/product-positioning.jpg?responsive";
+import publicSpeakingImage from "../assets/images/service/public-speaking.jpg?responsive";
+import shareImage from "../assets/images/service/share.jpg?responsive";
+import systemsIntegrationImage from "../assets/images/service/systems-integration.jpg?responsive";
+import teamAlignmentImage from "../assets/images/service/team-alignment.jpg?responsive";
+import technologyStrategyImage from "../assets/images/service/technology-strategy.jpg?responsive";
+import webDevelopmentImage from "../assets/images/service/web-development.jpg?responsive";
+import workshopsTrainingImage from "../assets/images/service/workshops-training.jpg?responsive";
+import type { ResponsiveImageSource } from "../components/responsive-image";
+
 export interface IService {
 	id: number;
 	slug: string;
@@ -15,7 +32,7 @@ export interface IService {
 	}[];
 	benefits: string[];
 	relatedCaseStudies: string[]; // slugs
-	imageSrc?: string;
+	image: ResponsiveImageSource;
 	testimonial?: {
 		text: string;
 		name: string;
@@ -27,6 +44,7 @@ export interface IService {
 export const PILLAR_INFO = {
 	build: {
 		name: "BUILD",
+		image: buildImage,
 		tagline: "You have the idea. We have the expertise.",
 		description:
 			"We design and develop the digital products that bring your vision to life. From responsive websites and full-scale applications to practical AI workflows and the integrations that connect your systems. Whether you're validating a concept with an MVP or scaling what's already working, we build with intention, craft, and an eye toward what comes next.",
@@ -39,6 +57,7 @@ export const PILLAR_INFO = {
 	},
 	lead: {
 		name: "LEAD",
+		image: leadImage,
 		tagline: "Knowing where you're going changes how you get there.",
 		description:
 			"We partner with leadership teams to define the path forward. We align technology decisions with business objectives, craft go-to-market strategies that resonate, and position your offerings to own their rightful place in the market. Strategic clarity that cuts through noise and creates real momentum.",
@@ -51,6 +70,7 @@ export const PILLAR_INFO = {
 	},
 	share: {
 		name: "SHARE",
+		image: shareImage,
 		tagline: "What you know is valuable. How you share it sets you apart.",
 		description:
 			"We facilitate the conversations that align teams, mediate the decisions that move projects forward, and take the stage to share insights that matter. From boardrooms to conferences, we help you find the words, and the confidence, to lead out loud.",
@@ -68,6 +88,7 @@ export const services: IService[] = [
 	{
 		id: 1,
 		slug: "systems-integration",
+		image: systemsIntegrationImage,
 		pillar: "build",
 		pillarName: "BUILD",
 		title: "AI and Systems Integration",
@@ -129,6 +150,7 @@ export const services: IService[] = [
 	{
 		id: 2,
 		slug: "app-development",
+		image: appDevelopmentImage,
 		pillar: "build",
 		pillarName: "BUILD",
 		title: "App Development",
@@ -190,6 +212,7 @@ export const services: IService[] = [
 	{
 		id: 3,
 		slug: "mvp-creation",
+		image: mvpCreationImage,
 		pillar: "build",
 		pillarName: "BUILD",
 		title: "MVP Creation",
@@ -251,6 +274,7 @@ export const services: IService[] = [
 	{
 		id: 4,
 		slug: "web-development",
+		image: webDevelopmentImage,
 		pillar: "build",
 		pillarName: "BUILD",
 		title: "Web Development",
@@ -314,6 +338,7 @@ export const services: IService[] = [
 	{
 		id: 5,
 		slug: "technology-strategy",
+		image: technologyStrategyImage,
 		pillar: "lead",
 		pillarName: "LEAD",
 		title: "Technology Strategy",
@@ -375,6 +400,7 @@ export const services: IService[] = [
 	{
 		id: 6,
 		slug: "marketing-strategy",
+		image: marketingStrategyImage,
 		pillar: "lead",
 		pillarName: "LEAD",
 		title: "Marketing Strategy",
@@ -430,6 +456,7 @@ export const services: IService[] = [
 	{
 		id: 7,
 		slug: "product-positioning",
+		image: productPositioningImage,
 		pillar: "lead",
 		pillarName: "LEAD",
 		title: "Product & Service Positioning",
@@ -486,6 +513,7 @@ export const services: IService[] = [
 	{
 		id: 8,
 		slug: "business-alignment",
+		image: businessAlignmentImage,
 		pillar: "lead",
 		pillarName: "LEAD",
 		title: "Strategic Business Alignment",
@@ -543,6 +571,7 @@ export const services: IService[] = [
 	{
 		id: 9,
 		slug: "facilitation-mediation",
+		image: facilitationMediationImage,
 		pillar: "share",
 		pillarName: "SHARE",
 		title: "Facilitation & Mediation",
@@ -598,6 +627,7 @@ export const services: IService[] = [
 	{
 		id: 10,
 		slug: "public-speaking",
+		image: publicSpeakingImage,
 		pillar: "share",
 		pillarName: "SHARE",
 		title: "Public Speaking & Keynotes",
@@ -654,6 +684,7 @@ export const services: IService[] = [
 	{
 		id: 11,
 		slug: "workshops-training",
+		image: workshopsTrainingImage,
 		pillar: "share",
 		pillarName: "SHARE",
 		title: "Workshops & Training",
@@ -709,6 +740,7 @@ export const services: IService[] = [
 	{
 		id: 12,
 		slug: "team-alignment",
+		image: teamAlignmentImage,
 		pillar: "share",
 		pillarName: "SHARE",
 		title: "Team Alignment & Communication",

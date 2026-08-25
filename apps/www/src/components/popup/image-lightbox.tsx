@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import ResponsiveImage from "../responsive-image";
+import ResponsiveImage, { type ImageSource } from "../responsive-image";
 
 interface ImageLightboxProps {
 	isOpen: boolean;
-	images: string[];
+	images: ImageSource[];
 	currentIndex: number;
 	onClose: () => void;
 	onNext: () => void;
@@ -147,7 +147,7 @@ export default function ImageLightbox({
 				}}
 			>
 				<ResponsiveImage
-					src={images[currentIndex]}
+					image={images[currentIndex]}
 					alt={`${alt} - ${currentIndex + 1}`}
 					sizes="90vw"
 					loading="eager"

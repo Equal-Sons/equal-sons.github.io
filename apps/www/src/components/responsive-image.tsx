@@ -1,21 +1,27 @@
 import type { ImgHTMLAttributes } from "react";
-import { responsiveImages } from "../generated/responsive-images";
+
+export interface ResponsiveImageSource {
+	sources: Record<string, string>;
+	img: {
+		src: string;
+		w: number;
+		h: number;
+	};
+}
+
+export type ImageSource = string | ResponsiveImageSource;
 
 type ResponsiveImageProps = Omit<
 	ImgHTMLAttributes<HTMLImageElement>,
 	"alt" | "src"
 > & {
-	src: string;
+	image: ImageSource;
 	alt: string;
 	sizes?: string;
 };
 
-function srcSet(variants: { src: string; width: number }[]) {
-	return variants.map(({ src, width }) => `${src} ${width}w`).join(", ");
-}
-
 export default function ResponsiveImage({
-	src,
+	image,
 	alt,
 	sizes = "100vw",
 	loading = "lazy",
@@ -23,13 +29,11 @@ export default function ResponsiveImage({
 	height,
 	...props
 }: ResponsiveImageProps) {
-	const metadata = responsiveImages[src];
-
-	if (!metadata) {
+	if (typeof image === "string") {
 		return (
 			<img
 				{...props}
-				src={src}
+				src={image}
 				alt={alt}
 				sizes={sizes}
 				loading={loading}
@@ -41,15 +45,21 @@ export default function ResponsiveImage({
 
 	return (
 		<picture>
-			<source type="image/avif" srcSet={srcSet(metadata.avif)} sizes={sizes} />
-			<source type="image/webp" srcSet={srcSet(metadata.webp)} sizes={sizes} />
+			{Object.entries(image.sources).map(([format, srcSet]) => (
+				<source
+					key={format}
+					type={`image/${format}`}
+					srcSet={srcSet}
+					sizes={sizes}
+				/>
+			))}
 			<img
 				{...props}
-				src={metadata.fallback.src}
+				src={image.img.src}
 				alt={alt}
 				loading={loading}
-				width={width ?? metadata.width}
-				height={height ?? metadata.height}
+				width={width ?? image.img.w}
+				height={height ?? image.img.h}
 			/>
 		</picture>
 	);

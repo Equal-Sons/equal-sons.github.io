@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import Wrapper from "../layout/wrapper";
-import SEOCom from "../components/seo";
-import Header from "../layout/headers/header";
+import workImage from "../assets/images/work/work.jpg?responsive";
 import BreadcrumbOne from "../components/breadcrumb/breadcrumb-one";
-import FooterSeven from "../layout/footer/footer-seven";
-import { caseStudies, getFeaturedCaseStudies } from "../data/case-studies";
+import SEOCom from "../components/seo";
 import CaseStudyCard from "../components/work/case-study-card";
+import { caseStudies, getFeaturedCaseStudies } from "../data/case-studies";
+import FooterSeven from "../layout/footer/footer-seven";
+import Header from "../layout/headers/header";
+import Wrapper from "../layout/wrapper";
 
 export default function WorkPage() {
 	const [activeFilter, setActiveFilter] = useState<string>("all");
@@ -24,7 +25,7 @@ export default function WorkPage() {
 			<Header />
 
 			<BreadcrumbOne
-				bg="/assets/img/work/work.jpg"
+				bg={workImage}
 				title="Our Work"
 				subtitle="See how our clients have improved their businesses through our partnership."
 			/>

@@ -8,18 +8,6 @@
 	font-family: "EB Garamond", serif;
 }
 
-.woods-bg {
-	background-image: url("/assets/generated/homepage/mobile/320.png");
-	background-image: image-set(
-		url("/assets/generated/homepage/mobile/320.avif") type("image/avif"),
-		url("/assets/generated/homepage/mobile/320.webp") type("image/webp"),
-		url("/assets/generated/homepage/mobile/320.png") type("image/png")
-	);
-	background-repeat: no-repeat;
-	background-position: top center;
-	background-size: cover;
-}
-
 .bg-transparent-black {
 	background-color: #000000c4;
 }
@@ -56,37 +44,4 @@
 	background-color: var(--theme-color);
 	color: var(--title-color);
 	border-color: var(--theme-color);
-}
-
-@media (min-width: 600px) {
-	.woods-bg {
-		background-image: url("/assets/generated/homepage/desktop/960.png");
-		background-image: image-set(
-			url("/assets/generated/homepage/desktop/960.avif") type("image/avif"),
-			url("/assets/generated/homepage/desktop/960.webp") type("image/webp"),
-			url("/assets/generated/homepage/desktop/960.png") type("image/png")
-		);
-	}
-}
-
-@media (min-width: 1200px) {
-	.woods-bg {
-		background-image: url("/assets/generated/homepage/desktop/1440.png");
-		background-image: image-set(
-			url("/assets/generated/homepage/desktop/1440.avif") type("image/avif"),
-			url("/assets/generated/homepage/desktop/1440.webp") type("image/webp"),
-			url("/assets/generated/homepage/desktop/1440.png") type("image/png")
-		);
-	}
-}
-
-@media (min-width: 1600px) {
-	.woods-bg {
-		background-image: url("/assets/generated/homepage/desktop/1920.png");
-		background-image: image-set(
-			url("/assets/generated/homepage/desktop/1920.avif") type("image/avif"),
-			url("/assets/generated/homepage/desktop/1920.webp") type("image/webp"),
-			url("/assets/generated/homepage/desktop/1920.png") type("image/png")
-		);
-	}
 }

@@ -1,3 +1,16 @@
+import bbgbBooksImage from "../assets/images/work/bbgbbooks.png?responsive";
+import buddyImage from "../assets/images/work/buddy.png?responsive";
+import coffitivityFinancesImage from "../assets/images/work/coffitivity-finances.png?responsive";
+import coffitivityNewCafesImage from "../assets/images/work/coffitivity-new-cafes.png?responsive";
+import coffitivityNewImage from "../assets/images/work/coffitivity-new.png?responsive";
+import coffitivityOldImage from "../assets/images/work/coffitivity-old.png?responsive";
+import hicPortalImage from "../assets/images/work/hicportal.png?responsive";
+import painless1099AccountImage from "../assets/images/work/painless1099-account.png?responsive";
+import painless1099Image from "../assets/images/work/painless1099.png?responsive";
+import roundlyxImage from "../assets/images/work/roundlyx.png?responsive";
+import somethingVintageImage from "../assets/images/work/something-vintage.png?responsive";
+import type { ResponsiveImageSource } from "../components/responsive-image";
+
 export interface ICaseStudy {
 	id: number;
 	slug: string;
@@ -15,8 +28,8 @@ export interface ICaseStudy {
 		title: string;
 	};
 	images: {
-		hero: string;
-		gallery?: string[];
+		hero: ResponsiveImageSource;
+		gallery?: ResponsiveImageSource[];
 	};
 	featured: boolean;
 }
@@ -45,8 +58,8 @@ export const caseStudies: ICaseStudy[] = [
 			title: "CTO, Buddy Technology",
 		},
 		images: {
-			hero: "/assets/img/work/buddy.png",
-			gallery: ["/assets/img/work/buddy.png"],
+			hero: buddyImage,
+			gallery: [buddyImage],
 		},
 		featured: true,
 	},
@@ -72,11 +85,11 @@ export const caseStudies: ICaseStudy[] = [
 			title: "Co-Founder, Coffitivity & Managing Partner, Equal Sons",
 		},
 		images: {
-			hero: "/assets/img/work/coffitivity-new.png",
+			hero: coffitivityNewImage,
 			gallery: [
-				"/assets/img/work/coffitivity-new.png",
-				"/assets/img/work/coffitivity-new-cafes.png",
-				"/assets/img/work/coffitivity-old.png",
+				coffitivityNewImage,
+				coffitivityNewCafesImage,
+				coffitivityOldImage,
 			],
 		},
 		featured: true,
@@ -103,8 +116,8 @@ export const caseStudies: ICaseStudy[] = [
 			title: "Co-Founder, Coffitivity & Managing Partner, Equal Sons",
 		},
 		images: {
-			hero: "/assets/img/work/coffitivity-new.png",
-			gallery: ["/assets/img/work/coffitivity-finances.png"],
+			hero: coffitivityNewImage,
+			gallery: [coffitivityFinancesImage],
 		},
 		featured: false,
 	},
@@ -124,7 +137,7 @@ export const caseStudies: ICaseStudy[] = [
 		results:
 			"The platform saved HIC thousands in licensing fees while enabling them to manage innovation funding at scale. Staff had a clear path to submit ideas, advisors had a structured review process, and leadership had the aggregated insights needed to make investment decisions. Supported companies of HIC went on to raise more than $2.35M in funding. The program was later discontinued when COVID-19 shifted the health system's priorities, but the work demonstrated what's possible when process design and custom tooling come together to solve a real operational challenge.",
 		images: {
-			hero: "/assets/img/work/hicportal.png",
+			hero: hicPortalImage,
 		},
 		featured: false,
 	},
@@ -144,8 +157,8 @@ export const caseStudies: ICaseStudy[] = [
 		results:
 			"SVR's workflow costs dropped from $3,500 per year to $25 per month, a 90% reduction. The operational efficiency stayed intact: what once required nearly a full-time employee still runs at a fraction of that. And now they have a system that scales with their business without scaling their software bill alongside it.",
 		images: {
-			hero: "/assets/img/work/something-vintage.png",
-			gallery: ["/assets/img/work/something-vintage.png"],
+			hero: somethingVintageImage,
+			gallery: [somethingVintageImage],
 		},
 		featured: false,
 	},
@@ -171,8 +184,8 @@ export const caseStudies: ICaseStudy[] = [
 			title: "Founder, RoundlyX",
 		},
 		images: {
-			hero: "/assets/img/work/roundlyx.png",
-			gallery: ["/assets/img/work/roundlyx.png"],
+			hero: roundlyxImage,
+			gallery: [roundlyxImage],
 		},
 		featured: false,
 	},
@@ -198,11 +211,8 @@ export const caseStudies: ICaseStudy[] = [
 			title: "Co-Founder, Painless1099 & Managing Partner, Equal Sons",
 		},
 		images: {
-			hero: "/assets/img/work/painless1099.png",
-			gallery: [
-				"/assets/img/work/painless1099.png",
-				"/assets/img/work/painless1099-account.png",
-			],
+			hero: painless1099Image,
+			gallery: [painless1099Image, painless1099AccountImage],
 		},
 		featured: true,
 	},
@@ -222,8 +232,8 @@ export const caseStudies: ICaseStudy[] = [
 		results:
 			"BBGB Books launched on their new site with zero downtime and no data loss. Boon delivered a complete project to her client without needing to become a DNS expert. This kind of last-mile partnership is something we do often. Designers and agencies bring us in when they need technical confidence without the overhead of hiring or learning. It's a small engagement, but it's exactly the kind of support that makes creative work sustainable.",
 		images: {
-			hero: "/assets/img/work/bbgbbooks.png",
-			gallery: ["/assets/img/work/bbgbbooks.png"],
+			hero: bbgbBooksImage,
+			gallery: [bbgbBooksImage],
 		},
 		featured: false,
 	},

@@ -1,15 +1,37 @@
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
+import { imagetools } from "vite-imagetools";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 
 // https://vitejs.dev/config/
 export default defineConfig({
 	plugins: [
 		react(),
+		imagetools({
+			cache: {
+				enabled: true,
+				dir: "node_modules/.cache/imagetools",
+			},
+			defaultDirectives: (url) => {
+				if (!url.searchParams.has("responsive")) {
+					return new URLSearchParams();
+				}
+
+				const fallbackFormat = url.pathname.endsWith(".png") ? "png" : "jpg";
+
+				return new URLSearchParams({
+					w: "480;960;1440;1920",
+					format: `avif;webp;${fallbackFormat}`,
+					quality: "75",
+					effort: "2",
+					as: "picture",
+				});
+			},
+		}),
 		ViteImageOptimizer({
-			// Responsive variants are generated manually and committed. Avoid
-			// reprocessing them and the oversized originals removed after build.
-			exclude: /assets[\\/](?:generated|img[\\/](?:service|work))[\\/]/,
+			// Imagetools owns imported assets. This plugin only optimizes files
+			// copied from public/, avoiding a second pass over responsive variants.
+			exclude: /^assets[\\/](?!img[\\/])/,
 			includePublic: true,
 			cache: true,
 			cacheLocation: "node_modules/.cache/vite-plugin-image-optimizer",

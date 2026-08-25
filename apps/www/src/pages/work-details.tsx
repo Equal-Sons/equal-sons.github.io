@@ -1,17 +1,17 @@
 import { useState } from "react";
-import { useParams, NavLink, Navigate } from "react-router-dom";
-import Wrapper from "../layout/wrapper";
-import SEOCom from "../components/seo";
-import Header from "../layout/headers/header";
+import { NavLink, Navigate, useParams } from "react-router-dom";
 import BreadcrumbOne from "../components/breadcrumb/breadcrumb-one";
-import FooterSeven from "../layout/footer/footer-seven";
+import ImageLightbox from "../components/popup/image-lightbox";
+import ResponsiveImage from "../components/responsive-image";
+import SEOCom from "../components/seo";
 import {
 	getCaseStudyBySlug,
 	getRelatedCaseStudies,
 } from "../data/case-studies";
 import { getServiceBySlug } from "../data/services";
-import ImageLightbox from "../components/popup/image-lightbox";
-import ResponsiveImage from "../components/responsive-image";
+import FooterSeven from "../layout/footer/footer-seven";
+import Header from "../layout/headers/header";
+import Wrapper from "../layout/wrapper";
 // import CaseStudyCard from "../components/work/case-study-card";
 
 export default function WorkDetailsPage() {
@@ -124,7 +124,7 @@ export default function WorkDetailsPage() {
 														aria-label={`${caseStudy.title} - Gallery item ${index + 1}`}
 													>
 														<ResponsiveImage
-															src={image}
+															image={image}
 															alt={`${caseStudy.title} - Gallery item ${index + 1}`}
 															sizes={
 																caseStudy.images.gallery?.length === 1
