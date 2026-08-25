@@ -3,7 +3,8 @@
 	"scripts": {
 		"cf-typegen": "wrangler types",
 		"dev": "wrangler dev",
-		"deploy-cloudflare:production": "wrangler deploy --env production src/index.ts"
+		"deploy-cloudflare:production": "wrangler deploy --env production src/index.ts",
+		"type-check": "pnpm cf-typegen && tsc"
 	},
 	"dependencies": {
 		"@hono/zod-validator": "^0.4.1",
