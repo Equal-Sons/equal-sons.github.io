@@ -17,9 +17,7 @@
 			"allowed_destination_addresses": [
 				"justin@equalsons.com",
 				"ace@equalsons.com"
-			],
-			"allowed_sender_addresses": ["justin@equalsons.com"],
-			"remote": true
+			]
 		}
 	],
 	"env": {
@@ -42,8 +40,7 @@
 					"allowed_destination_addresses": [
 						"justin@equalsons.com",
 						"ace@equalsons.com"
-					],
-					"allowed_sender_addresses": ["justin@equalsons.com"]
+					]
 				}
 			]
 		}
