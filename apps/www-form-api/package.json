@@ -1,6 +1,7 @@
 {
 	"name": "@equalsons/www-form-api",
 	"scripts": {
+		"cf-typegen": "wrangler types",
 		"dev": "wrangler dev",
 		"deploy-cloudflare:production": "wrangler deploy --env production src/index.ts"
 	},
@@ -10,7 +11,6 @@
 		"zod": "^3.23.8"
 	},
 	"devDependencies": {
-		"@cloudflare/workers-types": "^4.20250109.0",
-		"wrangler": "^3.101.0"
+		"wrangler": "^4.94.0"
 	}
 }

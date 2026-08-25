@@ -9,36 +9,46 @@ export interface ContactEmailArgs extends EmailBaseArgs {
 }
 
 export interface EmailGenerator {
-	contactSubmissionEmail: (args: ContactEmailArgs) => string;
+	contactSubmissionEmail: (args: ContactEmailArgs) => EmailMessageBuilder;
 }
 
+const escapeHtml = (value: string): string =>
+	value.replace(
+		/[&<>"']/g,
+		(character) =>
+			({
+				"&": "&amp;",
+				"<": "&lt;",
+				">": "&gt;",
+				'"': "&quot;",
+				"'": "&#039;",
+			})[character] ?? character,
+	);
+
 const emailGenerator: EmailGenerator = {
-	contactSubmissionEmail: (args: ContactEmailArgs): string => {
-		const payload = {
+	contactSubmissionEmail: (args: ContactEmailArgs): EmailMessageBuilder => {
+		return {
 			subject: "New Contact Submission",
-			sender: {
+			from: {
 				name: "Equal Sons",
 				email: "justin@equalsons.com",
 			},
-			to: [{ email: "justin@equalsons.com" }, { email: "ace@equalsons.com" }],
-			replyTo: {
-				email: args.email,
-			},
-			htmlContent: `
+			to: ["justin@equalsons.com"],
+			replyTo: args.email,
+			text: `A new contact submission has been received. Here are the details:\n\nName: ${escapeHtml(args.name)}\nEmail: ${escapeHtml(args.email)}\nMessage: ${escapeHtml(args.message)}`,
+			html: `
       <html>
         <body>
           <p>A new contact submission has been received. Here are the details:</p>
           <ul>
-            <li>Name: ${args.name}</li>
-            <li>Email: ${args.email}</li>
-            <li>Message: ${args.message}</li>
+            <li>Name: ${escapeHtml(args.name)}</li>
+            <li>Email: ${escapeHtml(args.email)}</li>
+            <li>Message: ${escapeHtml(args.message)}</li>
           </ul>
         </body>
       </html>
       `,
 		};
-
-		return JSON.stringify(payload);
 	},
 	// contactSubmissionEmail: (args: ContactEmailArgs): string => {
 	// 	const payload = {

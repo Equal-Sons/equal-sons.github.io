@@ -3,7 +3,7 @@
 	"name": "www-form-api",
 	"main": "src/index.ts",
 	"account_id": "00407a40e95866dea86b4528b8a50f87",
-	"compatibility_date": "2025-02-17",
+	"compatibility_date": "2026-08-25",
 	"observability": {
 		"enabled": false
 	},
@@ -11,6 +11,17 @@
 		"CLIENT_HOST": "http://localhost:5173",
 		"ENVIRONMENT": "development"
 	},
+	"send_email": [
+		{
+			"name": "EMAIL",
+			"allowed_destination_addresses": [
+				"justin@equalsons.com",
+				"ace@equalsons.com"
+			],
+			"allowed_sender_addresses": ["justin@equalsons.com"],
+			"remote": true
+		}
+	],
 	"env": {
 		"production": {
 			"route": {
@@ -24,7 +35,17 @@
 			"vars": {
 				"CLIENT_HOST": "http://equalsons.com",
 				"ENVIRONMENT": "production"
-			}
+			},
+			"send_email": [
+				{
+					"name": "EMAIL",
+					"allowed_destination_addresses": [
+						"justin@equalsons.com",
+						"ace@equalsons.com"
+					],
+					"allowed_sender_addresses": ["justin@equalsons.com"]
+				}
+			]
 		}
 	}
 	// "compatibility_flags": [

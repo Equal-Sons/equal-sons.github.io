@@ -1,14 +1,14 @@
 import { zValidator } from "@hono/zod-validator";
 import { Hono } from "hono";
-import { z } from "zod";
-import type { Bindings } from "./bindings";
-import { AppError } from "./AppError";
-import type { ContentfulStatusCode } from "hono/utils/http-status";
-import emailGenerator from "./emailGenerator";
-import Emailer from "./Emailer";
-import { logger } from "hono/logger";
 import { cors } from "hono/cors";
+import { logger } from "hono/logger";
 import { secureHeaders } from "hono/secure-headers";
+import type { ContentfulStatusCode } from "hono/utils/http-status";
+import { z } from "zod";
+import { AppError } from "./AppError";
+import Emailer from "./Emailer";
+import type { Bindings } from "./bindings";
+import emailGenerator from "./emailGenerator";
 
 /**
  * Contact submission schema using Zod
@@ -86,14 +86,14 @@ const app = new Hono<{ Bindings: Bindings }>()
 			}
 
 			// Generate email body and send email
-			const emailBody = emailGenerator.contactSubmissionEmail({
+			const emailMessage = emailGenerator.contactSubmissionEmail({
 				host: c.env.CLIENT_HOST,
 				name,
 				email,
 				message,
 			});
 
-			await Emailer.send({ authKey: c.env.BREVO_API_KEY, body: emailBody });
+			await Emailer.send({ email: c.env.EMAIL, message: emailMessage });
 
 			// Return success message
 			return c.json(

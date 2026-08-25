@@ -1,36 +1,51 @@
 export interface SendArgs {
-	authKey: string;
-	body: string;
+	email: SendEmail;
+	message: EmailMessageBuilder;
 }
 export interface EmailerService {
 	send: (args: SendArgs) => Promise<void>;
 }
 
 const Emailer: EmailerService = {
+	// Cloudflare
 	send: async (args) => {
 		try {
-			const url = "https://api.brevo.com/v3/smtp/email";
-			const options = {
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json",
-					Accept: "application/json",
-					"api-key": `${args.authKey}`,
-				},
-				body: args.body,
-			};
-
-			const response = await fetch(url, options);
-			const json = await response.json();
-			if (response.status > 399) {
-				console.log("Error response", json);
-				return Promise.reject("Error sending email");
-			}
+			await args.email.send(args.message);
 		} catch (error) {
-			console.error("EmailService send error", error);
-			return Promise.reject("Error sending email");
+			console.error(
+				JSON.stringify({
+					message: "EmailService send error",
+					error: error instanceof Error ? error.message : String(error),
+				}),
+			);
+			throw error;
 		}
 	},
+	// Brevo
+	// send: async (args) => {
+	// 	try {
+	// 		const url = "https://api.brevo.com/v3/smtp/email";
+	// 		const options = {
+	// 			method: "POST",
+	// 			headers: {
+	// 				"Content-Type": "application/json",
+	// 				Accept: "application/json",
+	// 				"api-key": `${args.authKey}`,
+	// 			},
+	// 			body: args.body,
+	// 		};
+
+	// 		const response = await fetch(url, options);
+	// 		const json = await response.json();
+	// 		if (response.status > 399) {
+	// 			console.log("Error response", json);
+	// 			return Promise.reject("Error sending email");
+	// 		}
+	// 	} catch (error) {
+	// 		console.error("EmailService send error", error);
+	// 		return Promise.reject("Error sending email");
+	// 	}
+	// },
 	// Sendgrid
 	// send: async (args) => {
 	// 	try {
