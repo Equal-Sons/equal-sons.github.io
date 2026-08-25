@@ -3,7 +3,8 @@
 	"name": "www-form-api",
 	"main": "src/index.ts",
 	"account_id": "00407a40e95866dea86b4528b8a50f87",
-	"compatibility_date": "2026-08-25",
+	// For Node compatibility
+	"compatibility_flags": ["nodejs_compat"],
 	"observability": {
 		"enabled": false
 	},

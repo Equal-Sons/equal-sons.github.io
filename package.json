@@ -2,6 +2,9 @@
 	"name": "equalsons-monorepo",
 	"private": true,
 	"packageManager": "pnpm@9.1.1",
+	"engines": {
+		"node": ">=22.16.0"
+	},
 	"scripts": {
 		"dev": "turbo run dev",
 		"deploy": "turbo run deploy",
