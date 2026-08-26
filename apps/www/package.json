@@ -27,6 +27,7 @@
 		"react-fast-marquee": "^1.6.4",
 		"react-helmet-async": "^2.0.4",
 		"react-hook-form": "^7.53.1",
+		"react-markdown": "^10.1.0",
 		"react-modal-video": "^2.0.1",
 		"react-paginate": "^8.2.0",
 		"react-responsive-masonry": "^2.2.0",
@@ -37,6 +38,7 @@
 		"sass": "^1.72.0",
 		"slick-carousel": "^1.8.1",
 		"wow.js": "^1.2.2",
+		"yaml": "^2.9.0",
 		"zod": "^3.23.8"
 	},
 	"devDependencies": {

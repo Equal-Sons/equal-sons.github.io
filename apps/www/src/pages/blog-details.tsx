@@ -1,18 +1,18 @@
 import Wrapper from "../layout/wrapper";
 import SEOCom from "../components/seo";
 import HeaderThree from "../layout/headers/header";
-import FooterEight from "../layout/footer/footer-eight";
+import FooterSeven from "../layout/footer/footer-seven";
 import MarqueeSlider from "../components/marquee-slider";
-import blog_data from "../data/blog-data";
+import { getAdjacentPosts, getBlogPost } from "../data/blog-posts";
 import { useNavigate, useParams } from "react-router-dom";
 import BreadcrumbOne from "../components/breadcrumb/breadcrumb-one";
 import BlogDetailsArea from "../components/blog/details/blog-details-area";
 import { useEffect } from "react";
 
 export default function BlogDetails() {
-	const { id } = useParams();
+	const { slug } = useParams();
 	const navigate = useNavigate();
-	const blog = blog_data.find((b) => Number(b.id) === Number(id));
+	const blog = slug ? getBlogPost(slug) : undefined;
 
 	useEffect(() => {
 		if (!blog) {
@@ -23,7 +23,7 @@ export default function BlogDetails() {
 	return (
 		<Wrapper>
 			{/* seo title */}
-			<SEOCom title="Blog" />
+			<SEOCom title={blog?.title ?? "Blog"} />
 			{/* seo title */}
 
 			{/* header area start */}
@@ -37,7 +37,10 @@ export default function BlogDetails() {
 					{/* breadcrumb end */}
 
 					{/* blog details area */}
-					<BlogDetailsArea blog={blog} />
+					<BlogDetailsArea
+						blog={blog}
+						adjacentPosts={getAdjacentPosts(blog)}
+					/>
 					{/* blog details area */}
 				</>
 			)}
@@ -47,7 +50,7 @@ export default function BlogDetails() {
 			{/* marquee slider */}
 
 			{/* footer area */}
-			<FooterEight />
+			<FooterSeven />
 			{/* footer area */}
 		</Wrapper>
 	);

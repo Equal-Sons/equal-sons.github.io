@@ -40,7 +40,7 @@ export default function AppNavigation() {
 				<Route path="/contact" element={<Contact />} />
 
 				<Route path="/blog" element={<Blog />} />
-				<Route path="/blog-details/:id" element={<BlogDetails />} />
+				<Route path="/blog/:slug" element={<BlogDetails />} />
 				<Route path="*" element={<NotFoundPage />} />
 			</Routes>
 			<BackToTop />

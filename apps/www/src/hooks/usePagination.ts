@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type PaginationResult<T> = {
   currentItems: T[];
@@ -9,11 +9,16 @@ type PaginationResult<T> = {
 function usePagination<T>(items: T[], itemsPerPage: number): PaginationResult<T> {
   const [itemOffset, setItemOffset] = useState(0);
 
+  useEffect(() => {
+    setItemOffset(0);
+  }, [items]);
+
   const endOffset = itemOffset + itemsPerPage;
   const currentItems = items.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(items.length / itemsPerPage);
 
   const handlePageClick = (event: { selected: number }) => {
+	if (items.length === 0) return;
     const newOffset = (event.selected * itemsPerPage) % items.length;
     setItemOffset(newOffset);
     window.scrollTo({ top: 0, behavior: "smooth" });

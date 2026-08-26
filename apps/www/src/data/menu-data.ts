@@ -28,11 +28,11 @@ const menu_data: IMenuDT[] = [
 		title: "WORK",
 		link: "/work",
 	},
-	// {
-	// 	id: 2,
-	// 	title: "BLOG",
-	// 	link: "/blog",
-	// },
+	{
+		id: 2,
+		title: "BLOG",
+		link: "/blog",
+	},
 	{
 		id: 3,
 		title: "ABOUT",
