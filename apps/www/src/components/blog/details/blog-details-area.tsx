@@ -1,5 +1,7 @@
-import ReactMarkdown from "react-markdown";
+import ReactMarkdown, { type Components } from "react-markdown";
 import { NavLink } from "react-router-dom";
+import rehypeRaw from "rehype-raw";
+import remarkGfm from "remark-gfm";
 import { getAuthor } from "../../../data/authors";
 import { getBlogCategory } from "../../../data/blog-categories";
 import { formatPublishedDate } from "../../../data/blog-posts";
@@ -10,6 +12,19 @@ import BlogSidebar from "../blog-sidebar";
 type BlogDetailsAreaProps = {
 	blog: BlogPost;
 	adjacentPosts: AdjacentPosts;
+};
+
+const markdownComponents: Components = {
+	table: ({ node: _node, ...props }) => (
+		<section
+			className="blog__table-wrap"
+			aria-label="Scrollable article table"
+			// biome-ignore lint/a11y/noNoninteractiveTabindex: Keyboard users need to focus and scroll wide tables.
+			tabIndex={0}
+		>
+			<table {...props} />
+		</section>
+	),
 };
 
 export default function BlogDetailsArea({
@@ -47,7 +62,13 @@ export default function BlogDetailsArea({
 									</div>
 									<h1 className="title">{blog.title}</h1>
 									<div className="blog__markdown">
-										<ReactMarkdown>{blog.content}</ReactMarkdown>
+										<ReactMarkdown
+											remarkPlugins={[remarkGfm]}
+											rehypePlugins={[rehypeRaw]}
+											components={markdownComponents}
+										>
+											{blog.content}
+										</ReactMarkdown>
 									</div>
 									{blog.tags.length > 0 && (
 										<div className="blog__details-bottom">
