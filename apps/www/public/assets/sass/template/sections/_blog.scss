@@ -357,6 +357,70 @@
     }
   }
 
+  .hljs-comment,
+  .hljs-quote {
+    color: #596273;
+    font-style: italic;
+  }
+
+  .hljs-keyword,
+  .hljs-selector-tag,
+  .hljs-built_in,
+  .hljs-literal,
+  .hljs-type {
+    color: #76276f;
+    font-weight: 600;
+  }
+
+  .hljs-string,
+  .hljs-symbol,
+  .hljs-bullet,
+  .hljs-addition {
+    color: #176538;
+  }
+
+  .hljs-title,
+  .hljs-section,
+  .hljs-name,
+  .hljs-attribute {
+    color: #005f87;
+  }
+
+  .hljs-title.function_,
+  .hljs-title.class_ {
+    font-weight: 600;
+  }
+
+  .hljs-number,
+  .hljs-regexp,
+  .hljs-link,
+  .hljs-deletion {
+    color: #9a382a;
+  }
+
+  .hljs-variable,
+  .hljs-template-variable,
+  .hljs-params {
+    color: $title-color;
+  }
+
+  .hljs-attr {
+    color: #824600;
+  }
+
+  .hljs-meta,
+  .hljs-doctag {
+    color: #6e4d00;
+  }
+
+  .hljs-emphasis {
+    font-style: italic;
+  }
+
+  .hljs-strong {
+    font-weight: 600;
+  }
+
   .blog__table-wrap {
     overflow-x: auto;
     border: 1px solid $border-color;

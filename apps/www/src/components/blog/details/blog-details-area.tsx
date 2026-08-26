@@ -1,3 +1,8 @@
+import hljs from "highlight.js/lib/core";
+import bash from "highlight.js/lib/languages/bash";
+import javascript from "highlight.js/lib/languages/javascript";
+import json from "highlight.js/lib/languages/json";
+import typescript from "highlight.js/lib/languages/typescript";
 import ReactMarkdown, { type Components } from "react-markdown";
 import { NavLink } from "react-router-dom";
 import rehypeRaw from "rehype-raw";
@@ -14,7 +19,54 @@ type BlogDetailsAreaProps = {
 	adjacentPosts: AdjacentPosts;
 };
 
+hljs.registerLanguage("bash", bash);
+hljs.registerLanguage("javascript", javascript);
+hljs.registerLanguage("json", json);
+hljs.registerLanguage("typescript", typescript);
+
+const languageAliases: Record<string, string> = {
+	js: "javascript",
+	jsx: "javascript",
+	jsonc: "json",
+	sh: "bash",
+	shell: "bash",
+	ts: "typescript",
+	tsx: "typescript",
+};
+
 const markdownComponents: Components = {
+	code: ({ node: _node, className, children, ...props }) => {
+		const languageMatch = /language-([\w-]+)/.exec(className ?? "");
+		const requestedLanguage = languageMatch?.[1];
+		const language = requestedLanguage
+			? (languageAliases[requestedLanguage] ?? requestedLanguage)
+			: undefined;
+
+		if (!language || !hljs.getLanguage(language)) {
+			return (
+				<code className={className} {...props}>
+					{children}
+				</code>
+			);
+		}
+
+		const highlightedCode = hljs.highlight(
+			String(children).replace(/\n$/, ""),
+			{
+				language,
+				ignoreIllegals: true,
+			},
+		).value;
+
+		return (
+			<code
+				className={`hljs ${className}`}
+				{...props}
+				// biome-ignore lint/security/noDangerouslySetInnerHtml: Highlight.js escapes source code before returning markup.
+				dangerouslySetInnerHTML={{ __html: highlightedCode }}
+			/>
+		);
+	},
 	table: ({ node: _node, ...props }) => (
 		<section
 			className="blog__table-wrap"

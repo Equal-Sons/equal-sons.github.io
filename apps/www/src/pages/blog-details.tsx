@@ -33,14 +33,11 @@ export default function BlogDetails() {
 			{blog && (
 				<>
 					{/* breadcrumb start */}
-					<BreadcrumbOne title="Blog" subtitle={blog.title} />
+					<BreadcrumbOne title={blog.title} />
 					{/* breadcrumb end */}
 
 					{/* blog details area */}
-					<BlogDetailsArea
-						blog={blog}
-						adjacentPosts={getAdjacentPosts(blog)}
-					/>
+					<BlogDetailsArea blog={blog} adjacentPosts={getAdjacentPosts(blog)} />
 					{/* blog details area */}
 				</>
 			)}
