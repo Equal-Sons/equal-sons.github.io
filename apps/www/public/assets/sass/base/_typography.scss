@@ -12,25 +12,6 @@ body {
 	line-height: $body-line-Height;
 	overflow-x: hidden;
 	-webkit-font-smoothing: antialiased;
-	/***scroll-bar***/
-    &::-webkit-scrollbar {
-        width: 10px;
-        height: 10px;
-    }
-	&::-webkit-scrollbar-thumb {
-		background-color: $title-color;
-		background-image: -webkit-linear-gradient(
-			45deg,
-			rgba(255, 255, 255, 0.3) 25%,
-			transparent 20%,
-			transparent 50%,
-			rgba(255, 255, 255, 0.3) 50%,
-			rgba(255, 255, 255, 0.3) 75%,
-			transparent 75%,
-			transparent
-		);
-		border-radius: 0px;
-    }
 }
 
 iframe {
