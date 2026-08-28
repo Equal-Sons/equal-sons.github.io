@@ -23,7 +23,13 @@ export default function BlogDetails() {
 	return (
 		<Wrapper>
 			{/* seo title */}
-			<SEOCom title={blog?.title ?? "Blog"} />
+			<SEOCom
+				title={blog?.title ?? "Blog"}
+				description={blog?.excerpt}
+				image={blog?.image}
+				path={blog ? `/blog/${blog.slug}` : "/blog"}
+				type={blog ? "article" : "website"}
+			/>
 			{/* seo title */}
 
 			{/* header area start */}
