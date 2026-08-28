@@ -3,6 +3,7 @@ import { getAuthor } from "../../data/authors";
 import { getBlogCategory } from "../../data/blog-categories";
 import { formatPublishedDate } from "../../data/blog-posts";
 import type { BlogPost } from "../../types/blog";
+import ResponsiveImage from "../responsive-image";
 
 type BlogListItemProps = {
 	post: BlogPost;
@@ -19,7 +20,11 @@ export default function BlogListItem({ post }: BlogListItemProps) {
 			{post.image && (
 				<div className="blog-post-thumb">
 					<NavLink to={`/blog/${post.slug}`}>
-						<img src={post.image} alt={post.imageAlt ?? post.title} />
+					<ResponsiveImage
+						image={post.image}
+						alt={post.imageAlt ?? post.title}
+						sizes="(min-width: 1200px) 520px, (min-width: 768px) 50vw, 100vw"
+					/>
 					</NavLink>
 				</div>
 			)}

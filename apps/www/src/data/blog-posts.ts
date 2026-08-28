@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { parse as parseYaml } from "yaml";
+import type { ResponsiveImageSource } from "../components/responsive-image";
 import type { AdjacentPosts, BlogPost } from "../types/blog";
 import { getAuthor } from "./authors";
 import { getBlogCategory } from "./blog-categories";
@@ -22,6 +23,18 @@ const frontmatterSchema = z
 	});
 
 type Frontmatter = z.infer<typeof frontmatterSchema>;
+
+const blogImages = import.meta.glob(
+	[
+		"../assets/images/blog/*.{avif,jpeg,jpg,png,webp}",
+		"../assets/images/blog/**/*.{avif,jpeg,jpg,png,webp}",
+	],
+	{
+		query: "?responsive",
+		import: "default",
+		eager: true,
+	},
+) as Record<string, ResponsiveImageSource>;
 
 const markdownFiles = import.meta.glob("../content/blog/*.md", {
 	query: "?raw",
@@ -56,12 +69,27 @@ function makePost(path: string, source: string): BlogPost {
 		publishedAt: frontmatter.publishedAt,
 		authorId: frontmatter.author,
 		categoryId: frontmatter.category,
-		image: frontmatter.image,
+		image: frontmatter.image
+			? resolveBlogImage(frontmatter.image, path)
+			: undefined,
 		imageAlt: frontmatter.imageAlt,
 		tags: frontmatter.tags,
 		draft: frontmatter.draft,
 		content,
 	};
+}
+
+function resolveBlogImage(imagePath: string, postPath: string) {
+	const normalizedPath = imagePath.replace(/^\.?\//, "");
+	const image = blogImages[`../assets/images/blog/${normalizedPath}`];
+
+	if (!image) {
+		throw new Error(
+			`Unknown blog image "${imagePath}" in ${postPath}. Add it under src/assets/images/blog and reference its relative path.`,
+		);
+	}
+
+	return image;
 }
 
 function validateReferences(frontmatter: Frontmatter, path: string) {
@@ -96,7 +124,9 @@ export function getPostsByCategory(categoryId?: string | null) {
 
 export function getAdjacentPosts(post: BlogPost): AdjacentPosts {
 	const categoryPosts = getPostsByCategory(post.categoryId);
-	const index = categoryPosts.findIndex((candidate) => candidate.slug === post.slug);
+	const index = categoryPosts.findIndex(
+		(candidate) => candidate.slug === post.slug,
+	);
 
 	return {
 		previous: categoryPosts[index + 1],

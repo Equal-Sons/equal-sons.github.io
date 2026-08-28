@@ -1,3 +1,5 @@
+import type { ImageSource } from "../components/responsive-image";
+
 export type Author = {
 	id: string;
 	name: string;
@@ -18,7 +20,7 @@ export type BlogPost = {
 	publishedAt: string;
 	authorId: string;
 	categoryId: string;
-	image?: string;
+	image?: ImageSource;
 	imageAlt?: string;
 	tags: string[];
 	draft: boolean;

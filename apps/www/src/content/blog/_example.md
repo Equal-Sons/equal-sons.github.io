@@ -7,7 +7,7 @@ category: build
 tags:
   - Example
   - Markdown
-draft: false
+draft: true
 ---
 
 Markdown is our preferred way to draft content, so this post is a **living

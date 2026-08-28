@@ -33,7 +33,7 @@ export default function BlogDetails() {
 			{blog && (
 				<>
 					{/* breadcrumb start */}
-					<BreadcrumbOne title={blog.title} />
+					<BreadcrumbOne title={blog.title} bg={blog.image} />
 					{/* breadcrumb end */}
 
 					{/* blog details area */}

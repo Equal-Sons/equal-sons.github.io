@@ -95,11 +95,6 @@ export default function BlogDetailsArea({
 					<div className="row">
 						<div className="col-70">
 							<article className="blog__details-wrap">
-								{blog.image && (
-									<div className="blog__details-thumb">
-										<img src={blog.image} alt={blog.imageAlt ?? blog.title} />
-									</div>
-								)}
 								<div className="blog__details-content">
 									<div className="blog-post-meta">
 										<ul className="list-wrap">

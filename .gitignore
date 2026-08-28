@@ -31,3 +31,6 @@ yarn-error.log*
 .turbo
 /node_modules
 /dist
+
+# docs
+docs/.obsidian/workspace.json
